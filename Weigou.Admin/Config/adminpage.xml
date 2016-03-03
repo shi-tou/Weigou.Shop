@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+	<!--BasePage-->
+	<object type="Weigou.Admin.AdminPage,Weigou.Admin">
+		<property name="SysService" ref="sysService"/>
+    <property name="MerchantService" ref="merchantService"/>
+    <property name="MemberService" ref="memberService"/>
+    <property name="GoodsService" ref="goodsService"/>
+    <property name="ReportService" ref="reportService"/>
+    <property name="SmsService" ref="smsService"/>
+    <property name="ContentService" ref="contentService"/>
+	</object>
+	<!--登录-->
+	<object type="Login.aspx">
+		<property name="SysService" ref="sysService"/>
+	</object>
+</objects>

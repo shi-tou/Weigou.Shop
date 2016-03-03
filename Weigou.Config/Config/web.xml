@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+	<!--啇城前台：Weigou.Web.BasePage-->
+	<object type="Weigou.Web.BasePage,Weigou.Web">
+		<property name="SysService" ref="sysService"/>
+    <property name="MemberService" ref="memberService"/>
+    <property name="GoodsService" ref="goodsService"/>
+    <property name="ReportService" ref="reportService"/>
+    <property name="SmsService" ref="smsService"/>
+    <property name="ContentService" ref="contentService"/>
+    <property name="OrderService" ref="orderService"/>
+	</object>
+</objects>

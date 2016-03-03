@@ -1,0 +1,12 @@
+﻿body,html{background:url("images/login_bg.jpg") top left;margin:0px; padding:0px;font-size:12px; font-family:微软雅黑;}
+.box{width:390px; height:300px; position:absolute; left:50%; top:50%; margin: -150px 0 0 -195px; background:#fff; }
+.box_title{background:#2e82d6 ;height:48px; line-height:48px; padding-left:20px; color:#fff; font-size:16px; font-weight:bold; }
+.box_main{ padding:20px;}
+.box_main p { margin-top:18px; text-align:center;}
+.txt{ width:260px;line-height:16px; border:solid 1px #ddd; padding:10px 30px; background:url("images/input_icons.png") no-repeat;font-size:16px; color:#666; }
+#txtUserName{ background-position:0px -63px;}
+#txtUserName:hover{ background-position:0px -103px;border:solid 1px #2e82f6;}
+#txtPassword{ background-position:0px -142px;}
+#txtPassword:hover{ background-position:0px -182px;border:solid 1px #2e82f6;}
+.btn{background:#2e82d6; width:320px; height:42px; line-height:42px; color:#fff; border:none; font-size:16px; cursor:pointer;}
+.btn:hover{background:#2e82f6;}

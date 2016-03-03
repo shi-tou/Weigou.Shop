@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - container</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      var cc = $f.dom.get("result");
+      $f("fancyform", {
+        rules: {
+          uname: { required: 1, minlength: 7, prefix: "fancy" }
+          , email: { required: 1, email: 1 }
+          , pwd: { required: 1, rangelength: [6, 8] }
+          , pwd2: { required: 1, compareTo: "pwd" }
+        }
+        , messages: {
+          uname: { required: "用户名必须填写", prefix: "用户名必须fancy开头" }
+          , email: { required: "email必须填写" }
+          , pwd: { required: "密码必须填写" }
+        }
+        , submitHandler: function() {
+          cc.innerHTML = "<label class='valid' style='padding-left:20px'>验证通过</label>";
+        }
+        , validCls: ""
+        , container: cc
+        , appendLabel: $f.appendContainer
+        , findLabel: $f.findContainer
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Container 在容器中显示提示信息</h1>
+  <div id="result" class="result">
+  </div>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" />
+      </li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" />
+      </li>
+      <li>
+        <label class="ttl">密码：</label>
+        <input class="fin h23" name="pwd" type="password" />
+      </li>
+      <li>
+        <label class="ttl">确认密码：</label>
+        <input class="fin h23" name="pwd2" type="password" />
+      </li>
+    </ul>
+  </fieldset>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

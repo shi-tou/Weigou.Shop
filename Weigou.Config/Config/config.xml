@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+	<!--基类-->
+	<object id="baseDao" type="Weigou.Dao.BaseDao, Weigou.Dao">
+		<property name="AdoTemplate" ref="adoTemplate"/>
+	</object>
+	<object id="baseService" type="Weigou.Service.BaseService,Weigou.Service">
+		<property name="BaseDao" ref="baseDao" />
+    <property name="MemberService" ref="memberService" />
+    <property name="GoodsService" ref="goodsService" />
+	</object>
+	
+  <!--系统管理-->
+  <object id="sysDao" type="Weigou.Dao.SysDao,Weigou.Dao"  parent="baseDao">
+  </object>
+  <object id="sysService" type="Weigou.Service.SysService,Weigou.Service"  parent="baseService">
+    <property name="SysDao" ref="sysDao" />
+  </object>
+  <!--商户管理-->
+  <object id="merchantDao" type="Weigou.Dao.MerchantDao,Weigou.Dao"  parent="baseDao">
+  </object>
+  <object id="merchantService" type="Weigou.Service.MerchantService,Weigou.Service"  parent="baseService">
+    <property name="MerchantDao" ref="merchantDao" />
+  </object>
+	<!--会员管理-->
+	<object id="memberDao" type="Weigou.Dao.MemberDao,Weigou.Dao"  parent="baseDao">
+	</object>
+	<object id="memberService" type="Weigou.Service.MemberService,Weigou.Service"  parent="baseService">
+		<property name="MemberDao" ref="memberDao" />
+	</object>
+  <!--商品管理-->
+  <object id="goodsDao" type="Weigou.Dao.GoodsDao,Weigou.Dao"  parent="baseDao">
+  </object>
+  <object id="goodsService" type="Weigou.Service.GoodsService,Weigou.Service"  parent="baseService">
+    <property name="GoodsDao" ref="goodsDao" />
+  </object>
+  <!--报表管理-->
+  <object id="reportDao" type="Weigou.Dao.ReportDao,Weigou.Dao"  parent="baseDao">
+  </object>
+  <object id="reportService" type="Weigou.Service.ReportService,Weigou.Service"  parent="baseService">
+    <property name="ReportDao" ref="reportDao" />
+  </object>
+  <!--短信管理-->
+  <object id="smsDao" type="Weigou.Dao.SmsDao,Weigou.Dao"  parent="baseDao">
+  </object>
+  <object id="smsService" type="Weigou.Service.SmsService,Weigou.Service"  parent="baseService">
+    <property name="SmsDao" ref="smsDao" />
+  </object>
+  <!--内容管理-->
+  <object id="contentDao" type="Weigou.Dao.ContentDao,Weigou.Dao"  parent="baseDao">
+  </object>
+  <object id="contentService" type="Weigou.Service.ContentService,Weigou.Service"  parent="baseService">
+    <property name="ContentDao" ref="contentDao" />
+  </object>
+  <!--订单管理-->
+  <object id="orderDao" type="Weigou.Dao.OrderDao,Weigou.Dao"  parent="baseDao">
+  </object>
+  <object id="orderService" type="Weigou.Service.OrderService,Weigou.Service"  parent="baseService">
+    <property name="OrderDao" ref="orderDao" />
+  </object>
+  <!--微信管理-->
+  <object id="weixinDao" type="Weigou.Dao.WeixinDao,Weigou.Dao"  parent="baseDao">
+  </object>
+  <object id="weixinService" type="Weigou.Service.WeixinService,Weigou.Service"  parent="baseService">
+    <property name="WeixinDao" ref="weixinDao" />
+  </object>
+</objects>

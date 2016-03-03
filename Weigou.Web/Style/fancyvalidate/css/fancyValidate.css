@@ -1,0 +1,321 @@
+﻿/* fancyvalidate styles */
+/* default error style */
+.error {
+  margin-left: 5px;
+  padding-left: 20px;
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #f28279;
+  font-size: .8em;
+  font-weight: 600;
+  font-family: "Trebuchet MS" ,Georgia,"Times New Roman",Times,sans-serif;
+  white-space: nowrap;
+  background: url(icons/exclamation.png) no-repeat 2px center !important;
+  background: url(icons/gifs/exclamation.gif) no-repeat 2px center;
+}
+.valid {
+  background: url(icons/accept.png) left center no-repeat !important;
+  background: url(icons/gifs/accept.gif) left center no-repeat;
+}
+.fld-error {
+  border: 1px solid #D28C8C;
+  background-color: #FCEBEB;
+}
+.fld-valid {
+  border: 1px solid #58792E;
+  background-color: #FBFBFB;
+}
+.fld-active {
+  border: 1px solid #F2DD8C;
+  background-color: #FEFEEE;
+}
+
+/* boxes */
+.box {
+  padding: 8px;
+  margin-bottom: 8px;
+  color: #555;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #eee;
+}
+.box-info {
+  padding-left: 32px;
+  border-top: 1px solid #B8E2FB;
+  border-bottom: 1px solid #B8E2FB;
+  background: #E8F6FF url("icons/information.png") no-repeat 8px 50% !important;
+  background: #E8F6FF url("icons/gifs/information.gif") no-repeat 8px 50%;
+}
+.box-warning {
+  padding-left: 32px;
+  border-top: 1px solid #F2DD8C;
+  border-bottom: 1px solid #F2DD8C;
+  background: #FFF5CC url("icons/error.png") no-repeat 8px 50% !important;
+  background: #FFF5CC url("icons/gifs/error.gif") no-repeat 8px 50%;
+}
+.box-error {
+  padding-left: 32px;
+  border-top: 1px solid #F8ACAC;
+  border-bottom: 1px solid #F8ACAC;
+  background: #FFD1D1 url("icons/exclamation.png") no-repeat 8px 50% !important;
+  background: #FFD1D1 url("icons/gifs/exclamation.gif") no-repeat 8px 50%;
+}
+.box-error-msg {
+  margin-top: -8px;
+  background: #FFF1F1;
+  border-top: 0 none;
+  border-bottom: 1px solid #FDDCDC;
+  color: #664B4B;
+  padding: 12px;
+}
+.box-error-msg ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.box-success {
+  padding-left: 32px;
+  border-top: 1px solid #BBDF8D;
+  border-bottom: 1px solid #BBDF8D;
+  background: #EAF7D9 url("icons/accept.png") no-repeat 8px 50% !important;
+  background: #EAF7D9 url("icons/gifs/accept.gif") no-repeat 8px 50%;
+}
+.box a:hover {
+  background: transparent !important;
+}
+
+/* box common style */
+.b-b {
+  position: absolute;
+  height: 30px;
+  line-height: 30px;
+  padding: .1em 1em;
+  border-radius: 5px;
+}
+.b-cor {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.b-cor10 {
+  border: 10px dashed transparent;
+}
+.b-cor15 {
+  border: 15px dashed transparent;
+}
+.b-con {
+  font-size: .9em;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* arrow box style */
+/* base */
+.e-arrow .b-cor {
+  top: 2px;
+  left: -28px;
+  border-right-style: solid;
+}
+.e-arrow .b-con {
+  color: White;
+}
+/*colors*/
+.ablue {
+  background: #beceeb;
+  box-shadow: 2px 2px 8px #beceeb;
+}
+.ablue .b-cor {
+  border-right-color: #beceeb;
+}
+.ablue2 {
+  background: #90D8F0;
+  box-shadow: 2px 2px 8px #90D8F0;
+}
+.ablue2 .b-cor {
+  border-right-color: #90D8F0;
+}
+.ablue3 {
+  background: #4D9FBF;
+  box-shadow: 2px 2px 8px #4D9FBF;
+}
+.ablue3 .b-cor {
+  border-right-color: #4D9FBF;
+}
+.agreen {
+  background: #8FD401;
+  box-shadow: 2px 2px 8px #8FD401;
+}
+.agreen .b-cor {
+  border-right-color: #8FD401;
+}
+.agreen2 {
+  background: #58792E;
+  box-shadow: 2px 2px 8px #58792E;
+}
+.agreen2 .b-cor {
+  border-right-color: #58792E;
+}
+.ared {
+  background: #f28279;
+  box-shadow: 2px 2px 8px #f28279;
+}
+.ared .b-cor {
+  border-right-color: #f28279;
+}
+.aorange {
+  background: #F3961C;
+  box-shadow: 2px 2px 8px #F3961C;
+}
+.aorange .b-cor {
+  border-right-color: #F3961C;
+}
+.acream {
+  background: #A27D35;
+  box-shadow: 2px 2px 8px #A27D35;
+}
+.acream .b-cor {
+  border-right-color: #A27D35;
+}
+.adark {
+  background: #D3D3D3;
+  box-shadow: 2px 2px 8px #D3D3D3;
+}
+.adark .b-cor {
+  border-right-color: #D3D3D3;
+}
+.ablack {
+  background: #454545;
+  box-shadow: 2px 2px 8px #454545;
+}
+.ablack .b-cor {
+  border-right-color: #454545;
+}
+
+/* bubble box style */
+/* base */
+.e-bubble {
+  background: white;
+}
+.e-bubble .e-b-bot {
+  border-top-style: solid;
+  left: 10px;
+  bottom: -20px;
+}
+.e-bubble .e-b-top {
+  border-top-style: solid;
+  border-top-color: #ffffff;
+  left: 10px;
+  bottom: -16px;
+}
+.e-bubble .b-con {
+  color: #454545;
+}
+/* colors */
+.bblue {
+  border: 3px solid #beceeb;
+  box-shadow: 2px 2px 8px #beceeb;
+}
+.bblue .e-b-bot {
+  border-top-color: #beceeb;
+}
+.bblue2 {
+  border: 3px solid #90D8F0;
+  box-shadow: 2px 2px 8px #90D8F0;
+}
+.bblue2 .e-b-bot {
+  border-top-color: #90D8F0;
+}
+.bblue3 {
+  border: 3px solid #4D9FBF;
+  box-shadow: 2px 2px 8px #4D9FBF;
+}
+.bblue3 .e-b-bot {
+  border-top-color: #4D9FBF;
+}
+.bgreen {
+  border: 3px solid #8FD401;
+  box-shadow: 2px 2px 8px #8FD401;
+}
+.bgreen .e-b-bot {
+  border-top-color: #8FD401;
+}
+.bgreen2 {
+  border: 3px solid #58792E;
+  box-shadow: 2px 2px 8px #58792E;
+}
+.bgreen2 .e-b-bot {
+  border-top-color: #58792E;
+}
+.bred {
+  border: 3px solid #f28279;
+  box-shadow: 2px 2px 8px #f28279;
+}
+.bred .e-b-bot {
+  border-top-color: #f28279;
+}
+.borange {
+  border: 3px solid #F3961C;
+  box-shadow: 2px 2px 8px #F3961C;
+}
+.borange .e-b-bot {
+  border-top-color: #F3961C;
+}
+.bcream {
+  border: 3px solid #A27D35;
+  box-shadow: 2px 2px 8px #A27D35;
+}
+.bcream .e-b-bot {
+  border-top-color: #A27D35;
+}
+.bdark {
+  border: 3px solid #D3D3D3;
+  box-shadow: 2px 2px 8px #D3D3D3;
+}
+.bdark .e-b-bot {
+  border-top-color: #D3D3D3;
+}
+.bblack {
+  border: 3px solid #454545;
+  box-shadow: 2px 2px 8px #454545;
+}
+.bblack .e-b-bot {
+  border-top-color: #454545;
+}
+
+/* position styles */
+.ab {
+  position: absolute;
+}
+.m40 {
+  margin-left: 40px;
+}
+.m4l3 {
+  margin-top: -40px;
+  margin-left: -30px;
+}
+
+/* textbox watermark plugin style */
+.w-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.w-label {
+  position: absolute;
+  padding: 0 0 0 6px;
+  margin: 0;
+  font-size: .8em;
+  color: #999;
+  opacity: 1;
+}
+.w-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.w-active {
+  color: #ddd;
+}

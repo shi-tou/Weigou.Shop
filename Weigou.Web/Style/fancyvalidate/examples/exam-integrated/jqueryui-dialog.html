@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - jQuery UI Dialog</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <link href="../../external/jquery-ui/css/ui-lightness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+  <link href="jqui.css" rel="stylesheet" />
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>  
+  <script src="../../external/jquery-1.7.1.min.js"></script>
+  <script src="../../external/jquery-ui/js/jquery-ui-1.8.17.custom.min.js"></script>
+  <script src="../../external/jquery-ui/js/jquery-ui-1.8.17.i18n.min.js"></script>
+  <script src="../../external/jquery-ui/js/jquery-ui-widget-combobox.js"></script>
+  <script src="../../external/xheditor-1.1.12/xheditor-1.1.12-zh-cn.min.js"></script>
+  <script src="jqui.js"></script>
+</head>
+<body>
+  <h1>jQuery UI Dialog、xheditor 集成</h1>
+  <form action="?" id="fancyform" class="todialog" title="jQuery UI Dialog 集成">
+  <fieldset class="jqueryui">
+    <legend class="leg">jQuery UI、xheditor 集成</legend>
+    <ul>
+      <li>
+        <label class="ttl">日期控件：</label>
+        <input class="fin h23" type="text" name="date" />
+      </li>
+      <li>
+        <label class="ttl">位置：</label>
+        <select class="fin" name="loc">
+          <option value="">请选择</option>
+          <option value="1">地球</option>
+          <option value="2">月球</option>
+          <option value="3">火星</option>
+        </select></li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" />
+      </li>
+      <li>
+        <label class="ttl">自动完成：</label>
+        <input class="fin h23" name="autoc" type="text" />(输入数字) </li>
+      <li>
+        <label class="ttl">性别：</label>
+        <div class="bset">
+          <input type="radio" id="radio1" name="sex" /><label for="radio1">男</label>
+          <input type="radio" id="radio2" name="sex" /><label for="radio2">女</label>
+          <input type="radio" id="radio3" name="sex" /><label for="radio3">？？</label>
+        </div>
+      </li>
+      <li class="age">
+        <label class="ttl">年龄：</label>
+        <input class="fin h23" id="age" name="age" type="text" />        
+        <div id="slider"></div>
+        <span id="agespan"></span>
+      </li>
+      <li>
+        <label class="ttl">爱好2：</label>
+        <div class="bset">
+          <input type="checkbox" id="check1" name="lov2" /><label for="check1">打酱油</label>
+          <input type="checkbox" id="check2" name="lov2" /><label for="check2">打酱油</label>
+          <input type="checkbox" id="check3" name="lov2" /><label for="check3">打酱油</label>
+        </div>
+      </li>
+      <li>
+        <label class="ttl">自我描述：</label>
+        <textarea name="desc" id="desc" class="tarea"></textarea>
+      </li>
+    </ul>
+  </fieldset>
+  </form>
+  <div class="dialog" id="dialog-confirm" title="提交确认">
+    <p>
+      <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>验证成功，确定要提交?
+    </p>
+  </div>
+  <div class="dialog" id="dialog-message" title="提交成功">
+    <p>
+      <span class="ui-icon ui-icon-circle-check" style="float: left; margin: 0 7px 0 0;"></span>已提交
+    </p>
+  </div>
+</body>
+</html>

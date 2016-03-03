@@ -1,0 +1,148 @@
+--------------------------------系统出现异常http://localhost:9999/Member/Deliver/DeliverAddress.aspx[10:09]--------------------------------
+错误消息：不能将值 NULL 插入列 'MemberID'，表 'SigeShop.dbo.T_DeliverAddress'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+发生时间：2015/06/16 10:09:39
+错误源： .Net SqlClient Data Provider
+站点地址：http://localhost:9999/Member/Deliver/DeliverAddress.aspx
+引发异常的方法： Int32 UpdateDataTable(System.Data.DataTable)
+堆栈信息：    在 SigeShop.Dao.BaseDao.UpdateDataTable(DataTable dt) 位置 f:\开发项目\SigeShop\SigeShop.Dao\BaseDao.cs:行号 108
+   在 SigeShop.Service.BaseService.UpdateDataTable(DataTable dt) 位置 f:\开发项目\SigeShop\SigeShop.Service\BaseService.cs:行号 61
+   在 SigeShop.Service.MemberService.SaveDeliverAddress(DeliverAddressInfo info) 位置 f:\开发项目\SigeShop\SigeShop.Service\Member\MemberService.cs:行号 313
+   在 _dynamic_SigeShop.Service.MemberService.SaveDeliverAddress(Object , Object[] )
+   在 Spring.Reflection.Dynamic.SafeMethod.Invoke(Object target, Object[] arguments)
+   在 Spring.Aop.Framework.DynamicMethodInvocation.InvokeJoinpoint()
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Transaction.Interceptor.TransactionInterceptor.Invoke(IMethodInvocation invocation)
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Aop.Framework.DynamicProxy.AdvisedProxy.Invoke(Object proxy, Object target, Type targetType, MethodInfo targetMethod, MethodInfo proxyMethod, Object[] args, IList interceptors)
+   在 CompositionAopProxy_cd9597a5dbf24f8b8381b74ffc9554f2.SaveDeliverAddress(DeliverAddressInfo info)
+   在 SigeShop.Web.Member.Deliver.DeliverAddress.btnSave_Click(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\Deliver\DeliverAddress.aspx.cs:行号 112
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/Deliver/DeliverAddress.aspx[10:12]--------------------------------
+错误消息：不能将值 NULL 插入列 'MemberID'，表 'SigeShop.dbo.T_DeliverAddress'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+发生时间：2015/06/16 10:12:03
+错误源： .Net SqlClient Data Provider
+站点地址：http://localhost:9999/Member/Deliver/DeliverAddress.aspx
+引发异常的方法： Int32 UpdateDataTable(System.Data.DataTable)
+堆栈信息：    在 SigeShop.Dao.BaseDao.UpdateDataTable(DataTable dt) 位置 f:\开发项目\SigeShop\SigeShop.Dao\BaseDao.cs:行号 108
+   在 SigeShop.Service.BaseService.UpdateDataTable(DataTable dt) 位置 f:\开发项目\SigeShop\SigeShop.Service\BaseService.cs:行号 61
+   在 SigeShop.Service.MemberService.SaveDeliverAddress(DeliverAddressInfo info) 位置 f:\开发项目\SigeShop\SigeShop.Service\Member\MemberService.cs:行号 313
+   在 _dynamic_SigeShop.Service.MemberService.SaveDeliverAddress(Object , Object[] )
+   在 Spring.Reflection.Dynamic.SafeMethod.Invoke(Object target, Object[] arguments)
+   在 Spring.Aop.Framework.DynamicMethodInvocation.InvokeJoinpoint()
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Transaction.Interceptor.TransactionInterceptor.Invoke(IMethodInvocation invocation)
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Aop.Framework.DynamicProxy.AdvisedProxy.Invoke(Object proxy, Object target, Type targetType, MethodInfo targetMethod, MethodInfo proxyMethod, Object[] args, IList interceptors)
+   在 CompositionAopProxy_3e1fc098e16e4bf8ae2eca6f396aae6e.SaveDeliverAddress(DeliverAddressInfo info)
+   在 SigeShop.Web.Member.Deliver.DeliverAddress.btnSave_Click(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\Deliver\DeliverAddress.aspx.cs:行号 113
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MemberInfo.aspx[16:17]--------------------------------
+错误消息：f:\开发项目\SigeShop\SigeShop.Web\Member\MemberInfo.aspx(61): error CS0117: “ASP.member_memberinfo_aspx”并不包含“ddlProvince_SelectedIndexChanged”的定义
+发生时间：2015/06/16 16:17:50
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MemberInfo.aspx
+引发异常的方法： System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+堆栈信息：    在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.HttpRuntimeEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreateHandler(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/Meminfo.aspx[16:43]--------------------------------
+错误消息：类型“System.Web.UI.UpdatePanel”不具有名为“class”的公共属性。
+发生时间：2015/06/16 16:43:12
+错误源： System.Web
+站点地址：http://localhost:9999/Member/Meminfo.aspx
+引发异常的方法： Void AddProperty(System.String, System.String, System.String, Boolean)
+堆栈信息：    在 System.Web.UI.ControlBuilder.AddProperty(String filter, String name, String value, Boolean mainDirectiveMode)
+   在 System.Web.UI.ControlBuilder.PreprocessAttribute(String filter, String attribname, String attribvalue, Boolean mainDirectiveMode)
+   在 System.Web.UI.ControlBuilder.PreprocessAttributes(ParsedAttributeCollection attribs)
+   在 System.Web.UI.ControlBuilder.Init(TemplateParser parser, ControlBuilder parentBuilder, Type type, String tagName, String id, IDictionary attribs)
+   在 System.Web.UI.ControlBuilder.CreateBuilderFromType(TemplateParser parser, ControlBuilder parentBuilder, Type type, String tagName, String id, IDictionary attribs, Int32 line, String sourceFileName)
+   在 System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   在 System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MemInfo.aspx[17:53]--------------------------------
+错误消息：类型“System.Web.UI.UpdatePanel”不具有名为“class”的公共属性。
+发生时间：2015/06/16 17:53:48
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MemInfo.aspx
+引发异常的方法： Void AddProperty(System.String, System.String, System.String, Boolean)
+堆栈信息：    在 System.Web.UI.ControlBuilder.AddProperty(String filter, String name, String value, Boolean mainDirectiveMode)
+   在 System.Web.UI.ControlBuilder.PreprocessAttribute(String filter, String attribname, String attribvalue, Boolean mainDirectiveMode)
+   在 System.Web.UI.ControlBuilder.PreprocessAttributes(ParsedAttributeCollection attribs)
+   在 System.Web.UI.ControlBuilder.Init(TemplateParser parser, ControlBuilder parentBuilder, Type type, String tagName, String id, IDictionary attribs)
+   在 System.Web.UI.ControlBuilder.CreateBuilderFromType(TemplateParser parser, ControlBuilder parentBuilder, Type type, String tagName, String id, IDictionary attribs, Int32 line, String sourceFileName)
+   在 System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   在 System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MemInfo.aspx[17:54]--------------------------------
+错误消息：类型“System.Web.UI.UpdatePanel”不具有名为“class”的公共属性。
+发生时间：2015/06/16 17:54:36
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MemInfo.aspx
+引发异常的方法： Void AddProperty(System.String, System.String, System.String, Boolean)
+堆栈信息：    在 System.Web.UI.ControlBuilder.AddProperty(String filter, String name, String value, Boolean mainDirectiveMode)
+   在 System.Web.UI.ControlBuilder.PreprocessAttribute(String filter, String attribname, String attribvalue, Boolean mainDirectiveMode)
+   在 System.Web.UI.ControlBuilder.PreprocessAttributes(ParsedAttributeCollection attribs)
+   在 System.Web.UI.ControlBuilder.Init(TemplateParser parser, ControlBuilder parentBuilder, Type type, String tagName, String id, IDictionary attribs)
+   在 System.Web.UI.ControlBuilder.CreateBuilderFromType(TemplateParser parser, ControlBuilder parentBuilder, Type type, String tagName, String id, IDictionary attribs, Int32 line, String sourceFileName)
+   在 System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   在 System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MemInfo.aspx[18:07]--------------------------------
+错误消息：f:\开发项目\SigeShop\SigeShop.Web\Member\MemInfo.aspx(79): error CS0117: “ASP.member_meminfo_aspx”并不包含“btnUpdateMem_Click”的定义
+发生时间：2015/06/16 18:07:35
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MemInfo.aspx
+引发异常的方法： System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+堆栈信息：    在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.HttpRuntimeEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreateHandler(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 

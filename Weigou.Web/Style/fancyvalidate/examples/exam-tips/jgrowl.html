@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - qtip</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <link href="../../external/stanlemon-jgrowl/jquery.jgrowl.css" rel="stylesheet" />
+  <script src="../../external/jquery-1.7.1.min.js"></script>
+  <script src="../../external/stanlemon-jgrowl/jquery.jgrowl_google.js"></script>
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      $.jGrowl.defaults.closerTemplate = '<div>关闭所有提示</div>';
+      $.jGrowl.defaults.pool = 5;
+      var result = $("<div class='center' />").appendTo(document.body),
+        tips = $("<div class='top-right' />").appendTo(document.body);
+
+      var val = $f("fancyform", {
+        rules: {
+          uname: { required: 1, minlength: 7, prefix: "fancy" }
+          , email: { required: 1, email: 1 }
+          , pwd: { required: 1, rangelength: [6, 8] }
+          , pwd2: { required: 1, compareTo: "pwd" }
+          , other2: { required: 1 }
+        }
+        , messages: {
+          uname: { required: "用户名必须填写", prefix: "用户名必须fancy开头" }
+          , email: { required: "email必须填写" }
+          , pwd: { required: "密码必须填写" }
+          , pwd2: { required: "确认密码必须填写" }
+          , other2: { required: "其他必须填写" }
+        }
+        , submitHandler: function() {
+          result.jGrowl("验证成功", {
+            header: '提示',
+            closer: false,
+            sticky: true
+          });
+        }
+      });
+
+      // 显示隐藏提示
+      $f.core.extend(true, val, {
+        showLabel: function(obj) {
+          if (obj.message)
+            tips.jGrowl(obj.message);
+        },
+        hideLabel: function(obj) {
+          tips.jGrowl("close");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>jgrowl 提示效果</h1>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" />
+      </li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" />
+      </li>
+      <li>
+        <label class="ttl">密码：</label>
+        <input class="fin h23" name="pwd" type="password" />
+      </li>
+      <li>
+        <label class="ttl">确认密码：</label>
+        <input class="fin h23" name="pwd2" type="password" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other2" />
+      </li>
+    </ul>
+  </fieldset>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

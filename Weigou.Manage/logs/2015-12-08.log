@@ -1,0 +1,14 @@
+2015-12-08 16:51:19.061 ERROR HttpService: System.Security.Cryptography.CryptographicException: 系统找不到指定的路径。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptogaphicException(Int32 hr)
+   在 System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName, String password)
+   在 MeiJin.Pay.Weixin.Pay.HttpService.Post(String xml, String url, Boolean isUseCert, Int32 timeout) 位置 d:\Working Directory\MeiJin\MeiJin.Pay\Weixin\Pay\HttpService.cs:行号 68
+2015-12-08 16:54:42.996 ERROR HttpService: System.Security.Cryptography.CryptographicException: 系统找不到指定的路径。
+
+   在 System.Security.Cryptography.CryptographicException.ThrowCryptogaphicException(Int32 hr)
+   在 System.Security.Cryptography.X509Certificates.X509Utils._QueryCertFileType(String fileName)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate.LoadCertificateFromFile(String fileName, Object password, X509KeyStorageFlags keyStorageFlags)
+   在 System.Security.Cryptography.X509Certificates.X509Certificate2..ctor(String fileName, String password)
+   在 MeiJin.Pay.Weixin.Pay.HttpService.Post(String xml, String url, Boolean isUseCert, Int32 timeout) 位置 d:\Working Directory\MeiJin\MeiJin.Pay\Weixin\Pay\HttpService.cs:行号 68

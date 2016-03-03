@@ -1,0 +1,19 @@
+--------------------------------系统出现异常http://localhost:9999/App/ServiceList.aspx[17:09]--------------------------------
+错误消息：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: 命名管道提供程序, error: 40 - 无法打开到 SQL Server 的连接)
+发生时间：2015/11/11 17:09:49
+错误源： .Net SqlClient Data Provider
+站点地址：http://localhost:9999/App/ServiceList.aspx
+引发异常的方法： System.Data.ProviderBase.DbConnectionInternal GetConnection(System.Data.Common.DbConnection)
+堆栈信息：    在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Spring.Data.Support.ConnectionUtils.DoGetConnection(IDbProvider provider)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Spring.Data.Support.ConnectionUtils.DoGetConnection(IDbProvider provider)
+   在 Spring.Data.Support.ConnectionUtils.GetConnectionTxPair(IDbProvider provider)
+
+ 

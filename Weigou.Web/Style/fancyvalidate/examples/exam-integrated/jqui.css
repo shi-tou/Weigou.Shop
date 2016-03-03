@@ -1,0 +1,38 @@
+﻿body {
+  font-size: .8em;
+}
+.ttl {
+  float: left;
+}
+.ui-datepicker {
+  font-size: 11px;
+}
+.ui-datepicker select.ui-datepicker-year, .ui-datepicker select.ui-datepicker-month {
+  width: auto;
+}
+/* combobox */
+.ui-button {
+  margin-left: -1px;
+}
+.ui-button-icon-only .ui-button-text {
+  padding: 0.35em;
+}
+.ui-autocomplete-input {
+  margin: 0;
+  padding: 0.48em 0 0.47em 0.45em;
+}
+/*buttonset*/
+.bset {
+  display: inline-block;
+}
+.dialog {
+  display: none;
+}
+/*slider*/
+.age input {
+  display: none;
+}
+.age #slider{
+  width: 200px;
+  display: inline-block;
+}

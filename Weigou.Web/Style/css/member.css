@@ -1,0 +1,31 @@
+﻿/*common*//
+body{ background:#f5f5f5;margin:0px; padding:0px;}
+.w150{ width:150px;}
+.w180{ width:180px;}
+.w200{ width:200px;}
+.w250{ width:250px;}
+.w400{ width:400px !important;}
+
+.mem_container{ width:1000px; margin:0px auto; padding:0px;}
+.row{ padding:0px; margin:0px;}
+col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9{ margin:0px; padding:0px;}
+
+
+.memform{ width:100%; line-height:35px;}
+.memform th{ width:150px;font-size:14px; font-weight:700; text-align:right;}
+.memform td{ text-align:left; padding:5px 10px;}
+.memform .txt
+{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    font-size: 14px;
+    width:180px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}

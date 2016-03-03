@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - qtip</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../external/jquery.qtip/jquery.qtip.min.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../external/jquery-1.7.1.min.js"></script>
+  <script src="../../external/jquery.qtip/jquery.qtip.min.js"></script>
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      // qtip 的各种可用样式
+      var tooltipCount = 0,
+        at = [
+		      'right center', 'top left', 'bottom left', 'left center',
+          'right top', 'top right', 'bottom right', 'left top',
+          'right bottom', 'top center', 'bottom center', 'left bottom', 'center'
+	      ],
+	      my = [
+		      'left center', 'bottom left', 'top left', 'right center',
+          'left top', 'bottom right', 'top right', 'right top',
+          'left bottom', 'bottom center', 'top center', 'right bottom', 'center'
+	      ],
+	      styles = [
+		      'red', 'blue', 'dark', 'light', 'green', 'cream', 'jtools', 'youtube', 'cluetip', 'tipsy', 'tipped', 'plain', 'default'
+	      ];
+
+      // 各个输入框的qtip样式
+      $(":text,:password").each(function(i) {
+        this.api = $(this).qtip({
+          content: {
+            text: 'I really like owls!'
+            , title: { text: my[i] + ' ' + at[i] + ' ' + styles[i], button: 'x' }
+          }
+          , position: {
+            my: my[i]
+		        , at: at[i]
+          }
+          //, show: { ready: true }
+          , show: { event: false }
+          , style: {
+            tip: true // Give them tips with auto corner detection
+            , classes: "ui-tooltip-" + styles[i] + " ui-tooltip-shadow ui-tooltip-rounded"
+          }
+          , hide: false
+        }).qtip("api");
+      });
+
+      // dialog方式
+      var bapi = $(':submit').qtip({
+        content: {
+          text: "<h3 style='text-align:center;'>验 证 成 功</h3>",
+          title: {
+            text: ' 提 示 ',
+            button: true
+          }
+        },
+        position: {
+          my: 'center', // ...at the center of the viewport
+          at: 'center',
+          target: $(window)
+        },
+        show: {
+          event: false,
+          solo: true,
+          modal: true
+        },
+        hide: false,
+        style: {
+          classes: 'ui-tooltip-blue ui-tooltip-shadow ui-tooltip-rounded',
+          width: 200,
+          height: 50
+        }
+      }).qtip("api");
+
+      // 各规则
+      var val = $f("fancyform", {
+        rules: {
+          uname: { required: 1, minlength: 7, prefix: "fancy" }
+          , email: { required: 1, email: 1 }
+          , pwd: { required: 1, rangelength: [6, 8] }
+          , pwd2: { required: 1, compareTo: "pwd" }
+          , other2: { required: 1 }
+          , other3: { required: 1 }
+          , other4: { required: 1 }
+          , other5: { required: 1 }
+          , other6: { required: 1 }
+          , other7: { required: 1 }
+          , other8: { required: 1 }
+          , other9: { required: 1 }
+          , other10: { required: 1 }
+        }
+        , messages: {
+          uname: { required: "用户名必须填写", prefix: "用户名必须fancy开头" }
+          , email: { required: "email必须填写" }
+          , pwd: { required: "密码必须填写" }
+        }
+        , submitHandler: function() {
+          bapi.toggle(true);
+        }
+      });
+
+      // 显示隐藏提示
+      $f.core.extend(true, val, {
+        showLabel: function(obj) {
+          setTimeout(function() {
+            obj.key.api.set('content.text', obj.message || "验证成功").toggle(true);
+          }, 100);
+        },
+        hideLabel: function(obj) {
+          obj.key.api.toggle(false);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>qtip 提示效果</h1>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" />
+      </li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" />
+      </li>
+      <li>
+        <label class="ttl">密码：</label>
+        <input class="fin h23" name="pwd" type="password" />
+      </li>
+      <li>
+        <label class="ttl">确认密码：</label>
+        <input class="fin h23" name="pwd2" type="password" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other2" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other3" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other4" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other5" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other6" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other7" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other8" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other9" />
+      </li>
+      <li>
+        <label class="ttl">其他：</label>
+        <input class="fin h23" type="text" name="other10" />
+      </li>
+    </ul>
+  </fieldset>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

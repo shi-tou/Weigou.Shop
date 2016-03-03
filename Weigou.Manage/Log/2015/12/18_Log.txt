@@ -1,0 +1,20 @@
+--------------------------------DefaultConfigFileManager.DeserializeInfo[11:42]--------------------------------
+XML 文档(2, 2)中有错误。
+
+ 
+--------------------------------DefaultConfigFileManager.DeserializeInfo[11:44]--------------------------------
+XML 文档(2, 2)中有错误。
+
+ 
+--------------------------------DefaultConfigFileManager.DeserializeInfo[11:46]--------------------------------
+XML 文档(2, 2)中有错误。
+
+ 
+--------------------------------DefaultConfigFileManager.DeserializeInfo[11:49]--------------------------------
+XML 文档(2, 2)中有错误。
+
+ 
+--------------------------------DefaultConfigFileManager.DeserializeInfo[11:49]--------------------------------
+XML 文档(2, 2)中有错误。
+
+ 

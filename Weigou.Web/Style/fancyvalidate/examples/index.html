@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - Javascript Form Validation</title>
+  <link href="css/example-layout.css" rel="stylesheet" />
+  <link href="css/loading.css" rel="stylesheet" />
+  <link href="../external/dynatree/skin-vista/ui.dynatree.css" rel="stylesheet" />
+  <link href="../external/stanlemon-jgrowl/jquery.jgrowl.css" rel="stylesheet" />
+  <script src="../external/jquery-1.7.1.min.js"></script>
+  <script src="../external/jquery-ui/js/jquery-ui-1.8.17.custom.min.js"></script>
+  <script src="../external/jquery.layout-latest.js"></script>
+  <script src="../external/jquery.cookie.js"></script>
+  <script src="../external/dynatree/jquery.dynatree.min.js"></script>
+  <script src="../external/jquery.loading.1.6.4.min.js"></script>
+  <script>
+    $(function() {
+      $('body').layout({
+        scrollToBookmarkOnLoad: false // handled by custom code so can 'unhide' section first
+        /*, defaults: {
+        }*/
+		    , north: {
+		      size: 50
+		      , spacing_open: 2
+			    , closable: false
+			    , resizable: false
+		    }
+		    , west: {
+		      size: 280
+			    , spacing_closed: 22
+			    , togglerLength_closed: 80
+			    , togglerAlign_closed: "top"
+			    , togglerContent_closed: "目<br />录<br />列<br />表"
+		    }
+      });
+
+      var body = $(document.body);
+
+      $("#content").load(function() {
+        body.loading(false);
+      });
+
+      $("#nav").dynatree({
+        autoFocus: true,
+        minExpandLevel: 2,
+        onClick: function(node) {
+          if (node.data.href) {
+            body.loading({ text: node.data.title + " 加载中...", align: "top-center" });
+            window.open(node.data.href + "?" + (+new Date), "content");
+          }
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <iframe class="ui-layout-center" src="example-index.html" id="content" name="content" width="100%" height="600" frameborder="0" scrolling="auto"></iframe>
+  <div class="ui-layout-north">
+    <div class="header">Fancy Validate - Javascript Form Validation</div>
+  </div>
+  <div id="nav" class="ui-layout-west">
+    <ul>
+      <li><a href="../doc.html"><strong>文档</strong></a></li>
+      <li><a href="example-index.html"><strong>首页</strong></a></li>
+      <li class="folder expnded">提示信息位置
+        <ul>
+          <li><a target="content" href="exam-pos/container.html">在容器中显示</a></li>
+          <li><a target="content" href="exam-pos/container-rich.html">在容器中显示(更丰富)</a></li>
+          <li><a target="content" href="exam-pos/lastchild.html">作为最后一个子节点</a></li>
+          <li><a target="content" href="exam-pos/absolute.html">使用绝对定位</a></li>
+          <li><a target="content" href="exam-pos/messages.html">完全自定义</a></li>
+        </ul>
+      </li>
+      <li class="folder expnded">提示效果
+        <ul>
+          <li><a target="content" href="exam-tips/bubble.html">气泡提示</a></li>
+          <li><a target="content" href="exam-tips/arrow.html">箭头提示</a></li>
+          <li><a target="content" href="exam-tips/fcbox.html">fcbox</a></li>
+          <li><a target="content" href="exam-tips/qtip.html">qtip</a></li>
+          <li><a target="content" href="exam-tips/jgrowl.html">jgrowl</a></li>
+        </ul>
+      </li>
+      <li class="folder expnded">规则定义
+        <ul>
+          <li><a target="content" href="exam-rule/htmlattr.html">HTML属性</a></li>
+          <li><a target="content" href="exam-rule/html5attr.html">HTML5属性(在0.1.8已废弃)</a></li>
+          <li><a target="content" href="exam-rule/rulekey.html">自定义规则key名称</a></li>
+          <li><a target="content" href="exam-rule/rulekeyalter.html">自定义两种规则key名称</a></li>
+          <li><a target="content" href="exam-rule/ruleattr.html">自定义规则属性名称</a></li>
+          <li><a target="content" href="exam-rule/dynamicform.html">动态表单/手动注册</a></li>
+        </ul>
+      </li>
+      <li class="folder expnded">内置方法
+        <ul>
+          <li><a target="content" href="exam-methods/rules.html">内置规则</a></li>
+          <li><a target="content" href="exam-methods/autoTab.html">自动Tab到下一元素</a></li>
+          <li><a target="content" href="exam-methods/watermark.html">文本框水印</a></li>
+        </ul>
+      </li>
+      <li class="folder expnded">插件集成
+        <ul>
+          <li><a target="content" href="exam-integrated/meio.mask.html">掩码输入meio.mask</a></li>
+          <li><a target="content" href="exam-integrated/maskedinput.html">掩码输入maskedinput</a></li>
+          <li><a target="content" href="exam-integrated/jqueryui.html">jQuery UI</a></li>
+          <li><a target="content" href="exam-integrated/jqueryui-dialog.html">jQuery UI弹出窗口</a></li>
+        </ul>
+      </li>
+      <li class="folder expnded">自定义主题
+        <ul>
+          <li><a target="content" href="exam-theme/carbon.html">Carbon Fiber Signup Form</a></li>
+          <li><a target="content" href="exam-theme/jqtransform.html">jqTransform</a></li>
+          <li><a target="content" href="exam-theme/idealforms.html">Ideal Forms</a></li>
+          <li><a target="content" href="exam-theme/formly.html">formly</a></li>
+          <li><a target="content" href="exam-theme/uniform.html">pixelmatrix uniform</a></li>
+          <li><a target="content" href="exam-theme/niceforms.html">niceforms</a></li>
+        </ul>
+      </li>
+      <li class="folder expnded">asp.net集成
+        <ul>
+          <li><a target="content" href="exam-aspnet/index.aspx">asp.net集成</a></li>
+          <li><a target="content" href="exam-aspnet/checkbox.aspx">邪恶的checkbox</a></li>
+          <li><a target="content" href="exam-aspnet/volatile.aspx">兼容asp.net的AutoId</a></li>
+          <li><a target="content" href="exam-aspnet/volatile2.aspx">兼容asp.net的AutoId(2)</a></li>
+        </ul>
+      </li>
+      <li><a href="generator/generator.html">简易生成器</a></li>
+    </ul>
+  </div>
+</body>
+</html>

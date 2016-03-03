@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - fcbox</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <link href="../../external/fcbox/classic/formcheck.css" rel="stylesheet" id="themecss" />
+  <style>
+    .fc-tbx {
+      margin-top: -50px;
+      margin-left: -50px;
+      position: absolute;
+    }
+    .fc-tbx p {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  </style>
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      var lnk = $f.dom.get("themecss"),
+                sw = $f.dom.get("themeswitcher");
+      $f.event.add(sw, "change", function() {
+        lnk.href = "../../external/fcbox/" + sw.value + "/formcheck.css";
+      });
+
+      function fcboxTip(label, elem) {
+        $f.appendContainer.call(this, label, elem);
+        label.innerHTML = '<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td class="tl"></td><td class="t"></td><td class="tr"></td></tr><tr><td class="l"></td><td class="c"><div class="err"><p></p></div><a class="close"></a></td><td class="r"></td></tr><tr><td class="bl"></td><td class="b"></td><td class="br"></td></tr></tbody></table>';
+        label.textNode = label.getElementsByTagName("p")[0];
+        label.vtarget = elem;
+        var ac = label.getElementsByTagName("a")[0];
+        $f.event.add(ac, "click", function() {
+          $f.dom.toggle(label);
+        });
+      }
+
+      $f("fancyform", {
+        rules: {
+          uname: { required: 1, minlength: 7, prefix: "fancy" }
+          , email: { required: 1, email: 1 }
+          , pwd: { required: 1, rangelength: [6, 8] }
+          , pwd2: { required: 1, compareTo: "pwd" }
+        }
+        , messages: {
+          uname: { required: "用户名必须填写", prefix: "用户名必须fancy开头" }
+          , email: { required: "email必须填写" }
+          , pwd: { required: "密码必须填写" }
+        }
+        , submitHandler: function() {
+          alert("验证成功！");
+        }
+        , validCls: ""
+        , errorCls: "fc-tbx"
+        , errorElement: "div"
+        , container: document.body
+        , appendLabel: fcboxTip
+        , labelText: $f.tipText
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>fcbox 提示效果</h1>
+  <h2>
+    更改主题：
+    <select id="themeswitcher" class="fin">
+      <option value="blue">蓝色</option>
+      <option value="classic" selected>经典黑色</option>
+      <option value="green">绿色</option>
+      <option value="grey">灰色</option>
+      <option value="red">红色</option>
+      <option value="white">白色</option>
+    </select>
+  </h2>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" />
+      </li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" />
+      </li>
+      <li>
+        <label class="ttl">密码：</label>
+        <input class="fin h23" name="pwd" type="password" />
+      </li>
+      <li>
+        <label class="ttl">确认密码：</label>
+        <input class="fin h23" name="pwd2" type="password" />
+      </li>
+    </ul>
+  </fieldset>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

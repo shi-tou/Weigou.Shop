@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - bubble</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      var sw = $f.dom.get("themeswitcher");
+      function getTheme() {
+        var t, u = location.href,
+          ix = u.indexOf("t="),
+          ix2 = u.indexOf("?");
+        if (ix > -1) {
+          t = u.slice(ix + 2);
+          u = u.slice(0, ix2);
+        }
+        sw.value = t || "bblue";
+        return { t: sw.value, u: u };
+      }
+      $f.event.add(sw, "change", function() {
+        var v = sw.value;
+        location.href = getTheme().u + "?t=" + v;
+      });
+
+      $f("fancyform", {
+        rules: {
+          uname: { required: 1, minlength: 7, prefix: "fancy" }
+          , email: { required: 1, email: 1 }
+          , pwd: { required: 1, rangelength: [6, 8] }
+          , pwd2: { required: 1, compareTo: "pwd" }
+        }
+        , messages: {
+          uname: { required: "用户名必须填写", prefix: "用户名必须fancy开头" }
+          , email: { required: "email必须填写" }
+          , pwd: { required: "密码必须填写" }
+        }
+        , submitHandler: function() {
+          alert("验证成功！");
+        }
+        , validCls: ""
+        , errorCls: getTheme().t + " m4l3" //"bblue m4l3"
+        , errorElement: "div"
+        , container: document.body
+        , appendLabel: $f.bubbleTip
+        , labelText: $f.tipText
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>bubble 气泡提示效果</h1>
+  <h2>
+    更改主题：
+    <select id="themeswitcher" class="fin">
+      <option value="bblue">蓝色</option>
+      <option value="bblue2">蓝色2</option>
+      <option value="bblue3">蓝色3</option>
+      <option value="bgreen">绿色</option>
+      <option value="bgreen2">绿色2</option>
+      <option value="bred">红色</option>
+      <option value="borange">橙色</option>
+      <option value="bcream">米色</option>
+      <option value="bdark">灰色</option>
+      <option value="bblack">黑色</option>
+    </select>
+  </h2>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" />
+      </li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" />
+      </li>
+      <li>
+        <label class="ttl">密码：</label>
+        <input class="fin h23" name="pwd" type="password" />
+      </li>
+      <li>
+        <label class="ttl">确认密码：</label>
+        <input class="fin h23" name="pwd2" type="password" />
+      </li>
+    </ul>
+  </fieldset>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

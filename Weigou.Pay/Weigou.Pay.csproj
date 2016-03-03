@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D378D7DB-547B-4378-9760-7AFF52428B7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weigou.Pay</RootNamespace>
+    <AssemblyName>Weigou.Pay</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alipay\Pay\AlipayConfig.cs" />
+    <Compile Include="Alipay\Pay\AlipayCore.cs" />
+    <Compile Include="Alipay\Pay\AlipayNotify.cs" />
+    <Compile Include="Alipay\Pay\RSA.cs" />
+    <Compile Include="Alipay\Refund\AlipayConfig.cs" />
+    <Compile Include="Alipay\Refund\AlipayCore.cs" />
+    <Compile Include="Alipay\Refund\AlipayNotify.cs" />
+    <Compile Include="Alipay\Refund\AlipaySubmit.cs" />
+    <Compile Include="Alipay\Refund\MD5.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unionpay\Pay\BigNum.cs" />
+    <Compile Include="Unionpay\Pay\CertUtil.cs" />
+    <Compile Include="Unionpay\Pay\DemoUtil.cs" />
+    <Compile Include="Unionpay\Pay\HttpClient.cs" />
+    <Compile Include="Unionpay\Pay\SDKConfig.cs" />
+    <Compile Include="Unionpay\Pay\SDKUtil.cs" />
+    <Compile Include="Unionpay\Pay\SecurityUtil.cs" />
+    <Compile Include="Unionpay\Pay\TxnType.cs" />
+    <Compile Include="Weixin\Pay\Exception.cs" />
+    <Compile Include="Weixin\Pay\HttpService.cs" />
+    <Compile Include="Weixin\Pay\Log.cs" />
+    <Compile Include="Weixin\Pay\Notify.cs" />
+    <Compile Include="Weixin\Pay\WxPayApi.cs" />
+    <Compile Include="Weixin\Pay\WxPayConfig.cs" />
+    <Compile Include="Weixin\Pay\WxPayData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Weigou.Common\Weigou.Common.csproj">
+      <Project>{28e32696-9cbd-4c0b-bed7-416ef4a08975}</Project>
+      <Name>Weigou.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Config\Weigou.Config.csproj">
+      <Project>{e9a30b42-30a0-45cc-a8af-22e6f358725d}</Project>
+      <Name>Weigou.Config</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+--------------------------------系统出现异常http://localhost:9999/Member/MyFavorite.aspx[14:37]--------------------------------
+错误消息：服务器标记的格式不正确。
+发生时间：2015/06/17 14:37:19
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyFavorite.aspx
+引发异常的方法： Void ProcessError(System.String)
+堆栈信息：    在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.DetectSpecialServerTagError(String text, Int32 textPos)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+
+ 

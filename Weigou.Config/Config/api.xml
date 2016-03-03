@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+	<!--Api-->
+	<object type="Weigou.Api.Base.BaseApi,Weigou.Api">
+		<property name="SysService" ref="sysService"/>
+    <property name="MemberService" ref="memberService"/>
+    <property name="GoodsService" ref="goodsService"/>
+    <property name="ReportService" ref="reportService"/>
+    <property name="SmsService" ref="smsService"/>
+    <property name="ContentService" ref="contentService"/>
+    <property name="OrderService" ref="orderService"/>
+	</object>
+  <!--test页面-->
+  <object type="test.aspx">
+    <property name="SysService" ref="sysService"/>
+  </object>
+  <!--api页面-->
+  <object type="api.aspx">
+    <property name="SysService" ref="sysService"/>
+  </object>
+  <!--UploadPhoto页面-->
+  <object type="UploadPhoto.aspx">
+    <property name="MemberService" ref="memberService"/>
+  </object>
+  <!--UploadPhotoCar页面(上传车辆相关图片)-->
+  <object type="UploadPhotoCar.aspx">
+    <property name="CarService" ref="carService"/>
+  </object>
+  <!--支付宝回调页面-->
+  <object type="Pay/Alipay/PayNotify.aspx">
+    <property name="OrderService" ref="orderService"/>
+  </object>
+  <object type="Pay/Alipay/RefundNotify.aspx">
+    <property name="OrderService" ref="orderService"/>
+  </object>
+  <!--微信回调页面-->
+  <object type="Pay/Weixin/PayNotify.aspx">
+    <property name="OrderService" ref="orderService"/>
+  </object>
+  <!--银联回调页面-->
+  <object type="Pay/Unionpay/PayNotify.aspx">
+    <property name="OrderService" ref="orderService"/>
+  </object>
+  <object type="Pay/Unionpay/RefundNotify.aspx">
+    <property name="OrderService" ref="orderService"/>
+  </object>
+</objects>

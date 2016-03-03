@@ -1,0 +1,23 @@
+--------------------------------系统出现异常http://localhost:9999/car_map.aspx[12:00]--------------------------------
+错误消息：g:\项目开发\Weiche\Weiche.Web\car_map.aspx(32): error CS1002: 应输入 ;
+发生时间：2015/11/25 12:00:09
+错误源： System.Web
+站点地址：http://localhost:9999/car_map.aspx
+引发异常的方法： System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+堆栈信息：    在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.HttpRuntimeEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreateHandler(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 

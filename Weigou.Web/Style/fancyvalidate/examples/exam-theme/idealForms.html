@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - Ideal Forms</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../external/forms/idealforms1.02/css/normalize.css" rel="stylesheet" />
+  <link href="../../external/forms/idealforms1.02/css/idealforms/idealforms.css" rel="stylesheet" />
+  <link href="../../external/forms/idealforms1.02/css/master.css" rel="stylesheet" media="screen" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <style>
+    ul.idealcheck li, ul.idealradio li {
+      display: inline-block;
+    }
+    li { margin: 0; }
+    body {
+      width: 700px;
+    }
+  </style>
+  <!--[if lt IE 8]>
+  <style>
+  .main-label, ul.idealcheck, ul.idealcheck li, ul.idealradio, ul.idealradio li { float: left; }
+  div { clear: both; }
+  </style>
+  <![endif]-->
+  <script src="../../external/jquery-1.7.1.min.js"></script>
+  <script src="../../external/forms/idealforms1.02/js/jquery.idealforms.js"></script>
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $(function() {
+      $("#fancyform").idealforms();
+    });
+  </script>
+  <script src="lastchild.js"></script>
+</head>
+<body>
+  <h1>Idea Forms</h1>
+  <form action="?" id="fancyform">
+  <fieldset>
+    <div>
+      <label>用户名：</label>
+      <input type="text" name="uname" />
+    </div>
+    <div>
+      <label>Email：</label>
+      <input name="email" type="text" />
+    </div>
+    <div>
+      <label>密码：</label>
+      <input name="pwd" type="password" />
+    </div>
+    <div>
+      <label>确认密码：</label>
+      <input name="pwd2" type="password" />
+    </div>
+    <div>
+      <label>头像：</label>
+      <input type="file" name="headpic" />
+    </div>
+    <div>
+      <label>姓名：</label>
+      <input type="text" name="rname" />
+    </div>
+    <div>
+      <label>性别：</label>
+      <ul>
+        <li><input type="radio" id="radio1" name="sex" /><label for="radio1">男</label></li>
+        <li><input type="radio" id="radio2" name="sex" /><label for="radio2">女</label></li>
+        <li><input type="radio" id="radio3" name="sex" /><label for="radio3">？？</label></li>
+      </ul>
+    </div>
+    <div>
+      <label>年龄：</label>
+      <input name="age" type="text" />
+    </div>
+    <div>
+      <label>位置：</label>
+      <select name="loc">
+        <option value="">请选择</option>
+        <option value="1">地球</option>
+        <option value="2">月球</option>
+        <option value="3">火星</option>
+      </select>
+    </div>
+    <div>
+      <label>爱好1：</label>
+      <select name="lov1" multiple="multiple" size="5">
+        <option value="1">打酱油</option>
+        <option value="2">打酱油</option>
+        <option value="3">打酱油</option>
+        <option value="4">打酱油</option>
+        <option value="5">打酱油</option>
+      </select>
+    </div>
+    <div>
+      <label>爱好2：</label>
+      <ul>
+        <li><input type="checkbox" id="check1" name="lov2" /><label for="check1">打酱油</label></li>
+        <li><input type="checkbox" id="check2" name="lov2" /><label for="check2">打酱油</label></li>
+        <li><input type="checkbox" id="check3" name="lov2" /><label for="check3">打酱油</label></li>
+      </ul>
+    </div>
+    <div>
+      <label>自我描述：</label>
+      <textarea name="desc"></textarea>
+    </div>
+    <div>
+      <label></label>
+      <input type="submit" value="提交" />
+    </div>
+  </fieldset>
+  </form>
+</body>
+</html>

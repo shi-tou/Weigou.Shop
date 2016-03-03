@@ -1,0 +1,29 @@
+﻿body{ background:#fff;color:#293846 !important;}
+
+.mt20{ margin-top:20px;}
+.mt50{ margin-top:50px;}
+.mt100{ margin-top:100px;}
+.tr{ text-align:right}
+.tl{ text-align:left}
+.green{ color:green;}
+.red{ color:red;}
+.blue{ color:blue;}
+/*---ibox---*/
+.ibox { margin-bottom:0px;}
+.ibox .ibox-tools a{ color:#fff;}
+.ibox .ibox-content{ padding-bottom:5px;}
+.ibox .ibox-content .form-group th{ padding-left:20px; text-align:right;}
+.ibox .ibox-content .form-group td{ text-align:left;}
+/*---form---*/
+.form{}
+.form th,.form td{ padding:5px;}
+.form th{ text-align:right;}
+/*---page---*/
+.pager{}
+.pager a {padding: 6px 12px;margin-left: -6px;color: #337AB7;text-decoration: none;border: 1px solid #DDD;}
+.pager .cpb {padding: 6px 12px;margin-left: -6px;color: #337AB7; background-color:#ddd; border: 1px solid #DDD;}
+.inline {display:inherit;}
+/*---tab---*/
+.nav-tabs{margin:5px; }
+
+

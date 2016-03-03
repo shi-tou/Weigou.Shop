@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - watermark</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      $f.placeHolder($f.dom.get("fancyform").elements);
+    });
+  </script>
+</head>
+<body>
+  <h1>watermark 文本框水印</h1>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" placeholder="输入用户名" />
+      </li>
+      <li>
+        <label class="ttl">年龄：</label>
+        <input class="fin h23" name="age" type="text" placeholder="输入年龄" />
+      </li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" placeholder="输入email" />
+      </li>
+      <li>
+        <label class="ttl">姓名：</label>
+        <input class="fin h23" name="rname" type="text" placeholder="输入姓名" />
+      </li>
+      <li>
+        <label class="ttl">自我描述：</label>
+        <textarea name="desc" class="tarea" placeholder="随便写点什么吧"></textarea>
+      </li>
+    </ul>
+  </fieldset>
+  </form>
+</body>
+</html>

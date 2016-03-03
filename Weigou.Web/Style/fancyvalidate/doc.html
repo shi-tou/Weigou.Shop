@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fancy Validate - documents</title>
+  <link href="examples/css/example.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>Documents 文档</h1>
+  <div class="item">
+    <h2>更新记录</h2>
+    <p>
+      02/01/2012 created<br />
+      04/02/2012 updated
+    </p>
+  </div>
+  <div class="item">
+    <h2>安装</h2>
+    <blockquote>
+      <p>
+        <strong>在页面头部引用核心脚本：</strong>
+      </p>
+      <pre style="font-family: NSimSun; font-size: 13; color: black; background: white;"><span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span
+        style="color: blue;">=&quot;fancyValidate.min.js&quot;&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span></pre>
+      <p>
+        <strong><span class="opl">(可选)</span>如果需要额外的验证规则，则再引用附加脚本：</strong>
+      </p>
+      <pre style="font-family: NSimSun; font-size: 13; color: black; background: white;"><span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span
+        style="color: blue;">=&quot;fancyValidate.additional.min.js&quot;&gt;&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span></pre>
+      <p>
+        <strong>还有包括错误消息的样式：</strong></p>
+      <pre style="font-family: NSimSun; font-size: 13; color: black; background: white;"><span style="color: blue;">&lt;</span><span style="color: maroon;">link</span>&nbsp;<span style="color: red;">href</span><span
+        style="color: blue;">=&quot;css/fancyValidate.css&quot;</span>&nbsp;<span style="color: red;">rel</span><span style="color: blue;">=&quot;stylesheet&quot;/&gt;</span></pre>
+      <p>
+        <strong>然后在DOM加载完成时使用它：</strong></p>
+      <pre style="font-family: NSimSun; font-size: 13; color: black; background: white;"><span style="color: blue;">&lt;</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+$f.dom.ready(<span style="color: blue;">function</span>()&nbsp;{
+&nbsp;&nbsp;$f(<span style="color: maroon;">&quot;form1&quot;</span>,&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: darkgreen;">//各种选项...</span>
+&nbsp;&nbsp;});
+});
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span></pre>
+      <p>
+        <strong>整体看起来就像这样：</strong></p>
+      <pre style="font-family: NSimSun; font-size: 13; color: black; background: white;"><span style="color: blue;">&lt;</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">link</span>&nbsp;<span style="color: red;">href</span><span style="color: blue;">=&quot;css/fancyValidate.css&quot;</span>&nbsp;<span
+  style="color: red;">rel</span><span style="color: blue;">=&quot;stylesheet&quot;/&gt;</span>
+&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=&quot;fancyValidate.min.js&quot;&gt;&lt;/</span><span
+  style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span>&nbsp;<span style="color: red;">src</span><span style="color: blue;">=&quot;fancyValidate.additional.min.js&quot;&gt;&lt;/</span><span
+  style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;<span style="color: blue;">&lt;</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+&nbsp;&nbsp;$f.dom.ready(<span style="color: blue;">function</span>()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;$f(<span style="color: maroon;">&quot;form1&quot;</span>,&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: darkgreen;">//各种选项...</span>
+&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;});
+&nbsp;&nbsp;<span style="color: blue;">&lt;/</span><span style="color: maroon;">script</span><span style="color: blue;">&gt;</span>
+<span style="color: blue;">&lt;/</span><span style="color: maroon;">head</span><span style="color: blue;">&gt;</span></pre>
+    </blockquote>
+  </div>
+  <div class="item">
+    <h2>选项配置</h2>
+    <table class="tbl">
+      <tr>
+        <td class="ta">
+          参数
+        </td>
+        <td class="ta">
+          类型
+        </td>
+        <td class="ta">
+          说明
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          rules
+        </td>
+        <td class="ta">
+          Object
+        </td>
+        <td class="tb">
+          验证规则；如：<pre>rules: {required: 1,digit: 1}</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          messages
+        </td>
+        <td class="ta">
+          Object
+        </td>
+        <td class="tb">
+          验证规则对应的提示消息；如：<pre>messages: {required: "请填写",digit: "必须是数字"}</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>ruleKey
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          规则的key对应的元素属性；默认为：<pre>ruleKey: "name"</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>ruleKeyAlter
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          规则的key对应的元素属性(需要定义额外的不同于ruleKey时)；默认为：<pre>ruleKeyAlter: null</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>getKey (element)
+        </td>
+        <td class="ta">
+          Function
+        </td>
+        <td class="tb">
+          用于从元素获取规则的key；默认为：<pre>getKey: null</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>ruleAttr
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          规则内容对应的元素属性；默认为：<pre>ruleAttr: "data-val"</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>validCls
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          验证成功时标签的样式；默认为：<pre>validCls: "success"</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>errorCls
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          验证失败时标签的样式；默认为：<pre>errorCls: "error"</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>errorElCls
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          验证失败时元素的样式；默认为：<pre>errorElCls: "fld-error"</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>validElCls
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          验证成功时元素的样式；默认为：<pre>validElCls: "fld-valid"</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>activeElCls
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          元素获得焦点时的样式；默认为：<pre>activeElCls: "fld-active"</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>errorElement
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          显示提示信息的标签名称；默认为：<pre>errorElement: "label"</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>appendLabel (label, element)
+        </td>
+        <td class="ta">
+          Function
+        </td>
+        <td class="tb">
+          用于把提示信息标签添加到页面上；默认为：<pre>appendLabel: $f.appendNext</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>findLabel (element, forId)
+        </td>
+        <td class="ta">
+          Function
+        </td>
+        <td class="tb">
+          查找已有的提示信息标签；默认为：<pre>findLabel: $f.findNext</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>labelText (label, message)
+        </td>
+        <td class="ta">
+          Function
+        </td>
+        <td class="tb">
+          设置提示信息内容；默认为：<pre>labelText: 内置的(设置innerHTML)</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>interceptInput
+        </td>
+        <td class="ta">
+          Boolean
+        </td>
+        <td class="tb">
+          在输入时进行验证；默认为：<pre>interceptInput: true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>interceptSubmit
+        </td>
+        <td class="ta">
+          Boolean
+        </td>
+        <td class="tb">
+          在表单提交时进行验证；默认为：<pre>interceptSubmit: true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>focusInvalid
+        </td>
+        <td class="ta">
+          Boolean
+        </td>
+        <td class="tb">
+          验证失败时为元素获得焦点；默认为：<pre>focusInvalid: true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>autoTab
+        </td>
+        <td class="ta">
+          Boolean
+        </td>
+        <td class="tb">
+          验证成功时为下一个元素获取焦点；默认为：<pre>autoTab: false</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>submitRandom
+        </td>
+        <td class="ta">
+          Boolean
+        </td>
+        <td class="tb">
+          发送随机数到服务器；默认为：<pre>submitRandom: true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>submitHandler (form, event)
+        </td>
+        <td class="ta">
+          Function
+        </td>
+        <td class="tb">
+          自定义验证成功时的行为；默认为：<pre>submitHandler: null</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>beforeSubmit (form, event)
+        </td>
+        <td class="ta">
+          Function
+        </td>
+        <td class="tb">
+          表单提交前的行为；默认为：<pre>beforeSubmit: null</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>debug
+        </td>
+        <td class="ta">
+          Boolean
+        </td>
+        <td class="tb">
+          启用调试，用于输出一些信息；默认为：<pre>debug: false</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>getList (element)
+        </td>
+        <td class="ta">
+          Function
+        </td>
+        <td class="tb">
+          用于获取元素(主要是checkbox/radio)同组的元素列表；默认为：<pre>getList: null</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>highlight (element)
+        </td>
+        <td class="ta">
+          Function
+        </td>
+        <td class="tb">
+          验证失败时对元素进行操作，如设置样式；默认为：<pre>highlight: 内置的</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>unhighlight (element)
+        </td>
+        <td class="ta">
+          Function
+        </td>
+        <td class="tb">
+          验证成功时对元素进行操作，如设置样式；；默认为：<pre>unhighlight: 内置的</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="item">
+    <h2>内置的验证规则</h2>
+    <table class="tbl">
+      <tr>
+        <td class="ta">
+          名称
+        </td>
+        <td class="ta">
+          类型
+        </td>
+        <td class="ta">
+          说明
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          required
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          必填；如：<pre>required:1 required:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          compareTo
+        </td>
+        <td class="ta">
+          String/HTMLElement
+        </td>
+        <td class="tb">
+          与其他表单元素的值相等；如：<pre>compareTo:"pwd" compareTo:$f.dom.get("pwd")</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          pattern
+        </td>
+        <td class="ta">
+          String/Regexp
+        </td>
+        <td class="tb">
+          正则表达式；如：<pre>pattern:"^abc$" pattern:/^abc$/</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          fn
+        </td>
+        <td class="ta">
+          String/Function
+        </td>
+        <td class="tb">
+          函数；函数名称、函数；如：<pre>fn:"fn1" fn:function(value,element,param){...}</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          minlength
+        </td>
+        <td class="ta">
+          Number
+        </td>
+        <td class="tb">
+          最小长度；如：<pre>minlength:1</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          maxlength
+        </td>
+        <td class="ta">
+          Number
+        </td>
+        <td class="tb">
+          最大长度；如：<pre>maxlength:9</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          rangelength
+        </td>
+        <td class="ta">
+          Array
+        </td>
+        <td class="tb">
+          长度范围；如：<pre>rangelength:[1,9]</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          min
+        </td>
+        <td class="ta">
+          Number
+        </td>
+        <td class="tb">
+          最小值；如：<pre>min:1</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          max
+        </td>
+        <td class="ta">
+          Number
+        </td>
+        <td class="tb">
+          最大值；如：<pre>max:9</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          range
+        </td>
+        <td class="ta">
+          Number
+        </td>
+        <td class="tb">
+          值范围；如：<pre>range:[1,9]</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          numeric
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          数字类型(包括小数)；如：<pre>numeric:1 numeric:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          digit
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          整数；如：<pre>digit:1 digit:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          prefix
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          前缀；如：<pre>prefix:'u_'</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          suffix
+        </td>
+        <td class="ta">
+          String
+        </td>
+        <td class="tb">
+          后缀；如：<pre>suffix:'_d'</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          equal
+        </td>
+        <td class="ta">
+          String/Number
+        </td>
+        <td class="tb">
+          相等；如：<pre>equal:'abc' equal:123</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="item">
+    <h2>附加的验证规则(fancyValidate.addtional.min.js)</h2>
+    <table class="tbl">
+      <tr>
+        <td class="ta">
+          名称
+        </td>
+        <td class="ta">
+          类型
+        </td>
+        <td class="ta">
+          说明
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          ajax
+        </td>
+        <td class="ta">
+          String/Object
+        </td>
+        <td class="tb">
+          通过ajax在服务器端进行验证；会以POST方式向服务器端发送一个参数"element的ruleKey=element的value"字符串，再验证返回结果是否等于1；如：<pre>ajax: "test.ashx" ajax:{ url: "//url", callback: function(text){//return true判断逻辑}}</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          email
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          RFC 2822规范 email地址；如：<pre>email:1 email:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          url
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          url地址；如：<pre>url:1 url:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          phone
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          电话(区号、分机可选)；如：<pre>phone:1 phone:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          mobile
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          手机；如：<pre>mobile:1 mobile:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          ipv4
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          ip地址(ipv4)；如：<pre>ipv4:1 ipv4:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          date
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          日期；如：<pre>date:1 date:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          time
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          时间；如：<pre>time:1 time:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          zipcode
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          邮编；如：<pre>zipcode:1 zipcode:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          idcard
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          身份证(仅粗略检测)；如：<pre>idcard:1 idcard:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          compressed
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          压缩包格式；如：<pre>compressed:1 compressed:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          picture
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          图片格式；如：<pre>picture:1 picture:true</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          chinese
+        </td>
+        <td class="ta">
+          Boolean/Number
+        </td>
+        <td class="tb">
+          中文；如：<pre>chinese:1 chinese:true</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="item">
+    <h2>内置方法(仅列出关键的)</h2>
+    <table class="tbl">
+      <tr>
+        <td class="ta">
+          名称
+        </td>
+        <td class="tb">
+          说明
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.dom.ready(fn)
+        </td>
+        <td class="tb">
+          DOM加载完成时执行函数；如：<pre>$f.dom.ready(function(){//...})</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.event.add(element, type, fn)
+        </td>
+        <td class="tb">
+          为元素注册事件
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.addMethod(name, fn, message)
+        </td>
+        <td class="tb">
+          添加自定义的验证规则；具体请参考<a href="examples/exam-methods/rules.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.addRegex(name, re, message)
+        </td>
+        <td class="tb">
+          添加自定义的正则表达式验证规则；具体请参考<a href="examples/exam-methods/rules.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          optional(element)
+        </td>
+        <td class="tb">
+          在添加自定义验证规则时用到，表示当前元素是否通过必填验证；具体请参考<a href="examples/exam-methods/rules.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          parseRule(element, options)
+        </td>
+        <td class="tb">
+          手动添加元素及验证规则；具体请参考<a href="examples/exam-rule/dynamicform.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          checkForm
+        </td>
+        <td class="tb">
+          手动触发验证；具体请参考<a href="examples/exam-pos/messages.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          unload
+        </td>
+        <td class="tb">
+          卸载fancy validate
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          initForm
+        </td>
+        <td class="tb">
+          初始化fancy validate
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.getListByKey (elem/key)
+        </td>
+        <td class="tb">
+          查找规则的key相同的元素列表，可做为getList的参数；如：<pre>getList: $f.getListByKey</pre>
+          具体请参考<a href="examples/exam-aspnet/volatile.aspx">这里</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="item">
+    <h2>内置的提示效果</h2>
+    <table class="tbl">
+      <tr>
+        <td class="ta">
+          名称
+        </td>
+        <td class="tb">
+          说明
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.findNext
+        </td>
+        <td class="tb">
+          默认的提示效果，查找表单元素的下一个元素，假如它是提示信息标签的话；如：<pre>findLabel: $f.findNext</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.appendNext
+        </td>
+        <td class="tb">
+          默认的提示效果，作为表单元素的下一个元素添加到页面上；如：<pre>appendLabel: $f.appendNext</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.findLast
+        </td>
+        <td class="tb">
+          查找表单元素父节点的最后一个子节点，假如它是提示信息标签的话；如：<pre>findLabel: $f.findLast</pre>
+          具体见：<a href="examples/exam-pos/lastchild.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.appendLast
+        </td>
+        <td class="tb">
+          作为表单元素父节点的最后一个子节点添加到页面上；如：<pre>appendLabel: $f.appendLast</pre>
+          具体见：<a href="examples/exam-pos/lastchild.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          <span class="opl">(可选)</span>findDepth选项
+        </td>
+        <td class="tb">
+          使用findLast、appendLast时，指定父级节点的层级，用于查找父节点(用于元素被多层包裹时)；默认为0；如：<pre>findDepth: 0</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.findContainer
+        </td>
+        <td class="tb">
+          把提示信息显示到指定的容器上，需要指定容器；如：<pre>findLabel: $f.findContainer, container: $f.dom.get("result")</pre>
+          具体见：<a href="examples/exam-pos/container.html">这里</a>/<a href="examples/exam-pos/container-rich.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.appendContainer
+        </td>
+        <td class="tb">
+          在容器中查找提示信息标签，需要指定容器，附加了top、left值，可使用绝对定位(absolute)；<pre>appendLabel: $f.appendContainer</pre>
+          具体见：<a href="examples/exam-pos/container.html">这里</a>/<a href="examples/exam-pos/container-rich.html">这里</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="item">
+    <h2>附加的提示效果/方法(fancyValidate.addtional.min.js)</h2>
+    <table class="tbl">
+      <tr>
+        <td class="ta">
+          名称
+        </td>
+        <td class="tb">
+          说明
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.bubbleTip
+        </td>
+        <td class="tb">
+          气泡提示框(有多种颜色样式)；使用它还需使用自定义的提示信息呈现函数$f.labelText；如：<pre>appendLabel: $f.bubbleTip, errorElement: "div", errorCls: "blue m4l3", labelText: $f.tipText</pre>
+          具体见：<a href="examples/exam-tips/bubble.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.arrowTip
+        </td>
+        <td class="tb">
+          箭头提示框(有多种颜色样式)；使用它还需使用自定义的提示信息呈现函数$f.labelText；如：<pre>appendLabel: $f.arrowTip, errorElement: "div", errorCls: "orange m40", labelText: $f.tipText</pre>
+          具体见：<a href="examples/exam-tips/arrow.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.watermark(element, text)
+        </td>
+        <td class="tb">
+          文本框水印效果；如：<pre>$f.watermark(element, "输入点什么")</pre>
+          具体见：<a href="examples/exam-rule/html5attr.html">这里</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          placeHolder
+        </td>
+        <td class="tb">
+          文本框水印效果；如果文本框不支持html5的placeholder的话，此方法会应用自定义的水印效果；如：<pre>$f("form"...).placeHolder();</pre>
+          例子同上
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.core.ajax
+        </td>
+        <td class="tb">
+          ajax工具；如：<pre>new $ajax(url).request({method:"POST",data:{...},callback:function(text, status, xhr){...}})</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="ta">
+          $f.getKeyForAspnet
+        </td>
+        <td class="tb">
+          获取asp.net控件的服务端id，可作为getKey的参数；如：<pre>getKey: $f.getKeyForAspnet</pre>
+          具体请参考<a href="examples/exam-aspnet/volatile.aspx">这里</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

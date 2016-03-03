@@ -1,0 +1,1407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7ED30E99-473E-4EED-9954-1028B2D58B99}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weigou.Manage</RootNamespace>
+    <AssemblyName>Weigou.Manage</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\Libs\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services, Version=1.3.0.20214, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Extensions, Version=1.3.0.20214, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\adminpage.xml" />
+    <Content Include="Content\BannerAdd.aspx" />
+    <Content Include="Content\BannerList.aspx" />
+    <Content Include="Content\NewsAdd.aspx" />
+    <Content Include="Content\NewsList.aspx" />
+    <Content Include="Content\NewsTypeAdd.aspx" />
+    <Content Include="Content\NewsTypeList.aspx" />
+    <Content Include="Easemob\EasemobUserList.aspx" />
+    <Content Include="Easemob\EasemobGroupList.aspx" />
+    <Content Include="Easemob\EasemobGroupAdd.aspx" />
+    <Content Include="Goods\AttributeValueSet.aspx" />
+    <Content Include="Goods\GoodsAdd.aspx" />
+    <Content Include="Goods\GoodsAttributeAdd.aspx" />
+    <Content Include="Goods\GoodsAttributeList.aspx" />
+    <Content Include="Goods\GoodsAttributeSet.aspx" />
+    <Content Include="Goods\GoodsAudit.aspx" />
+    <Content Include="Goods\GoodsBrandAdd.aspx" />
+    <Content Include="Goods\GoodsBrandList.aspx" />
+    <Content Include="Goods\GoodsBrandSet.aspx" />
+    <Content Include="Goods\GoodsCommentList.aspx" />
+    <Content Include="Goods\GoodsCommentReply.aspx" />
+    <Content Include="Goods\GoodsList.aspx" />
+    <Content Include="Goods\GoodsSelect.aspx" />
+    <Content Include="Goods\GoodsType.aspx" />
+    <Content Include="Goods\GoodsTypeAdd.aspx" />
+    <Content Include="Goods\GoodsTypeSelect.aspx" />
+    <Content Include="Goods\js\SaleProp.js" />
+    <Content Include="Goods\js\Goods.js" />
+    <Content Include="Goods\ManagePic.aspx" />
+    <Content Include="Hui_3.2\404.html" />
+    <Content Include="Hui_3.2\500.html" />
+    <Content Include="Hui_3.2\agile_board.html" />
+    <Content Include="Hui_3.2\article.html" />
+    <Content Include="Hui_3.2\badges_labels.html" />
+    <Content Include="Hui_3.2\basic_gallery.html" />
+    <Content Include="Hui_3.2\blog.html" />
+    <Content Include="Hui_3.2\blueimp.html" />
+    <Content Include="Hui_3.2\buttons.html" />
+    <Content Include="Hui_3.2\calendar.html" />
+    <Content Include="Hui_3.2\carousel.html" />
+    <Content Include="Hui_3.2\chat_view.html" />
+    <Content Include="Hui_3.2\clients.html" />
+    <Content Include="Hui_3.2\code_editor.html" />
+    <Content Include="Hui_3.2\contacts.html" />
+    <Content Include="Hui_3.2\css\animate.min.css" />
+    <Content Include="Hui_3.2\css\bootstrap.min.css" />
+    <Content Include="Hui_3.2\css\demo\webuploader-demo.css" />
+    <Content Include="Hui_3.2\css\font-awesome-ie7.min.css" />
+    <Content Include="Hui_3.2\css\font-awesome.min.css" />
+    <Content Include="Hui_3.2\css\login.min.css" />
+    <Content Include="Hui_3.2\css\plugins\awesome-bootstrap-checkbox\awesome-bootstrap-checkbox.css" />
+    <Content Include="Hui_3.2\css\plugins\blueimp\css\blueimp-gallery.min.css" />
+    <Content Include="Hui_3.2\css\plugins\chosen\chosen.css" />
+    <Content Include="Hui_3.2\css\plugins\clockpicker\clockpicker.css" />
+    <Content Include="Hui_3.2\css\plugins\codemirror\ambiance.css" />
+    <Content Include="Hui_3.2\css\plugins\codemirror\codemirror.css" />
+    <Content Include="Hui_3.2\css\plugins\colorpicker\css\bootstrap-colorpicker.min.css" />
+    <Content Include="Hui_3.2\css\plugins\cropper\cropper.min.css" />
+    <Content Include="Hui_3.2\css\plugins\datapicker\datepicker3.css" />
+    <Content Include="Hui_3.2\css\plugins\dataTables\dataTables.bootstrap.css" />
+    <Content Include="Hui_3.2\css\plugins\dropzone\basic.css" />
+    <Content Include="Hui_3.2\css\plugins\dropzone\dropzone.css" />
+    <Content Include="Hui_3.2\css\plugins\footable\footable.core.css" />
+    <Content Include="Hui_3.2\css\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Hui_3.2\css\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Hui_3.2\css\plugins\iCheck\custom.css" />
+    <Content Include="Hui_3.2\css\plugins\ionRangeSlider\ion.rangeSlider.css" />
+    <Content Include="Hui_3.2\css\plugins\ionRangeSlider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Hui_3.2\css\plugins\jasny\jasny-bootstrap.min.css" />
+    <Content Include="Hui_3.2\css\plugins\jsTree\style.min.css" />
+    <Content Include="Hui_3.2\css\plugins\markdown\bootstrap-markdown.min.css" />
+    <Content Include="Hui_3.2\css\plugins\morris\morris-0.4.3.min.css" />
+    <Content Include="Hui_3.2\css\plugins\nouslider\jquery.nouislider.css" />
+    <Content Include="Hui_3.2\css\plugins\simditor\simditor.css" />
+    <Content Include="Hui_3.2\css\plugins\steps\jquery.steps.css" />
+    <Content Include="Hui_3.2\css\plugins\summernote\summernote-bs3.css" />
+    <Content Include="Hui_3.2\css\plugins\summernote\summernote.css" />
+    <Content Include="Hui_3.2\css\plugins\sweetalert\sweetalert.css" />
+    <Content Include="Hui_3.2\css\plugins\switchery\switchery.css" />
+    <Content Include="Hui_3.2\css\plugins\toastr\toastr.min.css" />
+    <Content Include="Hui_3.2\css\plugins\treeview\bootstrap-treeview.css" />
+    <Content Include="Hui_3.2\css\plugins\webuploader\webuploader.css" />
+    <Content Include="Hui_3.2\css\style.min.css" />
+    <Content Include="Hui_3.2\css_animation.html" />
+    <Content Include="Hui_3.2\diff.html" />
+    <Content Include="Hui_3.2\draggable_panels.html" />
+    <Content Include="Hui_3.2\empty_page.html" />
+    <Content Include="Hui_3.2\faq.html" />
+    <Content Include="Hui_3.2\file_manager.html" />
+    <Content Include="Hui_3.2\form_advanced.html" />
+    <Content Include="Hui_3.2\form_avatar.html" />
+    <Content Include="Hui_3.2\form_basic.html" />
+    <Content Include="Hui_3.2\form_builder.html" />
+    <Content Include="Hui_3.2\form_editors.html" />
+    <Content Include="Hui_3.2\form_file_upload.html" />
+    <Content Include="Hui_3.2\form_markdown.html" />
+    <Content Include="Hui_3.2\form_simditor.html" />
+    <Content Include="Hui_3.2\form_validate.html" />
+    <Content Include="Hui_3.2\form_webuploader.html" />
+    <Content Include="Hui_3.2\form_wizard.html" />
+    <Content Include="Hui_3.2\forum_main.html" />
+    <Content Include="Hui_3.2\graph_echarts.html" />
+    <Content Include="Hui_3.2\graph_flot.html" />
+    <Content Include="Hui_3.2\graph_metrics.html" />
+    <Content Include="Hui_3.2\graph_morris.html" />
+    <Content Include="Hui_3.2\graph_peity.html" />
+    <Content Include="Hui_3.2\graph_rickshaw.html" />
+    <Content Include="Hui_3.2\graph_sparkline.html" />
+    <Content Include="Hui_3.2\grid_options.html" />
+    <Content Include="Hui_3.2\iconfont.html" />
+    <Content Include="Hui_3.2\icons.html" />
+    <Content Include="Hui_3.2\img\a1.jpg" />
+    <Content Include="Hui_3.2\img\a2.jpg" />
+    <Content Include="Hui_3.2\img\a3.jpg" />
+    <Content Include="Hui_3.2\img\a4.jpg" />
+    <Content Include="Hui_3.2\img\a5.jpg" />
+    <Content Include="Hui_3.2\img\a6.jpg" />
+    <Content Include="Hui_3.2\img\a7.jpg" />
+    <Content Include="Hui_3.2\img\a8.jpg" />
+    <Content Include="Hui_3.2\img\a9.jpg" />
+    <Content Include="Hui_3.2\img\iconfont-logo.png" />
+    <Content Include="Hui_3.2\img\index.jpg" />
+    <Content Include="Hui_3.2\img\index_4.jpg" />
+    <Content Include="Hui_3.2\img\p1.jpg" />
+    <Content Include="Hui_3.2\img\p2.jpg" />
+    <Content Include="Hui_3.2\img\p3.jpg" />
+    <Content Include="Hui_3.2\img\profile.jpg" />
+    <Content Include="Hui_3.2\img\profile_big.jpg" />
+    <Content Include="Hui_3.2\img\profile_small.jpg" />
+    <Content Include="Hui_3.2\img\p_big1.jpg" />
+    <Content Include="Hui_3.2\img\p_big2.jpg" />
+    <Content Include="Hui_3.2\img\p_big3.jpg" />
+    <Content Include="Hui_3.2\img\qr_code.png" />
+    <Content Include="Hui_3.2\img\wenku_logo.png" />
+    <Content Include="Hui_3.2\index.html" />
+    <Content Include="Hui_3.2\index_v1.html" />
+    <Content Include="Hui_3.2\index_v2.html" />
+    <Content Include="Hui_3.2\index_v3.html" />
+    <Content Include="Hui_3.2\index_v4.html" />
+    <Content Include="Hui_3.2\index_v5.html" />
+    <Content Include="Hui_3.2\invoice.html" />
+    <Content Include="Hui_3.2\invoice_print.html" />
+    <Content Include="Hui_3.2\jstree.html" />
+    <Content Include="Hui_3.2\js\bootstrap.min.js" />
+    <Content Include="Hui_3.2\js\contabs.min.js" />
+    <Content Include="Hui_3.2\js\content.min.js" />
+    <Content Include="Hui_3.2\js\demo\echarts-demo.min.js" />
+    <Content Include="Hui_3.2\js\demo\flot-demo.min.js" />
+    <Content Include="Hui_3.2\js\demo\layer-demo.min.js" />
+    <Content Include="Hui_3.2\js\demo\morris-demo.min.js" />
+    <Content Include="Hui_3.2\js\demo\peity-demo.min.js" />
+    <Content Include="Hui_3.2\js\demo\rickshaw-demo.min.js" />
+    <Content Include="Hui_3.2\js\demo\sparkline-demo.min.js" />
+    <Content Include="Hui_3.2\js\demo\treeview-demo.min.js" />
+    <Content Include="Hui_3.2\js\demo\webuploader-demo.min.js" />
+    <Content Include="Hui_3.2\js\hplus.min.js" />
+    <Content Include="Hui_3.2\js\jquery-2.1.1.min.js" />
+    <Content Include="Hui_3.2\js\jquery-ui-1.10.4.min.js" />
+    <Content Include="Hui_3.2\js\jquery-ui.custom.min.js" />
+    <Content Include="Hui_3.2\js\plugins\beautifyhtml\beautifyhtml.js" />
+    <Content Include="Hui_3.2\js\plugins\blueimp\jquery.blueimp-gallery.min.js" />
+    <Content Include="Hui_3.2\js\plugins\chartJs\Chart.min.js" />
+    <Content Include="Hui_3.2\js\plugins\chosen\chosen.jquery.js" />
+    <Content Include="Hui_3.2\js\plugins\clockpicker\clockpicker.js" />
+    <Content Include="Hui_3.2\js\plugins\codemirror\codemirror.js" />
+    <Content Include="Hui_3.2\js\plugins\codemirror\mode\javascript\javascript.js" />
+    <Content Include="Hui_3.2\js\plugins\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="Hui_3.2\js\plugins\cropper\cropper.min.js" />
+    <Content Include="Hui_3.2\js\plugins\datapicker\bootstrap-datepicker.js" />
+    <Content Include="Hui_3.2\js\plugins\dataTables\dataTables.bootstrap.js" />
+    <Content Include="Hui_3.2\js\plugins\dataTables\jquery.dataTables.js" />
+    <Content Include="Hui_3.2\js\plugins\diff_match_patch\diff_match_patch.js" />
+    <Content Include="Hui_3.2\js\plugins\dropzone\dropzone.js" />
+    <Content Include="Hui_3.2\js\plugins\easypiechart\jquery.easypiechart.js" />
+    <Content Include="Hui_3.2\js\plugins\echarts\echarts-all.js" />
+    <Content Include="Hui_3.2\js\plugins\fancybox\jquery.fancybox.css" />
+    <Content Include="Hui_3.2\js\plugins\fancybox\jquery.fancybox.js" />
+    <Content Include="Hui_3.2\js\plugins\flot\curvedLines.js" />
+    <Content Include="Hui_3.2\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Hui_3.2\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Hui_3.2\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Hui_3.2\js\plugins\flot\jquery.flot.spline.js" />
+    <Content Include="Hui_3.2\js\plugins\flot\jquery.flot.symbol.js" />
+    <Content Include="Hui_3.2\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Hui_3.2\js\plugins\footable\footable.all.min.js" />
+    <Content Include="Hui_3.2\js\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Hui_3.2\js\plugins\gritter\jquery.gritter.css" />
+    <Content Include="Hui_3.2\js\plugins\gritter\jquery.gritter.min.js" />
+    <Content Include="Hui_3.2\js\plugins\iCheck\icheck.min.js" />
+    <Content Include="Hui_3.2\js\plugins\ionRangeSlider\ion.rangeSlider.min.js" />
+    <Content Include="Hui_3.2\js\plugins\jasny\jasny-bootstrap.min.js" />
+    <Content Include="Hui_3.2\js\plugins\jeditable\jquery.jeditable.js" />
+    <Content Include="Hui_3.2\js\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Hui_3.2\js\plugins\jsKnob\jquery.knob.js" />
+    <Content Include="Hui_3.2\js\plugins\jsTree\jstree.min.js" />
+    <Content Include="Hui_3.2\js\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Hui_3.2\js\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Hui_3.2\js\plugins\layer\laydate\laydate.js" />
+    <Content Include="Hui_3.2\js\plugins\layer\layer.min.js" />
+    <Content Include="Hui_3.2\js\plugins\layer\layim\layim.css" />
+    <Content Include="Hui_3.2\js\plugins\layer\layim\layim.js" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\icon-ext.png" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\icon.png" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\loading-0.gif" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\loading-1.gif" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\loading-2.gif" />
+    <Content Include="Hui_3.2\js\plugins\layer\extend\layer.ext.js" />
+    <Content Include="Hui_3.2\js\plugins\markdown\bootstrap-markdown.js" />
+    <Content Include="Hui_3.2\js\plugins\markdown\bootstrap-markdown.zh.js" />
+    <Content Include="Hui_3.2\js\plugins\markdown\markdown.js" />
+    <Content Include="Hui_3.2\js\plugins\markdown\to-markdown.js" />
+    <Content Include="Hui_3.2\js\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="Hui_3.2\js\plugins\morris\morris.js" />
+    <Content Include="Hui_3.2\js\plugins\morris\raphael-2.1.0.min.js" />
+    <Content Include="Hui_3.2\js\plugins\nestable\jquery.nestable.js" />
+    <Content Include="Hui_3.2\js\plugins\nouslider\jquery.nouislider.min.js" />
+    <Content Include="Hui_3.2\js\plugins\pace\pace.min.js" />
+    <Content Include="Hui_3.2\js\plugins\peity\jquery.peity.min.js" />
+    <Content Include="Hui_3.2\js\plugins\preetyTextDiff\jquery.pretty-text-diff.min.js" />
+    <Content Include="Hui_3.2\js\plugins\prettyfile\bootstrap-prettyfile.js" />
+    <Content Include="Hui_3.2\js\plugins\rickshaw\rickshaw.min.js" />
+    <Content Include="Hui_3.2\js\plugins\rickshaw\vendor\d3.v3.js" />
+    <Content Include="Hui_3.2\js\plugins\simditor\hotkeys.js" />
+    <Content Include="Hui_3.2\js\plugins\simditor\module.js" />
+    <Content Include="Hui_3.2\js\plugins\simditor\simditor.js" />
+    <Content Include="Hui_3.2\js\plugins\simditor\uploader.js" />
+    <Content Include="Hui_3.2\js\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Hui_3.2\js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Hui_3.2\js\plugins\staps\jquery.steps.min.js" />
+    <Content Include="Hui_3.2\js\plugins\suggest\bootstrap-suggest.min.js" />
+    <Content Include="Hui_3.2\js\plugins\summernote\summernote-zh-CN.js" />
+    <Content Include="Hui_3.2\js\plugins\summernote\summernote.min.js" />
+    <Content Include="Hui_3.2\js\plugins\sweetalert\sweetalert.min.js" />
+    <Content Include="Hui_3.2\js\plugins\switchery\switchery.js" />
+    <Content Include="Hui_3.2\js\plugins\toastr\toastr.min.js" />
+    <Content Include="Hui_3.2\js\plugins\treeview\bootstrap-treeview.js" />
+    <Content Include="Hui_3.2\js\plugins\validate\jquery.validate.min.js" />
+    <Content Include="Hui_3.2\js\plugins\validate\messages_zh.min.js" />
+    <Content Include="Hui_3.2\js\plugins\webuploader\webuploader.min.js" />
+    <Content Include="Hui_3.2\js\welcome.js" />
+    <Content Include="Hui_3.2\layer.html" />
+    <Content Include="Hui_3.2\layerdate.html" />
+    <Content Include="Hui_3.2\layerphotos.html" />
+    <Content Include="Hui_3.2\layouts.html" />
+    <Content Include="Hui_3.2\lockscreen.html" />
+    <Content Include="Hui_3.2\login.html" />
+    <Content Include="Hui_3.2\login_v2.html" />
+    <Content Include="Hui_3.2\mailbox.html" />
+    <Content Include="Hui_3.2\mail_compose.html" />
+    <Content Include="Hui_3.2\mail_detail.html" />
+    <Content Include="Hui_3.2\modal_window.html" />
+    <Content Include="Hui_3.2\nestable_list.html" />
+    <Content Include="Hui_3.2\notifications.html" />
+    <Content Include="Hui_3.2\pin_board.html" />
+    <Content Include="Hui_3.2\plugins\fullavatareditor\scripts\fullAvatarEditor.js" />
+    <Content Include="Hui_3.2\plugins\fullavatareditor\scripts\jQuery.Cookie.js" />
+    <Content Include="Hui_3.2\plugins\fullavatareditor\scripts\swfobject.js" />
+    <Content Include="Hui_3.2\plugins\fullavatareditor\scripts\test.js" />
+    <Content Include="Hui_3.2\profile.html" />
+    <Content Include="Hui_3.2\projects.html" />
+    <Content Include="Hui_3.2\project_detail.html" />
+    <Content Include="Hui_3.2\register.html" />
+    <Content Include="Hui_3.2\search_results.html" />
+    <Content Include="Hui_3.2\social_feed.html" />
+    <Content Include="Hui_3.2\spinners.html" />
+    <Content Include="Hui_3.2\suggest.html" />
+    <Content Include="Hui_3.2\sweetalert.html" />
+    <Content Include="Hui_3.2\table_basic.html" />
+    <Content Include="Hui_3.2\table_data_tables.html" />
+    <Content Include="Hui_3.2\table_foo_table.html" />
+    <Content Include="Hui_3.2\table_jqgrid.html" />
+    <Content Include="Hui_3.2\tabs_panels.html" />
+    <Content Include="Hui_3.2\teams_board.html" />
+    <Content Include="Hui_3.2\timeline.html" />
+    <Content Include="Hui_3.2\timeline_v2.html" />
+    <Content Include="Hui_3.2\toastr_notifications.html" />
+    <Content Include="Hui_3.2\tree_view.html" />
+    <Content Include="Hui_3.2\typography.html" />
+    <Content Include="Hui_3.2\webim.html" />
+    <Content Include="Hui_3.2\widgets.html" />
+    <Content Include="JScript\common.js" />
+    <Content Include="JScript\fancybox\fancybox_sprite.png" />
+    <Content Include="JScript\fancybox\jquery.fancybox.css" />
+    <Content Include="JScript\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="JScript\global.js" />
+    <Content Include="JScript\highlight.js" />
+    <Content Include="JScript\KindEditor\kindeditor-min.js" />
+    <Content Include="JScript\KindEditor\kindeditor.js" />
+    <Content Include="JScript\KindEditor\lang\ar.js" />
+    <Content Include="JScript\KindEditor\lang\en.js" />
+    <Content Include="JScript\KindEditor\lang\zh_CN.js" />
+    <Content Include="JScript\KindEditor\lang\zh_TW.js" />
+    <Content Include="JScript\KindEditor\plugins\anchor\anchor.js" />
+    <Content Include="JScript\KindEditor\plugins\baidumap\baidumap.js" />
+    <Content Include="JScript\KindEditor\plugins\baidumap\map.html" />
+    <Content Include="JScript\KindEditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="JScript\KindEditor\plugins\code\code.js" />
+    <Content Include="JScript\KindEditor\plugins\code\prettify.css" />
+    <Content Include="JScript\KindEditor\plugins\code\prettify.js" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\emoticons.js" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\0.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\1.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\10.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\100.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\101.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\102.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\103.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\104.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\105.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\106.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\107.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\108.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\109.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\11.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\110.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\111.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\112.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\113.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\114.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\115.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\116.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\117.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\118.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\119.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\12.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\120.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\121.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\122.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\123.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\124.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\125.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\126.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\127.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\128.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\129.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\13.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\130.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\131.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\132.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\133.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\134.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\14.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\15.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\16.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\17.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\18.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\19.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\2.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\20.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\21.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\22.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\23.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\24.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\25.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\26.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\27.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\28.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\29.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\3.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\30.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\31.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\32.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\33.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\34.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\35.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\36.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\37.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\38.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\39.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\4.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\40.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\41.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\42.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\43.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\44.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\45.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\46.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\47.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\48.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\49.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\5.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\50.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\51.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\52.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\53.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\54.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\55.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\56.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\57.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\58.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\59.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\6.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\60.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\61.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\62.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\63.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\64.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\65.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\66.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\67.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\68.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\69.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\7.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\70.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\71.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\72.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\73.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\74.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\75.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\76.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\77.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\78.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\79.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\8.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\80.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\81.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\82.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\83.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\84.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\85.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\86.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\87.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\88.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\89.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\9.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\90.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\91.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\92.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\93.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\94.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\95.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\96.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\97.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\98.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\99.gif" />
+    <Content Include="JScript\KindEditor\plugins\emoticons\images\static.gif" />
+    <Content Include="JScript\KindEditor\plugins\filemanager\filemanager.js" />
+    <Content Include="JScript\KindEditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="JScript\KindEditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="JScript\KindEditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="JScript\KindEditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="JScript\KindEditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="JScript\KindEditor\plugins\flash\flash.js" />
+    <Content Include="JScript\KindEditor\plugins\image\image.js" />
+    <Content Include="JScript\KindEditor\plugins\image\images\align_left.gif" />
+    <Content Include="JScript\KindEditor\plugins\image\images\align_right.gif" />
+    <Content Include="JScript\KindEditor\plugins\image\images\align_top.gif" />
+    <Content Include="JScript\KindEditor\plugins\image\images\refresh.png" />
+    <Content Include="JScript\KindEditor\plugins\insertfile\insertfile.js" />
+    <Content Include="JScript\KindEditor\plugins\lineheight\lineheight.js" />
+    <Content Include="JScript\KindEditor\plugins\link\link.js" />
+    <Content Include="JScript\KindEditor\plugins\map\map.html" />
+    <Content Include="JScript\KindEditor\plugins\map\map.js" />
+    <Content Include="JScript\KindEditor\plugins\media\media.js" />
+    <Content Include="JScript\KindEditor\plugins\multiimage\images\image.png" />
+    <Content Include="JScript\KindEditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="JScript\KindEditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="JScript\KindEditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="JScript\KindEditor\plugins\multiimage\multiimage.js" />
+    <Content Include="JScript\KindEditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="JScript\KindEditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="JScript\KindEditor\plugins\preview\preview.js" />
+    <Content Include="JScript\KindEditor\plugins\quickformat\quickformat.js" />
+    <Content Include="JScript\KindEditor\plugins\table\table.js" />
+    <Content Include="JScript\KindEditor\plugins\template\html\1.html" />
+    <Content Include="JScript\KindEditor\plugins\template\html\2.html" />
+    <Content Include="JScript\KindEditor\plugins\template\html\3.html" />
+    <Content Include="JScript\KindEditor\plugins\template\template.js" />
+    <Content Include="JScript\KindEditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="JScript\KindEditor\themes\common\anchor.gif" />
+    <Content Include="JScript\KindEditor\themes\common\blank.gif" />
+    <Content Include="JScript\KindEditor\themes\common\flash.gif" />
+    <Content Include="JScript\KindEditor\themes\common\loading.gif" />
+    <Content Include="JScript\KindEditor\themes\common\media.gif" />
+    <Content Include="JScript\KindEditor\themes\common\rm.gif" />
+    <Content Include="JScript\KindEditor\themes\default\background.png" />
+    <Content Include="JScript\KindEditor\themes\default\default.css" />
+    <Content Include="JScript\KindEditor\themes\default\default.png" />
+    <Content Include="JScript\KindEditor\themes\qq\editor.gif" />
+    <Content Include="JScript\KindEditor\themes\qq\qq.css" />
+    <Content Include="JScript\KindEditor\themes\simple\simple.css" />
+    <Content Include="JScript\layer\extend\layer.ext.js" />
+    <Content Include="JScript\layer\layer.js" />
+    <Content Include="JScript\layer\layer.min.js" />
+    <Content Include="JScript\layer\skin\default\textbg.png" />
+    <Content Include="JScript\layer\skin\default\xubox_ico0.png" />
+    <Content Include="JScript\layer\skin\default\xubox_loading0.gif" />
+    <Content Include="JScript\layer\skin\default\xubox_loading1.gif" />
+    <Content Include="JScript\layer\skin\default\xubox_loading2.gif" />
+    <Content Include="JScript\layer\skin\default\xubox_loading3.gif" />
+    <Content Include="JScript\layer\skin\default\xubox_title0.png" />
+    <Content Include="JScript\layer\skin\layer.css" />
+    <Content Include="JScript\layer\skin\layer.ext.css" />
+    <Content Include="JScript\liandong.js" />
+    <Content Include="JScript\My97DatePicker\calendar.js" />
+    <Content Include="JScript\My97DatePicker\calendar0.js" />
+    <Content Include="JScript\My97DatePicker\config.js" />
+    <Content Include="JScript\My97DatePicker\lang\en.js" />
+    <Content Include="JScript\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="JScript\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="JScript\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="JScript\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="JScript\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="JScript\My97DatePicker\skin\default\img.gif" />
+    <Content Include="JScript\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="JScript\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="JScript\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="JScript\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="JScript\My97DatePicker\WdatePicker.js" />
+    <Content Include="JScript\Slide\responsiveslides.min.js" />
+    <Content Include="JScript\Slide\slide.js" />
+    <Content Include="JScript\uploadify\browse.jpg" />
+    <Content Include="JScript\uploadify\cancel.png" />
+    <Content Include="JScript\uploadify\jquery.fancybox.pack.js" />
+    <Content Include="JScript\uploadify\jquery.uploadify.js" />
+    <Content Include="JScript\uploadify\jquery.uploadify.v2.1.4.min.js" />
+    <Content Include="JScript\uploadify\swfobject.js" />
+    <Content Include="JScript\uploadify\updateprogress.gif" />
+    <Content Include="JScript\uploadify\uploader.swf" />
+    <Content Include="JScript\uploadify\uploadify.css" />
+    <Content Include="JScript\uploadify\uploadify.swf" />
+    <Content Include="JScript\zTree_v3\css\demo.css" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\loading.gif" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="JScript\zTree_v3\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="JScript\zTree_v3\js\jquery-1.4.4.min.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.all-3.5.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.all-3.5.min.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.core-3.5.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.core-3.5.min.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.excheck-3.5.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.excheck-3.5.min.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.exedit-3.5.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.exedit-3.5.min.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.exedit.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.exhide-3.5.js" />
+    <Content Include="JScript\zTree_v3\js\jquery.ztree.exhide-3.5.min.js" />
+    <Content Include="JScript\zTree_v3\log v3.x.txt" />
+    <Content Include="JScript\zTree_v3\QUI 框架介绍.txt" />
+    <Content Include="Login.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="Member\MemberAdd.aspx" />
+    <Content Include="Member\MemberLevelAdd.aspx" />
+    <Content Include="Member\MemberLevelList.aspx" />
+    <Content Include="Member\MemberList.aspx" />
+    <Content Include="Msg.aspx" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\textbg.png" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\xubox_ico0.png" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\xubox_loading0.gif" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\xubox_loading1.gif" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\xubox_loading2.gif" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\xubox_loading3.gif" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\default\xubox_title0.png" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\layer.css" />
+    <Content Include="Hui_3.2\js\plugins\layer\skin\layer.ext.css" />
+    <Content Include="Report\GoodsReport.aspx" />
+    <Content Include="Report\MemberReport.aspx" />
+    <Content Include="Report\OrderReport.aspx" />
+    <Content Include="Report\ScoreReport.aspx" />
+    <Content Include="Style\Images\Nopic.jpg" />
+    <Content Include="Order\AliPayRefund.aspx" />
+    <Content Include="Order\MallOrderDetail.aspx" />
+    <Content Include="Order\MallOrderList.aspx" />
+    <Content Include="Order\MallOrderReturnDetail.aspx" />
+    <Content Include="Order\MallOrderReturnList.aspx" />
+    <Content Include="Order\MallOrderSaleDetail.aspx" />
+    <Content Include="Order\MallOrderSaleList.aspx" />
+    <Content Include="Order\MallRemindSendList.aspx" />
+    <Content Include="Order\PrintOrder.aspx" />
+    <Content Include="Order\UnionpayRefund.aspx" />
+    <Content Include="Order\WeixinRefund.aspx" />
+    <Content Include="SlidePicture.aspx" />
+    <Content Include="Sms\SmsLogList.aspx" />
+    <Content Include="Sms\SmsSend.aspx" />
+    <Content Include="Sms\SmsTemplateAdd.aspx" />
+    <Content Include="Sms\SmsTemplateList.aspx" />
+    <Content Include="Sys\AreaAdd.aspx" />
+    <Content Include="Sys\AreaManage.aspx" />
+    <Content Include="Sys\BackupList.aspx" />
+    <Content Include="Sys\ConfigManager.aspx" />
+    <Content Include="Sys\LogisticsAdd.aspx" />
+    <Content Include="Sys\LogisticsList.aspx" />
+    <Content Include="Sys\PlatformLogisticsAdd.aspx" />
+    <Content Include="Sys\PlatformLogisticsList.aspx" />
+    <Content Include="Sys\PrivilegeAdd.aspx" />
+    <Content Include="Style\css.css" />
+    <Content Include="Style\Images\admin.png" />
+    <Content Include="Style\Images\login.png" />
+    <Content Include="Weixin\WeixinKeywordAdd.aspx" />
+    <Content Include="Weixin\WeixinKeywordList.aspx" />
+    <Content Include="Weixin\WeixinMenuAdd.aspx" />
+    <Content Include="Weixin\WeixinMenuList.aspx" />
+    <Content Include="Weixin\WeixinReply.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\Goods.ashx.cs">
+      <DependentUpon>Goods.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\Sys.ashx.cs">
+      <DependentUpon>Sys.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\BannerAdd.aspx.cs">
+      <DependentUpon>BannerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\BannerAdd.aspx.designer.cs">
+      <DependentUpon>BannerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\BannerList.aspx.cs">
+      <DependentUpon>BannerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\BannerList.aspx.designer.cs">
+      <DependentUpon>BannerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\NewsAdd.aspx.cs">
+      <DependentUpon>NewsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\NewsAdd.aspx.designer.cs">
+      <DependentUpon>NewsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\NewsList.aspx.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\NewsList.aspx.designer.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\NewsTypeAdd.aspx.cs">
+      <DependentUpon>NewsTypeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\NewsTypeAdd.aspx.designer.cs">
+      <DependentUpon>NewsTypeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\NewsTypeList.aspx.cs">
+      <DependentUpon>NewsTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\NewsTypeList.aspx.designer.cs">
+      <DependentUpon>NewsTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Easemob\EasemobUserList.aspx.cs">
+      <DependentUpon>EasemobUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Easemob\EasemobUserList.aspx.designer.cs">
+      <DependentUpon>EasemobUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Easemob\EasemobGroupList.aspx.cs">
+      <DependentUpon>EasemobGroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Easemob\EasemobGroupList.aspx.designer.cs">
+      <DependentUpon>EasemobGroupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Easemob\EasemobGroupAdd.aspx.cs">
+      <DependentUpon>EasemobGroupAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Easemob\EasemobGroupAdd.aspx.designer.cs">
+      <DependentUpon>EasemobGroupAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\AttributeValueSet.aspx.cs">
+      <DependentUpon>AttributeValueSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\AttributeValueSet.aspx.designer.cs">
+      <DependentUpon>AttributeValueSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsAdd.aspx.cs">
+      <DependentUpon>GoodsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsAdd.aspx.designer.cs">
+      <DependentUpon>GoodsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsAttributeAdd.aspx.cs">
+      <DependentUpon>GoodsAttributeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsAttributeAdd.aspx.designer.cs">
+      <DependentUpon>GoodsAttributeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsAttributeList.aspx.cs">
+      <DependentUpon>GoodsAttributeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsAttributeList.aspx.designer.cs">
+      <DependentUpon>GoodsAttributeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsAttributeSet.aspx.cs">
+      <DependentUpon>GoodsAttributeSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsAttributeSet.aspx.designer.cs">
+      <DependentUpon>GoodsAttributeSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsAudit.aspx.cs">
+      <DependentUpon>GoodsAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsAudit.aspx.designer.cs">
+      <DependentUpon>GoodsAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsBrandAdd.aspx.cs">
+      <DependentUpon>GoodsBrandAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsBrandAdd.aspx.designer.cs">
+      <DependentUpon>GoodsBrandAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsBrandList.aspx.cs">
+      <DependentUpon>GoodsBrandList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsBrandList.aspx.designer.cs">
+      <DependentUpon>GoodsBrandList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsBrandSet.aspx.cs">
+      <DependentUpon>GoodsBrandSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsBrandSet.aspx.designer.cs">
+      <DependentUpon>GoodsBrandSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsCommentList.aspx.cs">
+      <DependentUpon>GoodsCommentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsCommentList.aspx.designer.cs">
+      <DependentUpon>GoodsCommentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsCommentReply.aspx.cs">
+      <DependentUpon>GoodsCommentReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsCommentReply.aspx.designer.cs">
+      <DependentUpon>GoodsCommentReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsList.aspx.cs">
+      <DependentUpon>GoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsList.aspx.designer.cs">
+      <DependentUpon>GoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsSelect.aspx.cs">
+      <DependentUpon>GoodsSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsSelect.aspx.designer.cs">
+      <DependentUpon>GoodsSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsType.aspx.cs">
+      <DependentUpon>GoodsType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsType.aspx.designer.cs">
+      <DependentUpon>GoodsType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsTypeAdd.aspx.cs">
+      <DependentUpon>GoodsTypeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsTypeAdd.aspx.designer.cs">
+      <DependentUpon>GoodsTypeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GoodsTypeSelect.aspx.cs">
+      <DependentUpon>GoodsTypeSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GoodsTypeSelect.aspx.designer.cs">
+      <DependentUpon>GoodsTypeSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\ManagePic.aspx.cs">
+      <DependentUpon>ManagePic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\ManagePic.aspx.designer.cs">
+      <DependentUpon>ManagePic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\BaseAjax.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Func.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberAdd.aspx.cs">
+      <DependentUpon>MemberAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemberAdd.aspx.designer.cs">
+      <DependentUpon>MemberAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberLevelAdd.aspx.cs">
+      <DependentUpon>MemberLevelAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemberLevelAdd.aspx.designer.cs">
+      <DependentUpon>MemberLevelAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberLevelList.aspx.cs">
+      <DependentUpon>MemberLevelList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemberLevelList.aspx.designer.cs">
+      <DependentUpon>MemberLevelList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberList.aspx.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemberList.aspx.designer.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Msg.aspx.cs">
+      <DependentUpon>Msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Msg.aspx.designer.cs">
+      <DependentUpon>Msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\AliPayRefund.aspx.cs">
+      <DependentUpon>AliPayRefund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\AliPayRefund.aspx.designer.cs">
+      <DependentUpon>AliPayRefund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\MallOrderDetail.aspx.cs">
+      <DependentUpon>MallOrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\MallOrderDetail.aspx.designer.cs">
+      <DependentUpon>MallOrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\MallOrderList.aspx.cs">
+      <DependentUpon>MallOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\MallOrderList.aspx.designer.cs">
+      <DependentUpon>MallOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\MallOrderReturnDetail.aspx.cs">
+      <DependentUpon>MallOrderReturnDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\MallOrderReturnDetail.aspx.designer.cs">
+      <DependentUpon>MallOrderReturnDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\MallOrderReturnList.aspx.cs">
+      <DependentUpon>MallOrderReturnList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\MallOrderReturnList.aspx.designer.cs">
+      <DependentUpon>MallOrderReturnList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\MallOrderSaleDetail.aspx.cs">
+      <DependentUpon>MallOrderSaleDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\MallOrderSaleDetail.aspx.designer.cs">
+      <DependentUpon>MallOrderSaleDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\MallOrderSaleList.aspx.cs">
+      <DependentUpon>MallOrderSaleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\MallOrderSaleList.aspx.designer.cs">
+      <DependentUpon>MallOrderSaleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\MallRemindSendList.aspx.cs">
+      <DependentUpon>MallRemindSendList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\MallRemindSendList.aspx.designer.cs">
+      <DependentUpon>MallRemindSendList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\PrintOrder.aspx.cs">
+      <DependentUpon>PrintOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\PrintOrder.aspx.designer.cs">
+      <DependentUpon>PrintOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\UnionpayRefund.aspx.cs">
+      <DependentUpon>UnionpayRefund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\UnionpayRefund.aspx.designer.cs">
+      <DependentUpon>UnionpayRefund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\WeixinRefund.aspx.cs">
+      <DependentUpon>WeixinRefund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\WeixinRefund.aspx.designer.cs">
+      <DependentUpon>WeixinRefund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\GoodsReport.aspx.cs">
+      <DependentUpon>GoodsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\GoodsReport.aspx.designer.cs">
+      <DependentUpon>GoodsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MemberReport.aspx.cs">
+      <DependentUpon>MemberReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\MemberReport.aspx.designer.cs">
+      <DependentUpon>MemberReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\OrderReport.aspx.cs">
+      <DependentUpon>OrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\OrderReport.aspx.designer.cs">
+      <DependentUpon>OrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ScoreReport.aspx.cs">
+      <DependentUpon>ScoreReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ScoreReport.aspx.designer.cs">
+      <DependentUpon>ScoreReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SlidePicture.aspx.cs">
+      <DependentUpon>SlidePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SlidePicture.aspx.designer.cs">
+      <DependentUpon>SlidePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sms\SmsLogList.aspx.cs">
+      <DependentUpon>SmsLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sms\SmsLogList.aspx.designer.cs">
+      <DependentUpon>SmsLogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sms\SmsSend.aspx.cs">
+      <DependentUpon>SmsSend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sms\SmsSend.aspx.designer.cs">
+      <DependentUpon>SmsSend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sms\SmsTemplateAdd.aspx.cs">
+      <DependentUpon>SmsTemplateAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sms\SmsTemplateAdd.aspx.designer.cs">
+      <DependentUpon>SmsTemplateAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sms\SmsTemplateList.aspx.cs">
+      <DependentUpon>SmsTemplateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sms\SmsTemplateList.aspx.designer.cs">
+      <DependentUpon>SmsTemplateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\AreaAdd.aspx.cs">
+      <DependentUpon>AreaAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\AreaAdd.aspx.designer.cs">
+      <DependentUpon>AreaAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\AreaManage.aspx.cs">
+      <DependentUpon>AreaManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\AreaManage.aspx.designer.cs">
+      <DependentUpon>AreaManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\BackupList.aspx.cs">
+      <DependentUpon>BackupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\BackupList.aspx.designer.cs">
+      <DependentUpon>BackupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\ConfigManager.aspx.cs">
+      <DependentUpon>ConfigManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\ConfigManager.aspx.designer.cs">
+      <DependentUpon>ConfigManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\LogisticsAdd.aspx.cs">
+      <DependentUpon>LogisticsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\LogisticsAdd.aspx.designer.cs">
+      <DependentUpon>LogisticsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\LogisticsList.aspx.cs">
+      <DependentUpon>LogisticsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\LogisticsList.aspx.designer.cs">
+      <DependentUpon>LogisticsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\PlatformLogisticsAdd.aspx.cs">
+      <DependentUpon>PlatformLogisticsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\PlatformLogisticsAdd.aspx.designer.cs">
+      <DependentUpon>PlatformLogisticsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\PlatformLogisticsList.aspx.cs">
+      <DependentUpon>PlatformLogisticsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\PlatformLogisticsList.aspx.designer.cs">
+      <DependentUpon>PlatformLogisticsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\PrivilegeAdd.aspx.cs">
+      <DependentUpon>PrivilegeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\PrivilegeAdd.aspx.designer.cs">
+      <DependentUpon>PrivilegeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sys\LogList.aspx.cs">
+      <DependentUpon>LogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\LogList.aspx.designer.cs">
+      <DependentUpon>LogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\RoleAdd.aspx.cs">
+      <DependentUpon>RoleAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\RoleAdd.aspx.designer.cs">
+      <DependentUpon>RoleAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\RoleList.aspx.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\RoleList.aspx.designer.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SysVersionAdd.aspx.cs">
+      <DependentUpon>SysVersionAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\SysVersionAdd.aspx.designer.cs">
+      <DependentUpon>SysVersionAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SysVersionList.aspx.cs">
+      <DependentUpon>SysVersionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\SysVersionList.aspx.designer.cs">
+      <DependentUpon>SysVersionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserPwd.aspx.cs">
+      <DependentUpon>UserPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\UserPwd.aspx.designer.cs">
+      <DependentUpon>UserPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\PrivilegeList.aspx.cs">
+      <DependentUpon>PrivilegeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\PrivilegeList.aspx.designer.cs">
+      <DependentUpon>PrivilegeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestList.aspx.cs">
+      <DependentUpon>TestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestList.aspx.designer.cs">
+      <DependentUpon>TestList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserAdd.aspx.cs">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\UserAdd.aspx.designer.cs">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Weixin\WeixinKeywordAdd.aspx.cs">
+      <DependentUpon>WeixinKeywordAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Weixin\WeixinKeywordAdd.aspx.designer.cs">
+      <DependentUpon>WeixinKeywordAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Weixin\WeixinKeywordList.aspx.cs">
+      <DependentUpon>WeixinKeywordList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Weixin\WeixinKeywordList.aspx.designer.cs">
+      <DependentUpon>WeixinKeywordList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Weixin\WeixinMenuAdd.aspx.cs">
+      <DependentUpon>WeixinMenuAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Weixin\WeixinMenuAdd.aspx.designer.cs">
+      <DependentUpon>WeixinMenuAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Weixin\WeixinMenuList.aspx.cs">
+      <DependentUpon>WeixinMenuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Weixin\WeixinMenuList.aspx.designer.cs">
+      <DependentUpon>WeixinMenuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Weixin\WeixinReply.aspx.cs">
+      <DependentUpon>WeixinReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Weixin\WeixinReply.aspx.designer.cs">
+      <DependentUpon>WeixinReply.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hui_3.2\css\plugins\jqgrid\ui.jqgrid.css%400820" />
+    <Content Include="Hui_3.2\js\plugins\jqgrid\i18n\grid.locale-cn.js%400820" />
+    <Content Include="Hui_3.2\js\plugins\jqgrid\jquery.jqGrid.min.js%400820" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sys\js\user.js" />
+    <Content Include="Sys\LogList.aspx" />
+    <Content Include="Sys\RoleAdd.aspx" />
+    <Content Include="Sys\RoleList.aspx" />
+    <Content Include="Sys\SysVersionAdd.aspx" />
+    <Content Include="Sys\SysVersionList.aspx" />
+    <Content Include="Sys\UserPwd.aspx" />
+    <Content Include="Sys\PrivilegeList.aspx" />
+    <Content Include="TestList.aspx" />
+    <Content Include="Sys\UserList.aspx" />
+    <Content Include="Sys\UserAdd.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hui_3.2\fonts\fontawesome-webfont.eot" />
+    <Content Include="Hui_3.2\fonts\fontawesome-webfont.svg" />
+    <Content Include="Hui_3.2\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Hui_3.2\fonts\fontawesome-webfont.woff" />
+    <Content Include="Hui_3.2\fonts\FontAwesome.otf" />
+    <Content Include="JScript\KindEditor\file_manager_json.ashx" />
+    <Content Include="JScript\KindEditor\plugins\image\images\Thumbs.db" />
+    <Content Include="JScript\KindEditor\upload_json.ashx" />
+    <Content Include="JScript\uploadify\uploader.fla" />
+    <Content Include="JScript\zTree_v3\.gitattributes" />
+    <Content Include="JScript\zTree_v3\.gitignore" />
+    <Content Include="JScript\zTree_v3\README.md" />
+    <Content Include="JScript\zTree_v3\zTree.v3.jquery.json" />
+    <Content Include="Ajax\Sys.ashx" />
+    <Content Include="Config\activity.config" />
+    <Content Include="Config\ad.config" />
+    <Content Include="Config\alipay.config" />
+    <Content Include="Config\base.config" />
+    <Content Include="Config\cache.config" />
+    <Content Include="Config\config.ini" />
+    <Content Include="Config\createurl.config" />
+    <Content Include="Config\email.config" />
+    <Content Include="Config\games.config" />
+    <Content Include="Config\general.config" />
+    <Content Include="Config\goods.config" />
+    <Content Include="Config\member.config" />
+    <Content Include="Config\message.config" />
+    <Content Include="Config\mobile.config" />
+    <Content Include="Config\mobilestart.config" />
+    <Content Include="Config\Other.config" />
+    <Content Include="Config\photos.config" />
+    <Content Include="Config\shoppingprocess.config" />
+    <Content Include="Config\sms.config" />
+    <Content Include="Config\unionpay.config" />
+    <Content Include="Config\urls.config" />
+    <Content Include="Config\UserShop.config" />
+    <Content Include="Config\weixin.config" />
+    <Content Include="Ajax\Goods.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Config\weixin_reply.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Merchant\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plugins\Senparc.Weixin.MP\Senparc.Weixin.MP.csproj">
+      <Project>{1d815fbf-451c-4e23-939c-cb80172f445c}</Project>
+      <Name>Senparc.Weixin.MP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins\Senparc.Weixin\Senparc.Weixin.csproj">
+      <Project>{814092cd-9cd0-4fb7-91e8-d147f476f1fb}</Project>
+      <Name>Senparc.Weixin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Common\Weigou.Common.csproj">
+      <Project>{28e32696-9cbd-4c0b-bed7-416ef4a08975}</Project>
+      <Name>Weigou.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Config\Weigou.Config.csproj">
+      <Project>{e9a30b42-30a0-45cc-a8af-22e6f358725d}</Project>
+      <Name>Weigou.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Dao\Weigou.Dao.csproj">
+      <Project>{46de5735-890a-4cd5-aa61-4c5ff2bc9a97}</Project>
+      <Name>Weigou.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Easemob\Weigou.Easemob.csproj">
+      <Project>{65ec4b98-6bd5-44f7-b00f-b2715d7dd45e}</Project>
+      <Name>Weigou.Easemob</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Model\Weigou.Model.csproj">
+      <Project>{167e5fd5-7427-4b2d-82d6-7b7028c386a2}</Project>
+      <Name>Weigou.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Pay\Weigou.Pay.csproj">
+      <Project>{d378d7db-547b-4378-9760-7aff52428b7e}</Project>
+      <Name>Weigou.Pay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Service\Weigou.Service.csproj">
+      <Project>{b38d3659-f52a-4839-8199-771be66d7e0e}</Project>
+      <Name>Weigou.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2916</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4057/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

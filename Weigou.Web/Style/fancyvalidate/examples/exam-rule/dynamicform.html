@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - dynamic form</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      //IE9以下浏览器会保存Property，所以要在设置定义规则之前克隆节点
+      var cloned = document.getElementsByTagName("fieldset")[0].cloneNode(true),
+        val = $f("fancyform", {
+          rules: {
+            uname: { required: 1, minlength: 7, prefix: "fancy" }
+            , headpic: { required: 1, suffix: ".jpg" }
+            , sex: { required: 1 }
+            , age: { range: [10, 120] }
+            , loc: { required: 1, equal: 3 }
+            , lov1: { required: 1, minlength: 3 }
+            , lov2: { required: 1, minlength: 2 }
+            , desc: { required: 1, rangelength: [20, 50] }
+          }
+          , messages: {
+            uname: { prefix: "用户名必须fancy开头" }
+            , headpic: { suffix: "必须为jpg格式" }
+            , loc: { equal: "火星人才能注册" }
+            , lov1: { minlength: "至少要打3次酱油" }
+            , lov2: { minlength: "至少要打2次酱油" }
+          }
+          , submitHandler: function() {
+            alert("验证成功！");
+          }
+        }),
+      form = val.form,
+      addbtn = val.getElement("addfld");
+
+      function reg(el) {
+        val.parseRule(el);
+      }
+
+      $f.event.add(addbtn, "click", function() {
+        var clone = cloned.cloneNode(true);
+        form.insertBefore(clone, addbtn.parentNode.parentNode);
+        $f.core.each(clone.getElementsByTagName("input"), reg);
+        $f.core.each(clone.getElementsByTagName("select"), reg);
+        $f.core.each(clone.getElementsByTagName("textarea"), reg);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>dynamic form 动态表单，手动注册规则</h1>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" />
+      </li>
+      <li>
+        <label class="ttl">头像：</label>
+        <input class="fin h23 file" type="file" name="headpic" />
+      </li>
+      <li>
+        <label class="ttl">性别：</label>
+        <input type="radio" id="radio1" name="sex" /><label for="radio1">男</label>
+        <input type="radio" id="radio2" name="sex" /><label for="radio2">女</label>
+        <input type="radio" id="radio3" name="sex" /><label for="radio3">？？</label>
+      </li>
+      <li>
+        <label class="ttl">年龄：</label>
+      </li>
+      <li>
+        <label class="ttl">位置：</label>
+        <select class="fin" name="loc">
+          <option value="">请选择</option>
+          <option value="1">地球</option>
+          <option value="2">月球</option>
+          <option value="3">火星</option>
+        </select>
+      </li>
+      <li>
+        <label class="ttl">爱好1：</label>
+        <select name="lov1" class="fin" multiple="multiple" size="5">
+          <option value="1">打酱油</option>
+          <option value="2">打酱油</option>
+          <option value="3">打酱油</option>
+          <option value="4">打酱油</option>
+          <option value="5">打酱油</option>
+        </select>
+      </li>
+      <li>
+        <label class="ttl">爱好2：</label>
+        <input type="checkbox" id="check1" name="lov2" /><label for="check1">打酱油</label>
+        <input type="checkbox" id="check2" name="lov2" /><label for="check2">打酱油</label>
+        <input type="checkbox" id="check3" name="lov2" /><label for="check3">打酱油</label>
+      </li>
+      <li>
+        <label class="ttl">自我描述：</label>
+        <textarea name="desc" class="tarea"></textarea>
+      </li>
+    </ul>
+  </fieldset>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+      <input class="btn" type="button" value="添加字段" id="addfld" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

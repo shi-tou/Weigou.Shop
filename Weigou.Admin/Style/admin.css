@@ -1,0 +1,69 @@
+﻿body,html{margin:0px; padding:0px;font: 12px , "宋体", Arial, Helvetica, sans-serif; color:#000;}
+/*common*/
+.p10{ padding:10px}
+.bold{ font-weight:bold;}
+.pr20{ padding-right:20px;}
+.mt10{ margin-top:10px;}
+.red{ color:Red;}
+.green{ color:Green;}
+.blue{ color:Blue;}
+.tr{ text-align:right;}
+textarea{ font-size:12px;}
+.hide{ display:none;}
+.show{ display:block;}
+/*--------index--------*/
+.headL{float:left; height:50px; line-height:50px; color:#fff;}
+.headL h1{ width:280px ; margin:0px; padding:0px; font-size:22px; font-family:黑体; font-weight:bold; color:#fff;}
+.headL h1 img { width:180px }
+.headR{float:right; height:30px; line-height:30px; margin-top:20px; margin-right:20px; color:#fff;}
+.headR span{ margin-right:10px;}
+.menuUL{ list-style:none; margin:0px; padding:0px;}
+.menuUL li{ height:30px;line-height:30px; color:#fff;}
+.menuUL a{ color:#000;}
+#login_out{ cursor:pointer;}
+/*----------main---------*/
+.main{ padding:5px;}
+.search{padding:20px 10px;}
+.blank{ height:10px; clear:left;}
+.fl{ float:left;}
+.fr{ float:right;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+.infotable{ line-height:30px; background:#eee; width:98%; font-size:12px;}
+.infotable td{ background:#fff; border:none; padding:2px 5px;}
+.infotable th{ background:#fff; border:none; padding:2px 5px; text-align:right;}
+hr{ width:100%; border-top:solid 1px #eee;}
+
+.txt{width:200px; height:28px; padding-left:3px; line-height:28px;border:solid 1px #d4d4d4;}
+.txt:hover{ border:solid 1px #0891E2}
+.txt1{width:160px; height:25px; padding-left:8px; line-height:25px;border:solid 1px #d4d4d4;}
+.txt1:hover{ border:solid 1px #0891E2}
+.textarea{width:250px; height:40px; font-size:13px;border:solid 1px #efefef;}
+.action{ border-top:solid 1px #efefef; padding:20px; text-align:center;}
+.btn{ width:85px;  height:31px; line-height: 31px; background: url(images/btn.png) repeat-x 0 ;color:#111; cursor:pointer; border:none;}
+.btn:hover{ background-position:-86px 0px; }
+/*toolbar*/
+#tb{ padding:5px;}
+#tb th{ padding-left:5px; font-weight:normal; text-align:right;}
+#tb td{ padding-right:10px;}
+#tb .txt{ width:100px; height:20px; line-height:20px;}
+
+.l-btn:hover{ background:#E5C795}
+/*searchMember.ascx*/
+.searchMember{ margin-top:10px; padding-left:10px; border:solid 1px #ddd; line-height:35px; background:#fff; width:98%;}
+
+.tip1{ margin:10px; padding:15px; border:dashed 1px #f6981e; background:#ffc;}
+.tip1 p{ line-height:25px;}
+/*高亮插件样式*/
+span.highlight { color:red; font-weight:700}
+/*不可租日历样式*/
+.calendar{ margin-right:15px; border:0px; background:#eee; border-collapse:collapse;  font-size:13px; float:left;}
+.calendar th{  text-align:center; background:#50a2d8; color:#fff; padding:0px;}
+.calendar td{ padding:1px; text-align:center; background:#eee;}
+.calendar td a{ display:block;padding:8px; text-decoration:none; color:#1c94c4; border:solid 1px #ddd; background:#fff; line-height:normal; font-weight:700; cursor:pointer;}
+.calendar td a.disabled{ background: #f6f6f6; color:#aaa; cursor:default; }
+.calendar td a.current{ background: #ffe45c;}
+.calendar td a.close{ background: rgba(0, 0, 0, 0) url("images/disabled.png") no-repeat scroll center center;color:#aaa; }
+/**/
+ #slider-range .ui-slider-range { background: #729fcf; }
+ #slider-range .ui-slider-handle { border-color: #729fcf; }

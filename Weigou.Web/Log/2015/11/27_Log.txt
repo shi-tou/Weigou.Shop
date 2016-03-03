@@ -1,0 +1,240 @@
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:39]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:39:57
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:40]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:40:07
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:40]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:40:28
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:41]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:41:49
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:43]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:43:07
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:43]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:43:41
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:44]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:44:00
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:45]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:45:33
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:46]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:46:14
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/ajax/car.ashx[11:47]--------------------------------
+错误消息：未能创建类型“Weiche.Web.Ajax.car”。
+发生时间：2015/11/27 11:47:24
+错误源： System.Web
+站点地址：http://localhost:9999/ajax/car.ashx
+引发异常的方法： System.Type GetType(System.String)
+堆栈信息：    在 System.Web.UI.SimpleWebHandlerParser.GetType(String typeName)
+   在 System.Web.UI.SimpleWebHandlerParser.GetTypeToCache(Assembly builtAssembly)
+   在 System.Web.Compilation.SimpleHandlerBuildProvider.GetGeneratedType(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.CreateBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildProvider.GetBuildResult(CompilerResults results)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.UI.SimpleHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.SimpleHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 Spring.Web.Support.DefaultHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 

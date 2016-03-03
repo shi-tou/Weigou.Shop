@@ -1,0 +1,10 @@
+--------------------------------responseXml[09:30]--------------------------------
+<xml>
+  <ToUserName><![CDATA[olPjZjsXuQPJoV0HlruZkNzKc91E]]></ToUserName>
+  <FromUserName><![CDATA[gh_a96a4a619366]]></FromUserName>
+  <CreateTime>1449365459</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[OnTextRequest]]></Content>
+</xml>
+
+ 

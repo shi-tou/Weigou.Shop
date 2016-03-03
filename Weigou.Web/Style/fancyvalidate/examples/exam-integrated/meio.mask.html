@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - meio.mask</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script src="../../external/jquery-1.7.1.min.js"></script>
+  <script src="../../external/jquery.meio.mask.js"></script>
+  <script>
+    $(function() {
+      $(":text[name=mdate]").setMask("9999/19/39");
+      $(":text[name=mtime]").setMask("29:59:59");
+      $(":text[name=mip]").setMask("999.999.999.999");
+      $(":text[name=mzip]").setMask("999999");
+      $(":text[name=mtel]").setMask("(0999) 9999-9999");
+      $(":text[name=mmobile]").setMask("19999999999");
+      $(":text[name=mcurrency]").setMask({ mask: '99.999,999,999,999', type: 'reverse', defaultValue: '000', maxlength: 9 });
+    });
+  </script>
+  <script src="mask.js"></script>
+</head>
+<body>
+  <h1>meio.mask 掩码输入</h1>
+  <form action="?" id="fancyform">
+  <ul>
+    <li>
+      <label class="ttl">日期：</label>
+      <input class="fin h23" type="text" name="mdate" placeholder="输入日期" />
+    </li>
+    <li>
+      <label class="ttl">时间：</label>
+      <input class="fin h23" type="text" name="mtime" placeholder="输入时间" />
+    </li>
+    <li>
+      <label class="ttl">ipv4：</label>
+      <input class="fin h23" type="text" name="mip" placeholder="输入ip" />
+    </li>
+    <li>
+      <label class="ttl">邮编：</label>
+      <input class="fin h23" type="text" name="mzip" placeholder="输入邮编" />
+    </li>
+    <li>
+      <label class="ttl">电话：</label>
+      <input class="fin h23" type="text" name="mtel" placeholder="输入电话" />
+    </li>
+    <li>
+      <label class="ttl">手机：</label>
+      <input class="fin h23" type="text" name="mmobile" placeholder="输入手机" />
+    </li>
+    <li>
+      <label class="ttl">货币：</label>
+      <input class="fin h23" type="text" name="mcurrency" placeholder="输入货币" maxlength="9" />
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

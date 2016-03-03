@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CE4D384-AB56-4468-BB93-5150B033D504}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weigou.Weixin</RootNamespace>
+    <AssemblyName>Weigou.Weixin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson">
+      <HintPath>..\Libs\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web">
+      <HintPath>..\Libs\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Extensions">
+      <HintPath>..\Libs\Spring.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AmazeUI\css\admin.css" />
+    <Content Include="AmazeUI\css\amazeui.css" />
+    <Content Include="AmazeUI\css\amazeui.flat.css" />
+    <Content Include="AmazeUI\css\amazeui.flat.min.css" />
+    <Content Include="AmazeUI\css\amazeui.min.css" />
+    <Content Include="AmazeUI\css\app.css" />
+    <Content Include="AmazeUI\i\app-icon72x72%402x.png" />
+    <Content Include="AmazeUI\i\examples\admin-chrome.png" />
+    <Content Include="AmazeUI\i\examples\admin-firefox.png" />
+    <Content Include="AmazeUI\i\examples\admin-ie.png" />
+    <Content Include="AmazeUI\i\examples\admin-opera.png" />
+    <Content Include="AmazeUI\i\examples\admin-safari.png" />
+    <Content Include="AmazeUI\i\examples\adminPage.png" />
+    <Content Include="AmazeUI\i\examples\blogPage.png" />
+    <Content Include="AmazeUI\i\examples\landing.png" />
+    <Content Include="AmazeUI\i\examples\landingPage.png" />
+    <Content Include="AmazeUI\i\examples\loginPage.png" />
+    <Content Include="AmazeUI\i\examples\sidebarPage.png" />
+    <Content Include="AmazeUI\i\favicon.png" />
+    <Content Include="AmazeUI\i\startup-640x1096.png" />
+    <Content Include="AmazeUI\js\amazeui.js" />
+    <Content Include="AmazeUI\js\amazeui.legacy.js" />
+    <Content Include="AmazeUI\js\amazeui.legacy.min.js" />
+    <Content Include="AmazeUI\js\amazeui.min.js" />
+    <Content Include="AmazeUI\js\amazeui.widgets.helper.js" />
+    <Content Include="AmazeUI\js\amazeui.widgets.helper.min.js" />
+    <Content Include="AmazeUI\js\app.js" />
+    <Content Include="AmazeUI\js\handlebars.min.js" />
+    <Content Include="AmazeUI\js\polyfill\rem.min.js" />
+    <Content Include="AmazeUI\js\polyfill\respond.min.js" />
+    <Content Include="AppDownload.aspx" />
+    <Content Include="Config\adminpage.xml" />
+    <Content Include="Default.aspx" />
+    <Content Include="JScript\common.js" />
+    <Content Include="JScript\jquery-1.8.0.min.js" />
+    <Content Include="JScript\jquery.min.js" />
+    <Content Include="JScript\layer\default\xubox_ico0.png" />
+    <Content Include="JScript\layer\default\xubox_loading0.gif" />
+    <Content Include="JScript\layer\default\xubox_loading1.gif" />
+    <Content Include="JScript\layer\default\xubox_loading2.gif" />
+    <Content Include="JScript\layer\default\xubox_loading3.gif" />
+    <Content Include="JScript\layer\default\xubox_title0.png" />
+    <Content Include="JScript\layer\layer.css" />
+    <Content Include="JScript\layer\layer.min.js" />
+    <Content Include="JScript\login.js" />
+    <Content Include="JScript\register.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="logo.png" />
+    <Content Include="Pay\JsApiPayPage.aspx" />
+    <Content Include="Pay\WxPayInfo.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="uc\Footer.ascx" />
+    <Content Include="uc\Header.ascx" />
+    <Content Include="WxHandler.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\BaseAjax.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\Mem.ashx.cs">
+      <DependentUpon>Mem.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppDownload.aspx.cs">
+      <DependentUpon>AppDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppDownload.aspx.designer.cs">
+      <DependentUpon>AppDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pay\JsApiPay.cs" />
+    <Compile Include="Pay\JsApiPayPage.aspx.cs">
+      <DependentUpon>JsApiPayPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pay\JsApiPayPage.aspx.designer.cs">
+      <DependentUpon>JsApiPayPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pay\WxPayInfo.aspx.cs">
+      <DependentUpon>WxPayInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pay\WxPayInfo.aspx.designer.cs">
+      <DependentUpon>WxPayInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WeixinPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WxClass\WxClass.cs" />
+    <Compile Include="WxClass\WxMessageHandler.cs" />
+    <Compile Include="WxClass\WxService.cs" />
+    <Compile Include="WxHandler.aspx.cs">
+      <DependentUpon>WxHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxHandler.aspx.designer.cs">
+      <DependentUpon>WxHandler.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plugins\Senparc.Weixin.MP\Senparc.Weixin.MP.csproj">
+      <Project>{1d815fbf-451c-4e23-939c-cb80172f445c}</Project>
+      <Name>Senparc.Weixin.MP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins\Senparc.Weixin\Senparc.Weixin.csproj">
+      <Project>{814092cd-9cd0-4fb7-91e8-d147f476f1fb}</Project>
+      <Name>Senparc.Weixin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Common\Weigou.Common.csproj">
+      <Project>{28e32696-9cbd-4c0b-bed7-416ef4a08975}</Project>
+      <Name>Weigou.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Config\Weigou.Config.csproj">
+      <Project>{e9a30b42-30a0-45cc-a8af-22e6f358725d}</Project>
+      <Name>Weigou.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Dao\Weigou.Dao.csproj">
+      <Project>{46de5735-890a-4cd5-aa61-4c5ff2bc9a97}</Project>
+      <Name>Weigou.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Model\Weigou.Model.csproj">
+      <Project>{167e5fd5-7427-4b2d-82d6-7b7028c386a2}</Project>
+      <Name>Weigou.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Pay\Weigou.Pay.csproj">
+      <Project>{d378d7db-547b-4378-9760-7aff52428b7e}</Project>
+      <Name>Weigou.Pay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Service\Weigou.Service.csproj">
+      <Project>{b38d3659-f52a-4839-8199-771be66d7e0e}</Project>
+      <Name>Weigou.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\activity.config" />
+    <Content Include="Config\ad.config" />
+    <Content Include="Config\alipay.config" />
+    <Content Include="Config\base.config" />
+    <Content Include="Config\cache.config" />
+    <Content Include="Config\config.ini" />
+    <Content Include="Config\createurl.config" />
+    <Content Include="Config\email.config" />
+    <Content Include="Config\games.config" />
+    <Content Include="Config\general.config" />
+    <Content Include="Config\goods.config" />
+    <Content Include="Config\member.config" />
+    <Content Include="Config\message.config" />
+    <Content Include="Config\mobile.config" />
+    <Content Include="Config\mobilestart.config" />
+    <Content Include="Config\Other.config" />
+    <Content Include="Config\photos.config" />
+    <Content Include="Config\shoppingprocess.config" />
+    <Content Include="Config\sms.config" />
+    <Content Include="Config\unionpay.config" />
+    <Content Include="Config\urls.config" />
+    <Content Include="Config\UserShop.config" />
+    <Content Include="Config\weixin.config" />
+    <Content Include="Config\weixin_reply.config" />
+    <Content Include="AmazeUI\css\vssver2.scc" />
+    <Content Include="AmazeUI\fonts\fontawesome-webfont.eot" />
+    <Content Include="AmazeUI\fonts\fontawesome-webfont.svg" />
+    <Content Include="AmazeUI\fonts\fontawesome-webfont.ttf" />
+    <Content Include="AmazeUI\fonts\fontawesome-webfont.woff" />
+    <Content Include="AmazeUI\fonts\FontAwesome.otf" />
+    <Content Include="AmazeUI\fonts\vssver2.scc" />
+    <Content Include="AmazeUI\i\examples\vssver2.scc" />
+    <Content Include="AmazeUI\i\vssver2.scc" />
+    <Content Include="AmazeUI\js\polyfill\vssver2.scc" />
+    <Content Include="AmazeUI\js\vssver2.scc" />
+    <Content Include="JScript\layer\default\vssver2.scc" />
+    <Content Include="JScript\layer\vssver2.scc" />
+    <Content Include="Ajax\Mem.ashx" />
+    <None Include="Properties\PublishProfiles\MeiJin.Weixin.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1682/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

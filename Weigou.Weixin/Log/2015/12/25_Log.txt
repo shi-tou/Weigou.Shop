@@ -1,0 +1,70 @@
+--------------------------------DefaultConfigFileManager.DeserializeInfo[15:19]--------------------------------
+XML 文档(2, 2)中有错误。
+
+ 
+--------------------------------DefaultConfigFileManager.DeserializeInfo[15:26]--------------------------------
+XML 文档(2, 2)中有错误。
+
+ 
+--------------------------------responseXml[15:42]--------------------------------
+<xml>
+  <ToUserName><![CDATA[gh_a96a4a619366]]></ToUserName>
+  <FromUserName><![CDATA[gh_a96a4a619366]]></FromUserName>
+  <CreateTime>1451029335</CreateTime>
+  <MsgType><![CDATA[news]]></MsgType>
+  <ArticleCount>0</ArticleCount>
+  <Articles />
+</xml>
+
+ 
+--------------------------------responseXml[15:43]--------------------------------
+<xml>
+  <ToUserName><![CDATA[gh_a96a4a619366]]></ToUserName>
+  <FromUserName><![CDATA[gh_a96a4a619366]]></FromUserName>
+  <CreateTime>1451029397</CreateTime>
+  <MsgType><![CDATA[news]]></MsgType>
+  <ArticleCount>0</ArticleCount>
+  <Articles />
+</xml>
+
+ 
+--------------------------------responseXml[15:43]--------------------------------
+<xml>
+  <ToUserName><![CDATA[gh_a96a4a619366]]></ToUserName>
+  <FromUserName><![CDATA[gh_a96a4a619366]]></FromUserName>
+  <CreateTime>1451029415</CreateTime>
+  <MsgType><![CDATA[news]]></MsgType>
+  <ArticleCount>0</ArticleCount>
+  <Articles />
+</xml>
+
+ 
+--------------------------------responseXml[15:43]--------------------------------
+<xml>
+  <ToUserName><![CDATA[gh_a96a4a619366]]></ToUserName>
+  <FromUserName><![CDATA[gh_a96a4a619366]]></FromUserName>
+  <CreateTime>1451029437</CreateTime>
+  <MsgType><![CDATA[news]]></MsgType>
+  <ArticleCount>0</ArticleCount>
+  <Articles />
+</xml>
+
+ 
+--------------------------------responseXml[15:44]--------------------------------
+<xml>
+  <ToUserName><![CDATA[gh_a96a4a619366]]></ToUserName>
+  <FromUserName><![CDATA[gh_a96a4a619366]]></FromUserName>
+  <CreateTime>1451029445</CreateTime>
+  <MsgType><![CDATA[news]]></MsgType>
+  <ArticleCount>1</ArticleCount>
+  <Articles>
+    <item>
+      <Title><![CDATA[取还车时我都需要注意些什么？]]></Title>
+      <Description><![CDATA[取车时，车主有义务拍摄车辆的外观照片（包含车身各个位置），并告知租客车辆已有的磨损情况，证明车辆的出租前状况。这样在还车的时候如果发现未知伤痕可以很明确的界定车辆是否是在租期内出险，避免双方不必要的纠纷。]]></Description>
+      <PicUrl><![CDATA[]]></PicUrl>
+      <Url><![CDATA[http://www.baidu.com]]></Url>
+    </item>
+  </Articles>
+</xml>
+
+ 

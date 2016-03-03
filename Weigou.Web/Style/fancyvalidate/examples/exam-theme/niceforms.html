@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - niceforms</title>
+  <link href="../../external/forms/niceforms-v2.0/niceforms-default.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../external/forms/niceforms-v2.0/niceforms.js"></script>
+  <!--[if IE]>
+  <style>
+  .opt { padding-left: 8px; }
+  </style>
+  <![endif]-->
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    imagesPath = "../../external/forms/niceforms-v2.0/img/";
+  </script>
+  <script src="container.js"></script>
+</head>
+<body>
+  <h1>niceforms</h1>
+  <div id="container">
+    <form action="?" id="fancyform" class="niceform">
+    <fieldset>
+      <legend>用户信息</legend>
+      <dl>
+        <dt><label>用户名：</label></dt>
+        <dd><input type="text" name="uname" /></dd>
+      </dl>
+      <dl>
+        <dt><label>Email：</label></dt>
+        <dd><input name="email" type="text" /></dd>
+      </dl>
+      <dl>
+        <dt><label>密码：</label></dt>
+        <dd><input name="pwd" type="password" /></dd>
+      </dl>
+      <dl>
+        <dt><label>确认密码：</label></dt>
+        <dd><input name="pwd2" type="password" /></dd>
+      </dl>
+    </fieldset>
+    <fieldset>
+      <legend>更多信息</legend>
+      <dl>
+        <dt><label>头像：</label></dt>
+        <dd><input type="file" name="headpic" /></dd>
+      </dl>
+      <dl>
+        <dt><label>姓名：</label></dt>
+        <dd><input type="text" name="rname" /></dd>
+      </dl>
+      <dl>
+        <dt><label>性别：</label></dt>
+        <dd>
+          <input type="radio" id="radio1" name="sex" /><label for="radio1" class="opt">男</label>
+          <input type="radio" id="radio2" name="sex" /><label for="radio2" class="opt">女</label>
+          <input type="radio" id="radio3" name="sex" /><label for="radio3" class="opt">？？</label>
+        </dd>
+      </dl>
+      <dl>
+        <dt><label>年龄：</label></dt>
+        <dd><input name="age" type="text" /></dd>
+      </dl>
+      <dl>
+        <dt><label>位置：</label></dt>
+        <dd>
+          <select name="loc" size="1">
+            <option value="">请选择</option>
+            <option value="1">地球</option>
+            <option value="2">月球</option>
+            <option value="3">火星</option>
+          </select>
+        </dd>
+    </fieldset>
+    <fieldset>
+      <legend>其他信息</legend>
+      <dl>
+        <dt><label>爱好2：</label></dt>
+        <dd>
+          <input type="checkbox" id="check1" name="lov2" /><label for="check1" class="opt">打酱油</label>
+          <input type="checkbox" id="check2" name="lov2" /><label for="check2" class="opt">打酱油</label>
+          <input type="checkbox" id="check3" name="lov2" /><label for="check3" class="opt">打酱油</label>
+        </dd>
+      </dl>
+      <dl>
+        <dt><label>爱好1：</label></dt>
+        <dd>
+          <select name="lov1" multiple="multiple" size="5">
+            <option value="1">打酱油</option>
+            <option value="2">打酱油</option>
+            <option value="3">打酱油</option>
+            <option value="4">打酱油</option>
+            <option value="5">打酱油</option>
+          </select>
+        </dd>
+      </dl>
+      <dl>
+        <dt><label>自我描述：</label></dt>
+        <dd><textarea name="desc" rows="5" cols="60"></textarea></dd>
+      </dl>
+    </fieldset>
+    <fieldset class="action">
+      <input type="submit" value="提交表单" />
+    </fieldset>
+    </form>
+  </div>
+</body>
+</html>

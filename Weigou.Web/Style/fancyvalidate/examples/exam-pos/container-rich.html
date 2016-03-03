@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - container</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      var cc = $f.dom.get("result"),
+        childs = cc.getElementsByTagName("div"),
+        err = cc.getElementsByTagName("ol")[0],
+        dom = $f.dom;
+
+      $f("fancyform", {
+        rules: {
+          uname: { required: 1, minlength: 7, prefix: "fancy" }
+          , email: { required: 1, email: 1 }
+          , pwd: { required: 1, rangelength: [6, 8] }
+          , pwd2: { required: 1, compareTo: "pwd" }
+        }
+        , messages: {
+          uname: { required: "用户名必须填写", prefix: "用户名必须fancy开头" }
+          , email: { required: "email必须填写" }
+          , pwd: { required: "密码必须填写" }
+        }
+        , submitHandler: function() {
+          dom.toggle(childs[4], true);
+        }
+        , showErrors: function() {
+          $f.defaults.showErrors.call(this);
+          dom.toggle(cc, true);
+          var valid = this.valid(), num = this.numOfErrors();
+          dom.toggle(childs[0], !valid);
+          dom.toggle(childs[1], !valid);
+          dom.toggle(childs[2], num == 1);
+          dom.toggle(childs[3], num == 2 || num == 3);
+          dom.toggle(childs[4], valid);
+        }
+        , errorElement: "li"
+        , errorCls: ""
+        , validCls: ""
+        , container: err
+        , appendLabel: $f.appendContainer
+        , findLabel: $f.findContainer
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>container 在容器中显示更丰富的提示信息</h1>
+  <div id="result" style="display: none;">
+    <div class="box box-error">以下验证未通过</div>
+    <div class="box box-error-msg">
+      <ol>
+      </ol>
+    </div>
+    <div class="box box-info" style="display: none;">再努力一下，就可以通过验证了</div>
+    <div class="box box-warning" style="display: none;">验证还未通过，仍需继续努力</div>
+    <div class="box box-success" style="display: none;">验证成功</div>
+  </div>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" />
+      </li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" />
+      </li>
+      <li>
+        <label class="ttl">密码：</label>
+        <input class="fin h23" name="pwd" type="password" />
+      </li>
+      <li>
+        <label class="ttl">确认密码：</label>
+        <input class="fin h23" name="pwd2" type="password" />
+      </li>
+    </ul>
+  </fieldset>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

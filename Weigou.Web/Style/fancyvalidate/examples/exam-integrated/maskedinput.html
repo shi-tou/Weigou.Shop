@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - maskedinput</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script src="../../external/jquery-1.7.1.min.js"></script>
+  <script src="../../external/jquery.maskedinput-1.3.js"></script>
+  <script>
+    $(function() {
+      $(":text[name=mdate]").mask("9999/99/99");
+      $(":text[name=mtime]").mask("?99:99:99")
+        .blur(function() {
+          if ($f.core.endsWith(this.value, ":"))
+            this.value = this.value.slice(0, this.value.length - 1);
+        });
+      $(":text[name=mip]").mask("999.999.999.999");
+      $(":text[name=mzip]").mask("999999");
+      $(":text[name=mtel]").mask("(0999) 9999-9999");
+      $(":text[name=mmobile]").mask("19999999999");
+      $(":text[name=mcurrency]").mask('?99,999');
+    });
+  </script>
+  <script src="mask.js"></script>
+</head>
+<body>
+  <h1>maskedinput 掩码输入</h1>
+  <form action="?" id="fancyform">
+  <ul>
+    <li>
+      <label class="ttl">日期：</label>
+      <input class="fin h23" type="text" name="mdate" placeholder="输入日期" />
+    </li>
+    <li>
+      <label class="ttl">时间：</label>
+      <input class="fin h23" type="text" name="mtime" placeholder="输入时间" />
+    </li>
+    <li>
+      <label class="ttl">ipv4：</label>
+      <input class="fin h23" type="text" name="mip" placeholder="输入ip" />
+    </li>
+    <li>
+      <label class="ttl">邮编：</label>
+      <input class="fin h23" type="text" name="mzip" placeholder="输入邮编" />
+    </li>
+    <li>
+      <label class="ttl">电话：</label>
+      <input class="fin h23" type="text" name="mtel" placeholder="输入电话" />
+    </li>
+    <li>
+      <label class="ttl">手机：</label>
+      <input class="fin h23" type="text" name="mmobile" placeholder="输入手机" />
+    </li>
+    <li>
+      <label class="ttl">货币：</label>
+      <input class="fin h23" type="text" name="mcurrency" placeholder="输入货币" maxlength="9" />
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

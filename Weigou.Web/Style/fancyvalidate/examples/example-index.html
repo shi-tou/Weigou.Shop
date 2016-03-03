@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - main demo</title>
+  <link href="css/example.css" rel="stylesheet" />
+  <link href="../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../fancyValidate.min.js"></script>
+  <script src="../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      $f("fancyform", {
+        rules: {
+          uname: { required: 1, minlength: 7, prefix: "fancy" }
+          , email: { required: 1, email: 1 }
+          , pwd: { required: 1, rangelength: [6, 8] }
+          , pwd2: { required: 1, compareTo: "pwd" }
+          , headpic: { required: 1, suffix: ".jpg" }
+          , rname: { required: 1, chinese: 1 }
+          , sex: { required: 1 }
+          , age: { range: [10, 120] }
+          , loc: { required: 1, equal: 3 }
+          , lov1: { required: 1, minlength: 3 }
+          , lov2: { required: 1, minlength: 2 }
+          , desc: { required: 1, rangelength: [20, 50] }
+        }
+        , messages: {
+          uname: { prefix: "用户名必须fancy开头" }
+          , headpic: { suffix: "必须为jpg格式" }
+          , loc: { equal: "火星人才能注册" }
+          , lov1: { minlength: "至少要打3次酱油" }
+          , lov2: { minlength: "至少要打2次酱油" }
+        }
+        , submitHandler: function() {
+          alert("验证成功！");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>main demo 首页</h1>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" />
+      </li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" />
+      </li>
+      <li>
+        <label class="ttl">密码：</label>
+        <input class="fin h23" name="pwd" type="password" />
+      </li>
+      <li>
+        <label class="ttl">确认密码：</label>
+        <input class="fin h23" name="pwd2" type="password" />
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset class="fld">
+    <legend class="leg">更多信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">头像：</label>
+        <input class="fin h23 file" type="file" name="headpic" />
+      </li>
+      <li>
+        <label class="ttl">姓名：</label>
+        <input class="fin h23" type="text" name="rname" />
+      </li>
+      <li>
+        <label class="ttl">性别：</label>
+        <input type="radio" id="radio1" name="sex" /><label for="radio1">男</label>
+        <input type="radio" id="radio2" name="sex" /><label for="radio2">女</label>
+        <input type="radio" id="radio3" name="sex" /><label for="radio3">？？</label>
+      </li>
+      <li>
+        <label class="ttl">年龄：</label>
+        <input class="fin h23" name="age" type="text" />
+      </li>
+      <li>
+        <label class="ttl">位置：</label>
+        <select class="fin" name="loc">
+          <option value="">请选择</option>
+          <option value="1">地球</option>
+          <option value="2">月球</option>
+          <option value="3">火星</option>
+        </select>
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset class="fld">
+    <legend class="leg">其他信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">爱好1：</label>
+        <select name="lov1" class="fin" multiple="multiple" size="5">
+          <option value="1">打酱油</option>
+          <option value="2">打酱油</option>
+          <option value="3">打酱油</option>
+          <option value="4">打酱油</option>
+          <option value="5">打酱油</option>
+        </select>
+      </li>
+      <li>
+        <label class="ttl">爱好2：</label>
+        <input type="checkbox" id="check1" name="lov2" /><label for="check1">打酱油</label>
+        <input type="checkbox" id="check2" name="lov2" /><label for="check2">打酱油</label>
+        <input type="checkbox" id="check3" name="lov2" /><label for="check3">打酱油</label>
+      </li>
+      <li>
+        <label class="ttl">自我描述：</label>
+        <textarea name="desc" class="tarea"></textarea>
+      </li>
+    </ul>
+  </fieldset>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>

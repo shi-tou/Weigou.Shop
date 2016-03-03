@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{167E5FD5-7427-4B2D-82D6-7B7028C386A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weigou.Model</RootNamespace>
+    <AssemblyName>Weigou.Model</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'test|AnyCPU'">
+    <OutputPath>bin\test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ad\AdContentInfo.cs" />
+    <Compile Include="BaseDataConst.cs" />
+    <Compile Include="Content\NewsInfo.cs" />
+    <Compile Include="Enum\EnumPicture.cs" />
+    <Compile Include="Enum\EnumModule.cs" />
+    <Compile Include="Enum\EnumOperation.cs" />
+    <Compile Include="Enum\EnumSex.cs" />
+    <Compile Include="Enum\EnumShelvesStatus.cs" />
+    <Compile Include="Enum\EnumSource.cs" />
+    <Compile Include="Enum\EnumStatus.cs" />
+    <Compile Include="Enum\EnumMemStatus.cs" />
+    <Compile Include="Enum\EnumMallOrderStatus.cs" />
+    <Compile Include="Enum\EnumGoodsStatus.cs" />
+    <Compile Include="Enum\EnumScoreType.cs" />
+    <Compile Include="Enum\EnumFavType.cs" />
+    <Compile Include="Enum\EnumCarOrderStatus.cs" />
+    <Compile Include="Enum\EnumPayStatus.cs" />
+    <Compile Include="Enum\EnumExpressStatus.cs" />
+    <Compile Include="Excel\ExcelTemplate.cs" />
+    <Compile Include="Enum\EnumMemberSource.cs" />
+    <Compile Include="Goods\AttrValueInfo.cs" />
+    <Compile Include="Goods\GoodsAttrInfo.cs" />
+    <Compile Include="Goods\GoodsAttrValueInfo.cs" />
+    <Compile Include="Member\AccountInfo.cs" />
+    <Compile Include="Member\PasswordInfo.cs" />
+    <Compile Include="Member\GiftExchangeInfo.cs" />
+    <Compile Include="Member\DeliverAddressInfo.cs" />
+    <Compile Include="Member\CommentInfo.cs" />
+    <Compile Include="Merchant\MerchantInfo.cs" />
+    <Compile Include="Merchant\MerchantSettledInfo.cs" />
+    <Compile Include="Order\MallOrderInfo.cs" />
+    <Compile Include="Order\SubmitOrderInfo.cs" />
+    <Compile Include="Order\SubmitMallOrderInfo.cs" />
+    <Compile Include="Order\MallOrderDetailInfo.cs" />
+    <Compile Include="Order\MallOrderShipInfo.cs" />
+    <Compile Include="Order\MallOrderTrackInfo.cs" />
+    <Compile Include="PictureInfo.cs" />
+    <Compile Include="T4\test.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="Member\MemberInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmsCodeConst.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="T4\DBHelper.ttinclude" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="T4\test.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>test.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

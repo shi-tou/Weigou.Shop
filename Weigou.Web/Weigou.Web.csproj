@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F2FF551-9E7E-4D1C-94E6-5CCFE9239B90}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weigou.Web</RootNamespace>
+    <AssemblyName>Weigou.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\Libs\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\项目开发\MeiJin\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services">
+      <HintPath>..\Libs\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web">
+      <HintPath>..\Libs\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Extensions">
+      <HintPath>..\Libs\Spring.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\AmazeUI\css\admin.css" />
+    <Content Include="App\AmazeUI\css\amazeui.css" />
+    <Content Include="App\AmazeUI\css\amazeui.flat.css" />
+    <Content Include="App\AmazeUI\css\amazeui.flat.min.css" />
+    <Content Include="App\AmazeUI\css\amazeui.min.css" />
+    <Content Include="App\AmazeUI\css\app.css" />
+    <Content Include="App\AmazeUI\i\app-icon72x72%402x.png" />
+    <Content Include="App\AmazeUI\i\examples\admin-chrome.png" />
+    <Content Include="App\AmazeUI\i\examples\admin-firefox.png" />
+    <Content Include="App\AmazeUI\i\examples\admin-ie.png" />
+    <Content Include="App\AmazeUI\i\examples\admin-opera.png" />
+    <Content Include="App\AmazeUI\i\examples\admin-safari.png" />
+    <Content Include="App\AmazeUI\i\examples\adminPage.png" />
+    <Content Include="App\AmazeUI\i\examples\blogPage.png" />
+    <Content Include="App\AmazeUI\i\examples\landing.png" />
+    <Content Include="App\AmazeUI\i\examples\landingPage.png" />
+    <Content Include="App\AmazeUI\i\examples\loginPage.png" />
+    <Content Include="App\AmazeUI\i\examples\sidebarPage.png" />
+    <Content Include="App\AmazeUI\i\favicon.png" />
+    <Content Include="App\AmazeUI\i\startup-640x1096.png" />
+    <Content Include="App\AmazeUI\js\amazeui.js" />
+    <Content Include="App\AmazeUI\js\amazeui.legacy.js" />
+    <Content Include="App\AmazeUI\js\amazeui.legacy.min.js" />
+    <Content Include="App\AmazeUI\js\amazeui.min.js" />
+    <Content Include="App\AmazeUI\js\amazeui.widgets.helper.js" />
+    <Content Include="App\AmazeUI\js\amazeui.widgets.helper.min.js" />
+    <Content Include="App\AmazeUI\js\app.js" />
+    <Content Include="App\AmazeUI\js\handlebars.min.js" />
+    <Content Include="App\AmazeUI\js\polyfill\rem.min.js" />
+    <Content Include="App\AmazeUI\js\polyfill\respond.min.js" />
+    <Content Include="App\ServiceDetail.aspx" />
+    <Content Include="App\ServiceList.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="JScript\jquery-1.8.0.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Member\MemInfo.aspx" />
+    <Content Include="Member\MyAddress.aspx" />
+    <Content Include="Member\Main.aspx" />
+    <Content Include="Member\MyFavorite.aspx" />
+    <Content Include="Member\MyComment.aspx" />
+    <Content Include="Member\MyOrder.aspx" />
+    <Content Include="Style\css\member.css" />
+    <Content Include="Style\fancyvalidate\css\fancyValidate.css" />
+    <Content Include="Style\fancyvalidate\css\icons\accept.png" />
+    <Content Include="Style\fancyvalidate\css\icons\error.png" />
+    <Content Include="Style\fancyvalidate\css\icons\exclamation.png" />
+    <Content Include="Style\fancyvalidate\css\icons\gifs\accept.gif" />
+    <Content Include="Style\fancyvalidate\css\icons\gifs\error.gif" />
+    <Content Include="Style\fancyvalidate\css\icons\gifs\exclamation.gif" />
+    <Content Include="Style\fancyvalidate\css\icons\gifs\information.gif" />
+    <Content Include="Style\fancyvalidate\css\icons\information.png" />
+    <Content Include="Style\fancyvalidate\css\icons\readme.txt" />
+    <Content Include="Style\fancyvalidate\doc.html" />
+    <Content Include="Style\fancyvalidate\examples\css\example-layout.css" />
+    <Content Include="Style\fancyvalidate\examples\css\example.css" />
+    <Content Include="Style\fancyvalidate\examples\css\loading.css" />
+    <Content Include="Style\fancyvalidate\examples\exam-integrated\jqueryui-dialog.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-integrated\jqueryui.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-integrated\jqui.css" />
+    <Content Include="Style\fancyvalidate\examples\exam-integrated\jqui.js" />
+    <Content Include="Style\fancyvalidate\examples\exam-integrated\mask.js" />
+    <Content Include="Style\fancyvalidate\examples\exam-integrated\maskedinput.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-integrated\meio.mask.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-methods\autoTab.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-methods\rules.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-methods\watermark.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-pos\absolute.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-pos\container-rich.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-pos\container.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-pos\lastchild.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-pos\messages.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-rule\dynamicform.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-rule\html5attr.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-rule\htmlattr.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-rule\ruleattr.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-rule\rulekey.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-rule\ruleKeyAlter.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-theme\carbon.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-theme\container.js" />
+    <Content Include="Style\fancyvalidate\examples\exam-theme\formly.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-theme\idealForms.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-theme\jqtransform.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-theme\lastchild.js" />
+    <Content Include="Style\fancyvalidate\examples\exam-theme\niceforms.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-theme\uniform.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-tips\arrow.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-tips\bubble.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-tips\fcbox.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-tips\jgrowl.html" />
+    <Content Include="Style\fancyvalidate\examples\exam-tips\qtip.html" />
+    <Content Include="Style\fancyvalidate\examples\example-index.html" />
+    <Content Include="Style\fancyvalidate\examples\generator\fancyValidate.generator.js" />
+    <Content Include="Style\fancyvalidate\examples\generator\generator.html" />
+    <Content Include="Style\fancyvalidate\examples\index.html" />
+    <Content Include="Style\fancyvalidate\external\dynatree\GPL-LICENSE.txt" />
+    <Content Include="Style\fancyvalidate\external\dynatree\jquery.dynatree.min.js" />
+    <Content Include="Style\fancyvalidate\external\dynatree\MIT-License.txt" />
+    <Content Include="Style\fancyvalidate\external\dynatree\skin-vista\icons.gif" />
+    <Content Include="Style\fancyvalidate\external\dynatree\skin-vista\loading.gif" />
+    <Content Include="Style\fancyvalidate\external\dynatree\skin-vista\ui.dynatree.css" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\formcheck.css" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\b.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\bl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\br.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\c.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\close.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\l.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\r.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\t.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\tl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\blue\img\tr.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\formcheck.css" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\b.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\bl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\br.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\c.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\close.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\l.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\r.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\t.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\tl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\classic\img\tr.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\formcheck.css" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\b.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\bl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\br.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\c.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\close.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\l.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\r.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\t.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\tl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\green\img\tr.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\formcheck.css" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\b.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\bl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\br.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\c.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\close.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\l.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\r.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\t.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\tl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\grey\img\tr.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\formcheck.css" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\b.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\bl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\br.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\c.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\close.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\l.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\r.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\t.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\tl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\red\img\tr.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\formcheck.css" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\b.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\bl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\br.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\c.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\close.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\l.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\r.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\t.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\tl.png" />
+    <Content Include="Style\fancyvalidate\external\fcbox\white\img\tr.png" />
+    <Content Include="Style\fancyvalidate\external\forms\carbonFiberSignup\img\bg.png" />
+    <Content Include="Style\fancyvalidate\external\forms\carbonFiberSignup\img\box_bg.png" />
+    <Content Include="Style\fancyvalidate\external\forms\carbonFiberSignup\img\preloader.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\carbonFiberSignup\img\submit.png" />
+    <Content Include="Style\fancyvalidate\external\forms\carbonFiberSignup\styles.css" />
+    <Content Include="Style\fancyvalidate\external\forms\Formly\formly.css" />
+    <Content Include="Style\fancyvalidate\external\forms\Formly\formly.js" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\css\idealforms\distro2_bats-webfont.svg" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\css\idealforms\idealforms.css" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\css\master.css" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\css\normalize.css" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\js\jquery.idealforms.js" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\readme.txt" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\btn_left.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\btn_right.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\checkbox.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\input\input_left-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\input\input_left-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\input\input_left.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\input\input_right-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\input\input_right-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\input\input_right.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\input\input_text_left.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\input\input_text_right.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\radio.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\select_left.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\select_right.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-bl-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-bl-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-bl.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-bm-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-bm-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-bm.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-br-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-br-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-br.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-ml-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-ml-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-ml.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-mm-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-mm-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-mm.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-mr-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-mr-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-mr.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-tl-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-tl-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-tl.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-tm-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-tm-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-tm.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-tr-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-tr-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\notneeded\textarea-tr.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea-mm-focus.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea-mm-hover.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea-mm.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea_bl.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea_bm.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea_br.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea_ml.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea_mr.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea_tl.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea_tm.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\img\textarea\textarea_tr.gif" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\jqtransform.css" />
+    <Content Include="Style\fancyvalidate\external\forms\jqtransformplugin\jquery.jqtransform.js" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\0.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\button-left.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\button-right.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\button.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\checkbox.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\file.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\input-left.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\input-right.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\input.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\radio.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\select-left.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\select-right.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\textarea-bl.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\textarea-br.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\textarea-l-off.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\textarea-l-over.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\textarea-r-off.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\textarea-r-over.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\textarea-tl.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\img\textarea-tr.png" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\niceforms-default.css" />
+    <Content Include="Style\fancyvalidate\external\forms\niceforms-v2.0\niceforms.js" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\agent\css\uniform.agent.css" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\agent\images\sprite-agent.png" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\aristo\css\uniform.aristo.css" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\aristo\images\sprite-aristo.png" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\default\css\uniform.default.css" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\default\images\bg-input-focus.png" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\default\images\bg-input.png" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\default\images\sprite.png" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\jquery.uniform.min.js" />
+    <Content Include="Style\fancyvalidate\external\jquery-1.7.1.min.js" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\css\ui-lightness\jquery-ui-1.8.17.custom.css" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\js\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\js\jquery-ui-1.8.17.i18n.min.js" />
+    <Content Include="Style\fancyvalidate\external\jquery-ui\js\jquery-ui-widget-combobox.js" />
+    <Content Include="Style\fancyvalidate\external\jquery.cookie.js" />
+    <Content Include="Style\fancyvalidate\external\jquery.layout-latest.js" />
+    <Content Include="Style\fancyvalidate\external\jquery.loading.1.6.4.min.js" />
+    <Content Include="Style\fancyvalidate\external\jquery.maskedinput-1.3.js" />
+    <Content Include="Style\fancyvalidate\external\jquery.meio.mask.js" />
+    <Content Include="Style\fancyvalidate\external\jquery.qtip\jquery.qtip.min.css" />
+    <Content Include="Style\fancyvalidate\external\jquery.qtip\jquery.qtip.min.js" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\calendar.js" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\lang\en.js" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Style\fancyvalidate\external\My97DatePicker\WdatePicker.js" />
+    <Content Include="Style\fancyvalidate\external\stanlemon-jgrowl\jquery.jgrowl.css" />
+    <Content Include="Style\fancyvalidate\external\stanlemon-jgrowl\jquery.jgrowl_google.js" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\CHANGE.txt" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\LGPL-LICENSE.txt" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\README.txt" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\THANKS.txt" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\wizard.html" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor-1.1.12-zh-cn.min.js" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\iframe.css" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\anchor.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\close.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\flash.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\icons.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\loading.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\progress.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\progressbg.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-address.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-div.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-h1.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-h2.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-h3.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-h4.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-h5.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-h6.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-p.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\tag-pre.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\waiting.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\img\wmp.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\default\ui.css" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\iframe.css" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\anchor.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\close.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\flash.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\icons.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\loading.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\progress.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\progressbg.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-address.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-div.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-h1.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-h2.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-h3.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-h4.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-h5.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-h6.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-p.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\tag-pre.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\waiting.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\img\wmp.gif" />
+    <Content Include="Style\fancyvalidate\external\xheditor-1.1.12\xheditor_skin\nostyle\ui.css" />
+    <Content Include="Style\fancyvalidate\fancyValidate.additional.min.js" />
+    <Content Include="Style\fancyvalidate\fancyValidate.min.js" />
+    <Content Include="Style\fancyvalidate\MIT-License.txt" />
+    <Content Include="Style\fancyvalidate\README.txt" />
+    <Content Include="Style\fancyvalidate\src\fancyValidate.additional.js" />
+    <Content Include="Style\fancyvalidate\src\fancyValidate.js" />
+    <Content Include="Style\images\car.png" />
+    <Content Include="Style\images\close.gif" />
+    <Content Include="Style\images\sharp.png" />
+    <Content Include="Style\js\common.js" />
+    <Content Include="Style\layer\extend\layer.ext.js" />
+    <Content Include="Style\layer\layer.js" />
+    <Content Include="Style\layer\skin\default\icon-ext.png" />
+    <Content Include="Style\layer\skin\default\icon.png" />
+    <Content Include="Style\layer\skin\default\loading-0.gif" />
+    <Content Include="Style\layer\skin\default\loading-1.gif" />
+    <Content Include="Style\layer\skin\default\loading-2.gif" />
+    <Content Include="Style\layer\skin\layer.css" />
+    <Content Include="Style\layer\skin\layer.ext.css" />
+    <Content Include="UControl\MemHeader.ascx" />
+    <Content Include="UControl\MemMenu.ascx" />
+    <Content Include="upload\APP\diandonghuanbao.png" />
+    <Content Include="upload\APP\haohuazunxiang.png" />
+    <Content Include="upload\APP\jibenjincou.png" />
+    <Content Include="upload\APP\jingjishushi.png" />
+    <Content Include="upload\APP\shangwujingying.png" />
+    <Content Include="upload\APP\suv.png" />
+    <Content Include="upload\Banner\201509\6d5f33a2-0899-424b-b1ac-f26b806abb5e.jpg" />
+    <Content Include="upload\Brand\201506\091eaf82-89a4-451f-928b-4bf2d8b071f9.jpg" />
+    <Content Include="upload\Brand\201506\94e26170-395d-45ea-bda5-505115519334.jpg" />
+    <Content Include="upload\Brand\201506\9f6455c7-83be-4333-9faa-85d269e65845.jpg" />
+    <Content Include="upload\Brand\201506\b76d36e4-d751-4537-bf53-18ef6654b377.jpg" />
+    <Content Include="upload\Brand\201506\d4d3e417-7c8e-4d0e-b799-ee1a1709d9d1.jpg" />
+    <Content Include="upload\Brand\201506\ee1b0338-1eef-487c-959c-7ebab4208621.jpg" />
+    <Content Include="upload\Brand\201509\73c42018-ac32-4fcf-8262-d1cd9ce262bf.png" />
+    <Content Include="upload\Brand\201509\cbd4559e-9f3f-4805-aee2-bf4627a96e9e.png" />
+    <Content Include="upload\Brand\201509\eec1c7fa-ae15-471d-bee1-62dcbd3d76f3.png" />
+    <Content Include="upload\Car\201509\00a8ee2b-9ed3-4143-9e7b-f3ca405b8f8c_s.jpg" />
+    <Content Include="upload\Car\201509\1256e50c-6964-4d61-bb7c-a048f847a34b_s.jpg" />
+    <Content Include="upload\Car\201509\196c392c-2411-4bbd-9892-cb43e5863711_s.jpg" />
+    <Content Include="upload\Car\201509\5c331789-74e9-4f3a-a187-1c73f6408414.jpg" />
+    <Content Include="upload\Car\201509\67c2e48a-8d6a-4d4d-acb8-dfda127084b5.jpg" />
+    <Content Include="upload\Car\201509\8c41d515-ee7b-42a1-b552-da2d4d00cc1d.jpg" />
+    <Content Include="upload\Car\201509\ba78cfa5-820a-45bf-88b2-8fd90d868b13_s.jpg" />
+    <Content Include="upload\Car\201509\db10257e-74d5-41b5-a45f-a84d81d86434_s.jpg" />
+    <Content Include="upload\Car\201509\db10257e-74d5-41b5-a45f-a84d81d86434_s_150x150.jpg" />
+    <Content Include="upload\Car\201509\db10257e-74d5-41b5-a45f-a84d81d86434_s_150脳150.jpg" />
+    <Content Include="upload\Car\201509\e162b5d9-84b9-4c42-829c-b88efa94f4fa.jpg" />
+    <Content Include="upload\Car\201509\e9a48b9e-1932-4579-b768-d15a788b67c1.jpg" />
+    <Content Include="upload\Car\201511\01c71676-c970-458c-94ca-f7fe12411e2b.jpg" />
+    <Content Include="upload\Car\201511\17bcc522-a7da-4f84-bcdb-f73041812921_s.jpg" />
+    <Content Include="upload\Car\201511\21ccc8e5-f702-41ff-a5ca-6eda24db36cd.jpg" />
+    <Content Include="upload\Car\201511\23b61f5f-0aed-40a9-b3b8-a9266a768ecc.jpg" />
+    <Content Include="upload\Car\201511\29943467-d4c2-422d-b94a-9f7375f8cce1_s.jpg" />
+    <Content Include="upload\Car\201511\2a27dce8-1e30-476f-b524-84376ac702b1.jpg" />
+    <Content Include="upload\Car\201511\2de596e8-d3bf-4ed3-a0cc-9056a11699cf.jpg" />
+    <Content Include="upload\Car\201511\30c8d806-420f-455a-80b7-a424da918d3c.jpg" />
+    <Content Include="upload\Car\201511\3adfc60d-754c-4b15-91a2-20656b3a30cb.jpg" />
+    <Content Include="upload\Car\201511\47f32d57-0ef7-48a3-90df-7204d024d150.jpg" />
+    <Content Include="upload\Car\201511\4e3a5b07-f0d0-4527-a011-0dcdc58244b3.jpg" />
+    <Content Include="upload\Car\201511\4f04673b-709b-4557-bd19-30a4e4bfc2e8.jpg" />
+    <Content Include="upload\Car\201511\50120588-a30e-4eae-bca0-26f0580d56ce.jpg" />
+    <Content Include="upload\Car\201511\544592f5-a61f-48a9-a4a3-ef24a4af217c.jpg" />
+    <Content Include="upload\Car\201511\5e7a9bab-b7a2-4acb-80ab-b69043228981.jpg" />
+    <Content Include="upload\Car\201511\7353377b-111c-4e21-9465-b6b0aa828e9b.jpg" />
+    <Content Include="upload\Car\201511\770c730e-6470-488b-8a8a-388e8d566972.jpg" />
+    <Content Include="upload\Car\201511\7ec383ab-32fc-4019-91d3-4ba816d2b7b9.jpg" />
+    <Content Include="upload\Car\201511\83b3a853-68ca-4255-b637-07673a1f8d45.jpg" />
+    <Content Include="upload\Car\201511\85844cb1-2695-4173-a255-b494e107df43.jpg" />
+    <Content Include="upload\Car\201511\860b9a0b-9a93-4185-ad80-16cf28c15a78.jpg" />
+    <Content Include="upload\Car\201511\8d6d147b-3845-44fd-bc4e-141aa2d7b813.jpg" />
+    <Content Include="upload\Car\201511\9450d579-3b27-4e27-b360-e3251a001381.jpg" />
+    <Content Include="upload\Car\201511\945c8e38-63bd-472c-b5c4-b8336451c6c5_s.jpg" />
+    <Content Include="upload\Car\201511\97ca9265-68da-4bf5-a43e-1998e807c76a.jpg" />
+    <Content Include="upload\Car\201511\98eee829-746f-4da9-96ec-db9f53f36a6c.jpg" />
+    <Content Include="upload\Car\201511\990beed0-5c5b-4293-a39a-e8b06ef3f715_s.jpg" />
+    <Content Include="upload\Car\201511\a0e850c5-681b-4045-9b4a-0bb5de891f97.jpg" />
+    <Content Include="upload\Car\201511\a249e6b4-3503-45c5-9863-a650d0be66e7.jpg" />
+    <Content Include="upload\Car\201511\a5d773c1-6b9d-4554-a657-7d51aaeebdf2.jpg" />
+    <Content Include="upload\Car\201511\a7a4706f-8c14-4516-84a2-4a1209fcfbd6.jpg" />
+    <Content Include="upload\Car\201511\a7e4a992-c81e-47b2-a2a8-ef7724ec5537.jpg" />
+    <Content Include="upload\Car\201511\b795ec87-0891-43a3-95c7-5e45a25fa659.jpg" />
+    <Content Include="upload\Car\201511\be3851a7-400e-4a9f-b4cb-5fb3ab025bdb_s.jpg" />
+    <Content Include="upload\Car\201511\befbdd90-4895-463e-85eb-8817f4dbe8a1_s.jpg" />
+    <Content Include="upload\Car\201511\c345a141-971a-48c7-9c80-ef9a55596e29.jpg" />
+    <Content Include="upload\Car\201511\c355e97a-f443-48cc-b66c-770d940cd237.jpg" />
+    <Content Include="upload\Car\201511\c5fa25c9-4369-4fe0-bfd3-05270d6b5c7a.jpg" />
+    <Content Include="upload\Car\201511\cf05baab-8088-425a-973e-08044815587c.jpg" />
+    <Content Include="upload\Car\201511\d4685e93-aa4b-46a3-bd8e-34761e3c726f_s.jpg" />
+    <Content Include="upload\Car\201511\e4abfe0a-c46e-4d6f-98ed-82f16e82633b.jpg" />
+    <Content Include="upload\Car\201511\e94b8773-fad6-4c45-ab4f-00bacf985f20_s.jpg" />
+    <Content Include="upload\Car\201511\ea3188e5-8cab-4f3c-8fbf-222db6ada744.jpg" />
+    <Content Include="upload\Car\201511\ec004d96-00b5-49e5-8ec1-001fbb2474f6.jpg" />
+    <Content Include="upload\Car\201511\ec1d059e-fc7e-4895-8f27-ac80479dfc26.jpg" />
+    <Content Include="upload\Car\201511\ec2f1527-4626-4ca4-ae7e-478cceff2ee9.jpg" />
+    <Content Include="upload\Car\201511\f17a7b4d-d939-4acf-a436-e491326d2d2f.jpg" />
+    <Content Include="upload\Car\201511\f5009c99-4fec-495c-88a8-ff144dad239e.jpg" />
+    <Content Include="upload\Car\201511\f9da0b80-244a-48d2-8990-0e8f2935c8a6.jpg" />
+    <Content Include="upload\Car\201511\ffba753a-2680-4581-ade2-d431727ac758.jpg" />
+    <Content Include="upload\Goods\201510\02700354-970b-42b0-99f7-3d56cfd9823e.jpg" />
+    <Content Include="upload\Goods\201510\08a132cc-167d-418e-9cd5-d2c439b4eca6.jpg" />
+    <Content Include="upload\Goods\201510\0c97512c-3904-458b-874c-505da349e5bd_s.jpg" />
+    <Content Include="upload\Goods\201510\11ac7190-0a88-4d19-8e48-4b6b72bcf2d1.jpg" />
+    <Content Include="upload\Goods\201510\1450b699-6889-4ed0-85f3-bf5d2c841ef8_s.jpg" />
+    <Content Include="upload\Goods\201510\188d2ca2-617e-488e-b03e-577195ba2bdc.jpg" />
+    <Content Include="upload\Goods\201510\230b510f-132f-41e6-a835-f62b10e9b6c1_s.jpg" />
+    <Content Include="upload\Goods\201510\24b3a4d2-0613-4bbc-bc4c-39e3d30d5361.jpg" />
+    <Content Include="upload\Goods\201510\351e85c9-43e3-47bd-b99c-f9219ccba98c.jpg" />
+    <Content Include="upload\Goods\201510\3761723f-8d39-47ae-9ed9-0ce781fd38ea.jpg" />
+    <Content Include="upload\Goods\201510\524d187f-03c8-48a4-9f8f-54e20f7d0044.jpg" />
+    <Content Include="upload\Goods\201510\536b516e-3e58-4c7a-9c35-c834c1573a44_s.jpg" />
+    <Content Include="upload\Goods\201510\5b25dc1c-f6a0-44f0-856d-e775ba23c748_s.jpg" />
+    <Content Include="upload\Goods\201510\5b25dc1c-f6a0-44f0-856d-e775ba23c748_s_150x150.jpg" />
+    <Content Include="upload\Goods\201510\5b25dc1c-f6a0-44f0-856d-e775ba23c748_s_150脳150.jpg" />
+    <Content Include="upload\Goods\201510\6f772149-ee7b-4db7-b4fa-c614bf5d1e45.jpg" />
+    <Content Include="upload\Goods\201510\7151aa2c-926f-409d-a7cd-d8f4b79c52f2_s.jpg" />
+    <Content Include="upload\Goods\201510\866b4af2-273a-4ea8-8816-f775d9511975_s.jpg" />
+    <Content Include="upload\Goods\201510\8cd01499-17ca-4303-8fae-944946e899e7.jpg" />
+    <Content Include="upload\Goods\201510\9ab9aa1e-33a2-4377-87c9-68e789e56e66_s.jpg" />
+    <Content Include="upload\Goods\201510\aae3a9cd-5dea-4bad-82b7-491bc360324c_s.jpg" />
+    <Content Include="upload\Goods\201510\abba1f10-d76e-43ce-9bca-970e831b4959.jpg" />
+    <Content Include="upload\Goods\201510\b10384bb-cf8b-443b-8304-8ca64471d5bc_s.jpg" />
+    <Content Include="upload\Goods\201510\b10384bb-cf8b-443b-8304-8ca64471d5bc_s_150x150.jpg" />
+    <Content Include="upload\Goods\201510\b10384bb-cf8b-443b-8304-8ca64471d5bc_s_150脳150.jpg" />
+    <Content Include="upload\Goods\201510\b69d0360-3546-44eb-8294-fd30b93d39d2_s.jpg" />
+    <Content Include="upload\Goods\201510\b69d0360-3546-44eb-8294-fd30b93d39d2_s_150x150.jpg" />
+    <Content Include="upload\Goods\201510\b69d0360-3546-44eb-8294-fd30b93d39d2_s_150脳150.jpg" />
+    <Content Include="upload\Goods\201510\e3eadabe-4489-4312-a5bc-e59e9f4dc2cb_s.jpg" />
+    <Content Include="upload\Goods\201510\e3eadabe-4489-4312-a5bc-e59e9f4dc2cb_s_150x150.jpg" />
+    <Content Include="upload\Goods\201510\e3eadabe-4489-4312-a5bc-e59e9f4dc2cb_s_150脳150.jpg" />
+    <Content Include="upload\Goods\201510\e7a5e9f7-297a-4a02-a45e-429867641b39_s.jpg" />
+    <Content Include="upload\Goods\201510\e7a5e9f7-297a-4a02-a45e-429867641b39_s_150x150.jpg" />
+    <Content Include="upload\Goods\201510\e7a5e9f7-297a-4a02-a45e-429867641b39_s_150脳150.jpg" />
+    <Content Include="upload\Goods\201510\eba4a862-092e-424b-a5f9-2985aa9162c4.jpg" />
+    <Content Include="upload\Goods\201510\fe2eb0ec-818f-4c02-909d-c2db744d205b.jpg" />
+    <Content Include="upload\Goods\201511\1eb9cfa1-83fc-4b51-89ec-810d05b3cd9a.jpg" />
+    <Content Include="upload\Goods\201511\48606857-7a4c-46eb-b19c-6f79f7368921_s.jpg" />
+    <Content Include="upload\Goods\201511\593a204c-61f6-4cf9-9f8a-b35c1d0ab9f3.jpg" />
+    <Content Include="upload\Goods\201511\efe588c2-887f-49a6-8192-e9b983489da1_s.jpg" />
+    <Content Include="upload\Member\201511\16dc5212-8093-4eb7-934e-22dcd0ab4490.jpg" />
+    <Content Include="upload\Member\201511\2bc79dd9-5a17-44a9-9794-5448f6689fae.jpg" />
+    <Content Include="upload\Member\201511\2f3c4eab-3df1-42a2-958e-b6e1473e5071.jpg" />
+    <Content Include="upload\Member\201511\487a83b9-3b0a-47dc-9135-632262442e8d.jpg" />
+    <Content Include="upload\Member\201511\68177d6a-2521-4f3c-9044-0771d41402ce.jpg" />
+    <Content Include="upload\Member\201511\7da4025b-5cd6-4fd0-910a-1562eab0caed.jpg" />
+    <Content Include="upload\Member\201511\7f292cb0-03f3-4dfa-9c9b-f980aeeeb4fa.jpg" />
+    <Content Include="upload\Member\201511\95ac54a2-7a11-4080-a71c-44f299a8e4e7.jpg" />
+    <Content Include="upload\Member\201511\a612b4c2-4649-4af1-bf6b-42faf6c2a488.jpg" />
+    <Content Include="upload\Member\201511\d748acfc-8fce-415f-bbef-d64d42cd552c.jpg" />
+    <Content Include="upload\Member\201511\dbd38930-b05b-4ce5-8933-628a063ba889.jpg" />
+    <Content Include="upload\Member\201511\df9424b7-92d3-4b32-a74d-27f592501418.jpg" />
+    <Content Include="upload\Member\201511\eb582858-b37c-4286-b92c-e053c6cf4e39.jpg" />
+    <Content Include="upload\Member\201511\fc64eba3-95d6-4ddf-9ddc-bb22df010131.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\BaseAjax.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\ServiceDetail.aspx.cs">
+      <DependentUpon>ServiceDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\ServiceDetail.aspx.designer.cs">
+      <DependentUpon>ServiceDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\ServiceList.aspx.cs">
+      <DependentUpon>ServiceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\ServiceList.aspx.designer.cs">
+      <DependentUpon>ServiceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MemberPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemInfo.aspx.cs">
+      <DependentUpon>MemInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MemInfo.aspx.designer.cs">
+      <DependentUpon>MemInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MyFavorite.aspx.cs">
+      <DependentUpon>MyFavorite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MyFavorite.aspx.designer.cs">
+      <DependentUpon>MyFavorite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MyComment.aspx.cs">
+      <DependentUpon>MyComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MyComment.aspx.designer.cs">
+      <DependentUpon>MyComment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\MyOrder.aspx.cs">
+      <DependentUpon>MyOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MyOrder.aspx.designer.cs">
+      <DependentUpon>MyOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\MemHeader.ascx.cs">
+      <DependentUpon>MemHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UControl\MemHeader.ascx.designer.cs">
+      <DependentUpon>MemHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\MemMenu.ascx.cs">
+      <DependentUpon>MemMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UControl\MemMenu.ascx.designer.cs">
+      <DependentUpon>MemMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MyAddress.aspx.cs">
+      <DependentUpon>MyAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\MyAddress.aspx.designer.cs">
+      <DependentUpon>MyAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\AmazeUI\css\vssver2.scc" />
+    <Content Include="App\AmazeUI\fonts\fontawesome-webfont.eot" />
+    <Content Include="App\AmazeUI\fonts\fontawesome-webfont.svg" />
+    <Content Include="App\AmazeUI\fonts\fontawesome-webfont.ttf" />
+    <Content Include="App\AmazeUI\fonts\fontawesome-webfont.woff" />
+    <Content Include="App\AmazeUI\fonts\FontAwesome.otf" />
+    <Content Include="App\AmazeUI\fonts\vssver2.scc" />
+    <Content Include="App\AmazeUI\i\examples\vssver2.scc" />
+    <Content Include="App\AmazeUI\i\vssver2.scc" />
+    <Content Include="App\AmazeUI\js\polyfill\vssver2.scc" />
+    <Content Include="App\AmazeUI\js\vssver2.scc" />
+    <None Include="Properties\PublishProfiles\SigeShop.Web.pubxml" />
+    <Content Include="Style\fancyvalidate\examples\exam-methods\ajax.ashx" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\css\idealforms\distro2_bats-webfont.eot" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\css\idealforms\distro2_bats-webfont.ttf" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\css\idealforms\distro2_bats-webfont.woff" />
+    <Content Include="Style\fancyvalidate\external\forms\idealforms1.02\css\idealforms\idealforms.less" />
+    <Content Include="Style\fancyvalidate\external\forms\pixelmatrix-uniform\README.textile" />
+    <Content Include="upload\Car\201509\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\Weiche.Web.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Weigou.Common\Weigou.Common.csproj">
+      <Project>{28e32696-9cbd-4c0b-bed7-416ef4a08975}</Project>
+      <Name>Weigou.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Config\Weigou.Config.csproj">
+      <Project>{e9a30b42-30a0-45cc-a8af-22e6f358725d}</Project>
+      <Name>Weigou.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Dao\Weigou.Dao.csproj">
+      <Project>{46de5735-890a-4cd5-aa61-4c5ff2bc9a97}</Project>
+      <Name>Weigou.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Model\Weigou.Model.csproj">
+      <Project>{167e5fd5-7427-4b2d-82d6-7b7028c386a2}</Project>
+      <Name>Weigou.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Pay\Weigou.Pay.csproj">
+      <Project>{d378d7db-547b-4378-9760-7aff52428b7e}</Project>
+      <Name>Weigou.Pay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weigou.Service\Weigou.Service.csproj">
+      <Project>{b38d3659-f52a-4839-8199-771be66d7e0e}</Project>
+      <Name>Weigou.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'test|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>9999</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1975/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

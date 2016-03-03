@@ -1,0 +1,325 @@
+--------------------------------系统出现异常http://localhost:9999/Member/MyFavorite.aspx[09:08]--------------------------------
+错误消息：DataBinding:“System.Data.DataRowView”不包含名为“GoodsPic”的属性。
+发生时间：2015/06/18 09:08:01
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyFavorite.aspx
+引发异常的方法： System.Object GetPropertyValue(System.Object, System.String)
+堆栈信息：    在 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   在 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   在 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   在 System.Web.UI.TemplateControl.Eval(String expression)
+   在 ASP.member_myfavorite_aspx.__DataBind__control7(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx:行号 61
+   在 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.Control.DataBindChildren()
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   在 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   在 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   在 System.Web.UI.WebControls.Repeater.DataBind()
+   在 SigeShop.Web.Member.MyFavorite.BindList() 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 43
+   在 SigeShop.Web.Member.MyFavorite.Page_Load(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 29
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyFavorite.aspx[09:08]--------------------------------
+错误消息：DataBinding:“System.Data.DataRowView”不包含名为“GoodsPic”的属性。
+发生时间：2015/06/18 09:08:07
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyFavorite.aspx
+引发异常的方法： System.Object GetPropertyValue(System.Object, System.String)
+堆栈信息：    在 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   在 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   在 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   在 System.Web.UI.TemplateControl.Eval(String expression)
+   在 ASP.member_myfavorite_aspx.__DataBind__control7(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx:行号 61
+   在 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.Control.DataBindChildren()
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   在 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   在 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   在 System.Web.UI.WebControls.Repeater.DataBind()
+   在 SigeShop.Web.Member.MyFavorite.BindList() 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 43
+   在 SigeShop.Web.Member.MyFavorite.Page_Load(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 29
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyFavorite.aspx[09:09]--------------------------------
+错误消息：DataBinding:“System.Data.DataRowView”不包含名为“GoodsPic”的属性。
+发生时间：2015/06/18 09:09:18
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyFavorite.aspx
+引发异常的方法： System.Object GetPropertyValue(System.Object, System.String)
+堆栈信息：    在 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   在 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   在 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   在 System.Web.UI.TemplateControl.Eval(String expression)
+   在 ASP.member_myfavorite_aspx.__DataBind__control7(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx:行号 61
+   在 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.Control.DataBindChildren()
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   在 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   在 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   在 System.Web.UI.WebControls.Repeater.DataBind()
+   在 SigeShop.Web.Member.MyFavorite.BindList() 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 43
+   在 SigeShop.Web.Member.MyFavorite.Page_Load(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 29
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyFavorite.aspx[09:46]--------------------------------
+错误消息：DataBinding:“System.Data.DataRowView”不包含名为“GoodsPic”的属性。
+发生时间：2015/06/18 09:46:11
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyFavorite.aspx
+引发异常的方法： System.Object GetPropertyValue(System.Object, System.String)
+堆栈信息：    在 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   在 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   在 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   在 System.Web.UI.TemplateControl.Eval(String expression)
+   在 ASP.member_myfavorite_aspx.__DataBind__control7(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx:行号 61
+   在 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.Control.DataBindChildren()
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   在 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   在 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   在 System.Web.UI.WebControls.Repeater.DataBind()
+   在 SigeShop.Web.Member.MyFavorite.BindList() 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 43
+   在 SigeShop.Web.Member.MyFavorite.Page_Load(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 29
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyFavorite.aspx[10:12]--------------------------------
+错误消息：未将对象引用设置到对象的实例。
+发生时间：2015/06/18 10:12:06
+错误源： SigeShop.Web
+站点地址：http://localhost:9999/Member/MyFavorite.aspx
+引发异常的方法： Void BindList(SigeShop.Model.Enum.EnumFavType)
+堆栈信息：    在 SigeShop.Web.Member.MyFavorite.BindList(EnumFavType type) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 41
+   在 SigeShop.Web.Member.MyFavorite.Page_Load(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyFavorite.aspx.cs:行号 30
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyAddress.aspx[10:26]--------------------------------
+错误消息：f:\开发项目\SigeShop\SigeShop.Web\Member\MyAddress.aspx(96): error CS0117: “ASP.member_myaddress_aspx”并不包含“SetDefault”的定义
+发生时间：2015/06/18 10:26:38
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyAddress.aspx
+引发异常的方法： System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+堆栈信息：    在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.HttpRuntimeEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreateHandler(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyAddress.aspx[10:26]--------------------------------
+错误消息：f:\开发项目\SigeShop\SigeShop.Web\Member\MyAddress.aspx(96): error CS0117: “ASP.member_myaddress_aspx”并不包含“SetDefault”的定义
+发生时间：2015/06/18 10:26:47
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyAddress.aspx
+引发异常的方法： System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+堆栈信息：    在 System.Web.Compilation.BuildManager.PostProcessFoundBuildResult(BuildResult result, Boolean keyFromVPP, VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetBuildResultFromCacheInternal(String cacheKey, Boolean keyFromVPP, VirtualPath virtualPath, Int64 hashCode)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultFromCacheInternal(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.HttpRuntimeEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreateHandler(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyAddress.aspx[10:27]--------------------------------
+错误消息：f:\开发项目\SigeShop\SigeShop.Web\Member\MyAddress.aspx(96): error CS0117: “ASP.member_myaddress_aspx”并不包含“SetDefault”的定义
+发生时间：2015/06/18 10:27:23
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyAddress.aspx
+引发异常的方法： System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+堆栈信息：    在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.HttpRuntimeEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreateHandler(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyAddress.aspx?id=4[10:30]--------------------------------
+错误消息：关键字 'where' 附近有语法错误。
+发生时间：2015/06/18 10:30:41
+错误源： .Net SqlClient Data Provider
+站点地址：http://localhost:9999/Member/MyAddress.aspx?id=4
+引发异常的方法： Void OnError(System.Data.SqlClient.SqlException, Boolean)
+堆栈信息：    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 Spring.Data.Core.AdoTemplate.DataAdapterFillCallback.DoInDataAdapter(IDbDataAdapter dataAdapter)
+   在 Spring.Data.Core.AdoTemplate.Execute(IDataAdapterCallback dataAdapterCallback)
+   在 Spring.Data.Core.AdoTemplate.DataTableFillWithParams(DataTable dataTable, CommandType commandType, String sql, IDbParameters parameters)
+   在 Spring.Data.Core.AdoTemplate.DataTableCreateWithParams(CommandType commandType, String sql, IDbParameters parameters)
+   在 SigeShop.Dao.BaseDao.GetDataByKey(String tablename, String field, Object obj) 位置 f:\开发项目\SigeShop\SigeShop.Dao\BaseDao.cs:行号 225
+   在 SigeShop.Service.BaseService.GetDataByKey(String tablename, String field, Object obj) 位置 f:\开发项目\SigeShop\SigeShop.Service\BaseService.cs:行号 116
+   在 CompositionAopProxy_814b1c5594d64acea8da83369ffcc447.GetDataByKey(String tablename, String field, Object obj)
+   在 SigeShop.Web.Member.MyAddress.BindInfo() 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyAddress.aspx.cs:行号 71
+   在 SigeShop.Web.Member.MyAddress.Page_Load(Object sender, EventArgs e) 位置 f:\开发项目\SigeShop\SigeShop.Web\Member\MyAddress.aspx.cs:行号 36
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyAddress.aspx?id=4[10:32]--------------------------------
+错误消息：类型“System.Web.UI.WebControls.CheckBox”不具有名为“Button”的公共属性。
+发生时间：2015/06/18 10:32:51
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyAddress.aspx?id=4
+引发异常的方法： System.Web.UI.ControlBuilder GetChildPropertyBuilder(System.String, System.Collections.IDictionary, System.Type ByRef, System.Web.UI.TemplateParser, Boolean)
+堆栈信息：    在 System.Web.UI.ControlBuilder.GetChildPropertyBuilder(String tagName, IDictionary attribs, Type& childType, TemplateParser templateParser, Boolean defaultProperty)
+   在 System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   在 System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/myAddress.aspx[10:58]--------------------------------
+错误消息：f:\开发项目\SigeShop\SigeShop.Web\Member\MyAddress.aspx(72): error CS0117: “ASP.member_myaddress_aspx”并不包含“repDeliver_ItemCommand”的定义
+发生时间：2015/06/18 10:58:38
+错误源： System.Web
+站点地址：http://localhost:9999/Member/myAddress.aspx
+引发异常的方法： System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+堆栈信息：    在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.HttpRuntimeEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreateHandler(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyComment.aspx[11:48]--------------------------------
+错误消息：f:\开发项目\SigeShop\SigeShop.Web\Member\MyComment.aspx(60): error CS0117: “ASP.member_mycomment_aspx”并不包含“AspNetPager_PageChanging”的定义
+发生时间：2015/06/18 11:48:03
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyComment.aspx
+引发异常的方法： System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+堆栈信息：    在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.HttpRuntimeEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreateHandler(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 
+--------------------------------系统出现异常http://localhost:9999/Member/MyComment.aspx[11:48]--------------------------------
+错误消息：f:\开发项目\SigeShop\SigeShop.Web\Member\MyComment.aspx(60): error CS0117: “ASP.member_mycomment_aspx”并不包含“AspNetPager_PageChanging”的定义
+发生时间：2015/06/18 11:48:34
+错误源： System.Web
+站点地址：http://localhost:9999/Member/MyComment.aspx
+引发异常的方法： System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+堆栈信息：    在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.HttpRuntimeEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Util.VirtualEnvironment.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreateHandler(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.CreateHandlerInstance(IConfigurableApplicationContext appContext, HttpContext context, String requestType, String rawUrl, String physicalPath)
+   在 Spring.Web.Support.AbstractHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+ 

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Fancy Validate - html5 attribute</title>
+  <link href="../css/example.css" rel="stylesheet" />
+  <link href="../../css/fancyValidate.css" rel="stylesheet" />
+  <script src="../../fancyValidate.min.js"></script>
+  <script src="../../fancyValidate.additional.min.js"></script>
+  <script>
+    $f.dom.ready(function() {
+      $f("fancyform", {
+        messages: {
+          uname: { pattern: "用户名必须fancy开头" }
+          , age: { pattern: "必须是数字" }
+          , email: { pattern: "email格式不正确" }
+        }
+        , submitHandler: function() {
+          alert("验证成功！");
+        }
+      })
+      .placeHolder();//create placeholder if not supported html5 placeholder
+    });
+  </script>
+</head>
+<body>
+  <h1>html5 attribute 定义在元素的html5属性中</h1>
+  <form action="?" id="fancyform">
+  <fieldset class="fld">
+    <legend class="leg">用户信息</legend>
+    <ul>
+      <li>
+        <label class="ttl">用户名：</label>
+        <input class="fin h23" type="text" name="uname" placeholder="输入用户名" required pattern="^fancy\w+" /></li>
+      <li>
+        <label class="ttl">年龄：</label>
+        <input class="fin h23" name="age" type="text" placeholder="输入年龄" required pattern="^\d+$" min="10" max="200" />
+      </li>
+      <li>
+        <label class="ttl">Email：</label>
+        <input class="fin h23" name="email" type="text" placeholder="输入email" required pattern="^\w+@\w+.\w+$" />
+      </li>
+      <li>
+        <label class="ttl">姓名：</label>
+        <input class="fin h23" name="rname" type="text" placeholder="输入姓名" required maxlength="3" />
+      </li>
+      <li>
+        <label class="ttl">头像：</label>
+        <input class="fin h23 file" type="file" name="headpic" required />
+      </li>
+      <li>
+        <label class="ttl">性别：</label>
+        <input type="radio" id="radio1" name="sex" required /><label for="radio1">男</label>
+        <input type="radio" id="radio2" name="sex" /><label for="radio2">女</label>
+        <input type="radio" id="radio3" name="sex" /><label for="radio3">？？</label>
+      </li>
+      <li>
+        <label class="ttl">位置：</label>
+        <select name="loc" class="fin" required>
+          <option value="">请选择</option>
+          <option value="1">地球</option>
+          <option value="2">月球</option>
+          <option value="3">火星</option>
+        </select>
+      </li>
+      <li>
+        <label class="ttl">爱好1：</label>
+        <select name="lov1" class="fin" multiple="multiple" size="5" required>
+          <option value="1">打酱油</option>
+          <option value="2">打酱油</option>
+          <option value="3">打酱油</option>
+          <option value="4">打酱油</option>
+          <option value="5">打酱油</option>
+        </select>
+      </li>
+      <li>
+        <label class="ttl">爱好2：</label>
+        <input type="checkbox" id="check1" name="lov2" required /><label for="check1">打酱油</label>
+        <input type="checkbox" id="check2" name="lov2" /><label for="check2">打酱油</label>
+        <input type="checkbox" id="check3" name="lov2" /><label for="check3">打酱油</label>
+      </li>
+      <li>
+        <label class="ttl">自我描述：</label>
+        <textarea name="desc" class="tarea" placeholder="写点什么吧" required></textarea>
+      </li>
+    </ul>
+  </fieldset>
+  <ul>
+    <li>
+      <label class="ttl"></label>
+      <input class="btn" type="submit" value="提交" />
+    </li>
+  </ul>
+  </form>
+</body>
+</html>
