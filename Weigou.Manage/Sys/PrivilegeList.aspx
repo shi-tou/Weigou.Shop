@@ -65,7 +65,7 @@
                             <td class="hidden"><%#Eval("ID") %></td>
                             <td><%#Eval("Name") %></td>
                             <td><%#Eval("Code") %></td>
-                            <td><%#Eval("ParentCode") %></td>
+                            <td style="text-align:center;"><%#Eval("ParentCode").ToString()==""?"--":Eval("ParentCode").ToString() %></td>
                             <td><%#GetType(Eval("PrivilegeType").ToString()) %></td>
                             <td><%#Eval("Url") %></td>
                             <td><%#Eval("Func") %></td>

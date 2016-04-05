@@ -19,7 +19,7 @@ namespace Weigou.Common
             int sex = Convert.ToInt16(v);
             if (sex == (int)EnumStatus.Disabled)
             {
-                return "不可用(待审核)";
+                return "<span style=\"color:red\">不可用(待审核)</span>";
             }
             else if (sex == (int)EnumStatus.Normal)
             {
@@ -27,7 +27,7 @@ namespace Weigou.Common
             }
             else if (sex == (int)EnumStatus.DisAudit)
             {
-                return "审核不通过";
+                return "<span style=\"color:blue\">审核不通过</span>";
             }
             return "";
         }
