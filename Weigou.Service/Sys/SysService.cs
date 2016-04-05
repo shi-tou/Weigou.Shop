@@ -192,16 +192,6 @@ namespace Weigou.Service
         }
         #endregion
 
-        /// <summary>
-        /// 获取数据字典
-        /// </summary>
-        /// <returns></returns>
-        public DataTable GetDictionaryList()
-        {
-            DataTable dt = sysDao.GetDictionaryList();
-            return dt;
-        }
-
         #region 地区管理
         /// <summary>
         /// 获取省份列表

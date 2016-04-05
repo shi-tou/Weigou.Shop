@@ -54,7 +54,6 @@ namespace Weigou.Manage.Sys
             DataTable dt = sysService.GetPrivilegeList(hs);
             DataTable dtRolePrivilege = sysService.GetDataByKey("T_RolePrivilege", "RoleID", _ID);
             List<string> list = GetPrivilege(dtRolePrivilege);
-
             StringBuilder sb = new StringBuilder();
             foreach (DataRow dr in dt.Rows)
             {
@@ -72,6 +71,8 @@ namespace Weigou.Manage.Sys
                 sb.Append("}");
             }
             PrivilegeJson = "[" + sb.ToString() + "]";
+            //隐藏域赋值
+            this.hfPrivilege.Value = string.Join(",", list.ToArray());
         }
             
         /// <summary>

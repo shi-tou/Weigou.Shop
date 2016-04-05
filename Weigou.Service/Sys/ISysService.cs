@@ -57,12 +57,6 @@ namespace Weigou.Service
         DataTable GetUserPrivilege(int UserID);
         #endregion
 
-        /// <summary>
-        /// 获取数据字典
-        /// </summary>
-        /// <returns></returns>
-        DataTable GetDictionaryList();
-
         #region 地区管理
         /// <summary>
         /// 获取省份列表

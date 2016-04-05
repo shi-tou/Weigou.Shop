@@ -169,37 +169,6 @@ namespace Weigou.Admin.Ajax
         }
         #endregion
 
-        #region 数据字典管理
-        /// <summary>
-        /// 获取字典列表
-        /// </summary>
-        /// <param name="hc"></param>
-        public void GetDictionaryList(HttpContext hc)
-        {
-            DataTable dt = sysService.GetDictionaryList();
-            strJson = Utils.CreateTreeJson(dt, "ID", "ParentID");
-            ResponseWrite(hc);
-        }
-        /// <summary>
-        /// 删除字典数据
-        /// </summary>
-        /// <param name="hc"></param>
-        public void DeleteDictionary(HttpContext hc)
-        {
-            string id = GetRequest("ID", "");
-            int res = 0;
-            try
-            {
-                res = sysService.Delete("T_Dictionary", "ID", id);
-            }
-            catch
-            {
-                res = 0;
-            }
-            ResponseWrite(hc, res > 0 ? "0" : "1");
-        }
-        #endregion
-
         #region 地区管理
         /// <summary>
         /// 获取省份列表

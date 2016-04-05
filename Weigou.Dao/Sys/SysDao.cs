@@ -44,6 +44,7 @@ namespace Weigou.Dao
             p.ItemCount = Convert.ToInt32(ds.Tables[1].Rows[0][0]);
             return RT.SUCCESS;
         }
+
         /// </summary>
         /// 权限列表
         /// </summary>
@@ -51,6 +52,16 @@ namespace Weigou.Dao
         {
             string sql = "select * from T_Privilege where 1=1  ";
             IDbParameters param = AdoTemplate.CreateDbParameters();
+            if (hs.Contains("Code"))
+            {
+                sql += " and Code = @Code";
+                param.AddWithValue("Code", hs["Code"]);
+            }
+            if (hs.Contains("PrivilegeType"))
+            {
+                sql += " and PrivilegeType=@PrivilegeType";
+                param.AddWithValue("PrivilegeType", hs["PrivilegeType"]);
+            }
             if (hs.Contains("ParentCode"))
             {
                 sql += " and ParentCode=@ParentCode";
@@ -65,8 +76,13 @@ namespace Weigou.Dao
             DataSet ds = AdoTemplate.DataSetCreateWithParams(CommandType.Text, sql, param);
             return ds.Tables[0];
         }
+
+        /// <summary>
         /// 权限列表
         /// </summary>
+        /// <param name="p"></param>
+        /// <param name="hs"></param>
+        /// <returns></returns>
         public int GetPrivilegeList(Pager p, Hashtable hs)
         {
             string sql = @"select * from T_Privilege where 1=1";
@@ -92,6 +108,7 @@ namespace Weigou.Dao
             p.ItemCount = Convert.ToInt32(ds.Tables[1].Rows[0][0]);
             return RT.SUCCESS;
         }
+
         /// </summary>
         /// 角色列表
         /// </summary>
@@ -132,19 +149,6 @@ namespace Weigou.Dao
         }
 
         #endregion
-
-        /// <summary>
-        /// 获取数据字典
-        /// </summary>
-        /// <returns></returns>
-        public DataTable GetDictionaryList()
-        {
-            string sql = @"select a.*,b.Name as ParentName from T_Dictionary a
-                            left join T_NavMenu b on b.ID=a.ParentID";
-            IDbParameters param = AdoTemplate.CreateDbParameters();
-            DataSet ds = AdoTemplate.DataSetCreateWithParams(CommandType.Text, sql, param);
-            return ds.Tables[0];
-        }
 
         #region 地区管理
         /// <summary>
